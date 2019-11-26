@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on 网路拾遗</title>
+    <link>https://hhaiyun.github.io/tags/linux/</link>
+    <description>Recent content in linux on 网路拾遗</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Tue, 26 Nov 2019 16:16:01 +0800</lastBuildDate>
+    
+	<atom:link href="https://hhaiyun.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>在virtualbox里折腾i3wm</title>
+      <link>https://hhaiyun.github.io/2019/11/use-i3-in-virtualbox/</link>
+      <pubDate>Tue, 26 Nov 2019 16:16:01 +0800</pubDate>
+      
+      <guid>https://hhaiyun.github.io/2019/11/use-i3-in-virtualbox/</guid>
+      <description>选用了一个作死的版本：ubuntu mini ISO，安装的时候记得选国内源，时区现在还没调回来 安装i3 sudo apt install i3 （i3wm i3status i3lock i3bar） 安装xini</description>
+    </item>
+    
+  </channel>
+</rss>

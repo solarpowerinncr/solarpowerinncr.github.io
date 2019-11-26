@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on 网路拾遗</title>
+    <link>https://hhaiyun.github.io/posts/</link>
+    <description>Recent content in Posts on 网路拾遗</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Tue, 26 Nov 2019 17:51:33 +0800</lastBuildDate>
+    
+	<atom:link href="https://hhaiyun.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>三体人物之章北海：黑暗的仁者</title>
+      <link>https://hhaiyun.github.io/2019/11/%E4%B8%89%E4%BD%93%E4%BA%BA%E7%89%A9%E4%B9%8B%E7%AB%A0%E5%8C%97%E6%B5%B7/</link>
+      <pubDate>Tue, 26 Nov 2019 17:51:33 +0800</pubDate>
+      
+      <guid>https://hhaiyun.github.io/2019/11/%E4%B8%89%E4%BD%93%E4%BA%BA%E7%89%A9%E4%B9%8B%E7%AB%A0%E5%8C%97%E6%B5%B7/</guid>
+      <description>&lt;p&gt;“那我该怎么办？”&lt;br /&gt;
+“要多想。”&lt;br /&gt;
+“想了以后呢？”&lt;br /&gt;
+“北海，我只能告诉你那以前要多想。”&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>三体人物之罗辑：信仰之锚</title>
+      <link>https://hhaiyun.github.io/2019/11/%E4%B8%89%E4%BD%93%E4%BA%BA%E7%89%A9%E4%B9%8B%E7%BD%97%E8%BE%91/</link>
+      <pubDate>Tue, 26 Nov 2019 17:43:52 +0800</pubDate>
+      
+      <guid>https://hhaiyun.github.io/2019/11/%E4%B8%89%E4%BD%93%E4%BA%BA%E7%89%A9%E4%B9%8B%E7%BD%97%E8%BE%91/</guid>
+      <description>&lt;p&gt;罗辑是个百分之百的浪子。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>YY的胡言乱语：朱元璋后宫之123</title>
+      <link>https://hhaiyun.github.io/2019/11/%E6%9C%B1%E5%85%83%E7%92%8B%E5%90%8E%E5%AE%AB%E4%B9%8B123/</link>
+      <pubDate>Tue, 26 Nov 2019 17:04:09 +0800</pubDate>
+      
+      <guid>https://hhaiyun.github.io/2019/11/%E6%9C%B1%E5%85%83%E7%92%8B%E5%90%8E%E5%AE%AB%E4%B9%8B123/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;by 红袖刀 from 晋江文学城&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;按：&lt;br /&gt;
+之前为《皓月冷千山》一文查找一些资料，结果找着找着让某的思维方向发生了漂移……朱元璋一生宏才大略，灭元政权，在中原地区恢复汉人统治，并于400年后再度统一北方，创不世之基业，然其人刻薄寡恩残酷滥杀向遭人诟病，无甚文化这条也常为后世文人耻笑，但开国六王（皆为武臣，可见此人口味之重）基本还都算善终（虽然只有2人符合刘备“寿过五十不算夭”的标准），可见老朱也算甚有情义（雾），而这六人也可谓是老朱后宫的第一梯队（……）。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>长安一夜风吹雪</title>
+      <link>https://hhaiyun.github.io/2019/11/%E9%95%BF%E5%AE%89%E4%B8%80%E5%A4%9C%E9%A3%8E%E5%90%B9%E9%9B%AA/</link>
+      <pubDate>Tue, 26 Nov 2019 16:20:18 +0800</pubDate>
+      
+      <guid>https://hhaiyun.github.io/2019/11/%E9%95%BF%E5%AE%89%E4%B8%80%E5%A4%9C%E9%A3%8E%E5%90%B9%E9%9B%AA/</guid>
+      <description>&lt;p&gt;0&lt;br /&gt;
+——哎，狄仁杰，你说要是我死了，你可一定得把这个组合办下去。&lt;br /&gt;
+——哦。&lt;br /&gt;
+——哎你什么态度啊！我告诉你！组合！生命不息，情义无价！&lt;br /&gt;
+——哦。&lt;br /&gt;
+——我告诉你这样我可不是很开心！不是很开心！&lt;br /&gt;
+——那好吧。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>在virtualbox里折腾i3wm</title>
+      <link>https://hhaiyun.github.io/2019/11/use-i3-in-virtualbox/</link>
+      <pubDate>Tue, 26 Nov 2019 16:16:01 +0800</pubDate>
+      
+      <guid>https://hhaiyun.github.io/2019/11/use-i3-in-virtualbox/</guid>
+      <description>选用了一个作死的版本：ubuntu mini ISO，安装的时候记得选国内源，时区现在还没调回来 安装i3 sudo apt install i3 （i3wm i3status i3lock i3bar） 安装xini</description>
+    </item>
+    
+    <item>
+      <title>Markdown 基本语法预览</title>
+      <link>https://hhaiyun.github.io/2019/08/basic-markdown-preview/</link>
+      <pubDate>Sun, 25 Aug 2019 16:22:42 +0800</pubDate>
+      
+      <guid>https://hhaiyun.github.io/2019/08/basic-markdown-preview/</guid>
+      <description>&lt;p&gt;这是一篇用于预览 :(fab fa-markdown): Markdown 基本语法的文章。&lt;/p&gt;
+
+&lt;p&gt;文章内容基于 &lt;a href=&#34;https://github.github.com/gfm&#34;&gt;GitHub Flavo红色 Markdown Spec&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;不包含复杂的规则说明，仅仅展示 GFM 所约定的 Markdown 基本语法。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
