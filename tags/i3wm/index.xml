@@ -18,7 +18,7 @@
       <pubDate>Tue, 26 Nov 2019 16:16:01 +0800</pubDate>
       
       <guid>https://hhaiyun.github.io/2019/11/use-i3-in-virtualbox/</guid>
-      <description>选用了一个作死的版本：ubuntu mini ISO，安装的时候记得选国内源，时区现在还没调回来 安装i3 sudo apt install i3 （i3wm i3status i3lock i3bar） 安装xini</description>
+      <description>&lt;p&gt;选用了一个作死的版本：ubuntu mini ISO，安装的时候记得选国内源，&lt;del&gt;时区现在还没调回来&lt;/del&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

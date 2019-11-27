@@ -7,10 +7,42 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Tue, 26 Nov 2019 16:16:01 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 27 Nov 2019 13:07:24 +0800</lastBuildDate>
     
 	<atom:link href="https://hhaiyun.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>vps初始配置</title>
+      <link>https://hhaiyun.github.io/2019/11/vps%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Wed, 27 Nov 2019 13:07:24 +0800</pubDate>
+      
+      <guid>https://hhaiyun.github.io/2019/11/vps%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;h2 id=&#34;添加用户并授予root权限&#34;&gt;添加用户并授予root权限&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;adduser ubuntu
+&lt;span class=&#34;c1&#34;&gt;#记住自己输入了啥密码&lt;/span&gt;
+usermod -g sudo ubuntu&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Bashrc配置</title>
+      <link>https://hhaiyun.github.io/2019/11/bashrc%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Wed, 27 Nov 2019 12:57:58 +0800</pubDate>
+      
+      <guid>https://hhaiyun.github.io/2019/11/bashrc%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;p&gt;&lt;code&gt;LS_COLORS=&#39;di=1;36:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43&#39;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;PS1=&#39;\[\033[38;5;11m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\h:\[$(tput sgr0)\]\[\033[38;5;14m\]\w\[$(tput sgr0)\]\[\033[38;5;209m\] λ\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]&#39;&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>在virtualbox里折腾i3wm</title>
@@ -18,7 +50,7 @@
       <pubDate>Tue, 26 Nov 2019 16:16:01 +0800</pubDate>
       
       <guid>https://hhaiyun.github.io/2019/11/use-i3-in-virtualbox/</guid>
-      <description>选用了一个作死的版本：ubuntu mini ISO，安装的时候记得选国内源，时区现在还没调回来 安装i3 sudo apt install i3 （i3wm i3status i3lock i3bar） 安装xini</description>
+      <description>&lt;p&gt;选用了一个作死的版本：ubuntu mini ISO，安装的时候记得选国内源，&lt;del&gt;时区现在还没调回来&lt;/del&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

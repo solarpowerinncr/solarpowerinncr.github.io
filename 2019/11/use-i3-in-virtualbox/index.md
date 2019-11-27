@@ -5,7 +5,7 @@
 
 选用了一个作死的版本：ubuntu mini ISO，安装的时候记得选国内源，~~时区现在还没调回来~~
 
-<!-- more -->
+<!--more-->
 
 ## 安装i3
 sudo apt install i3 （i3wm i3status i3lock i3bar）
