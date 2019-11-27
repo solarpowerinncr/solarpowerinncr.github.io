@@ -3,12 +3,12 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>vps初始配置 | 网路拾遗</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Linuximint初始化 | 网路拾遗</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noodp" />
 <meta name="Description" content="仓鼠症患者">
-<link rel="prev" href="https://hhaiyun.github.io/2019/11/bashrc%E9%85%8D%E7%BD%AE/" />
-<link rel="next" href="https://hhaiyun.github.io/2019/11/linuximint%E5%88%9D%E5%A7%8B%E5%8C%96/" />
-<link rel="canonical" href="https://hhaiyun.github.io/2019/11/vps%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE/" />
+<link rel="prev" href="https://hhaiyun.github.io/2019/11/vps%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE/" />
+<link rel="next" href="https://hhaiyun.github.io/2019/11/%E5%9C%A8%E8%B7%AF%E7%94%B1%E5%99%A8%E4%B8%8A%E6%A0%BC%E5%BC%8F%E5%8C%96u%E7%9B%98%E7%A1%AC%E7%9B%98/" />
+<link rel="canonical" href="https://hhaiyun.github.io/2019/11/linuximint%E5%88%9D%E5%A7%8B%E5%8C%96/" />
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -18,28 +18,25 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="vps初始配置"/>
-<meta name="twitter:description" content="添加用户并授予root权限
+<meta name="twitter:title" content="Linuximint初始化"/>
+<meta name="twitter:description" content="开机黑屏
+
+用recovery模式进，改驱动为nvidia闭源驱动
+
+输入法
 
 
-1
-2
-3
-
-
-adduser ubuntu
-#记住自己输入了啥密码
-usermod -g sudo ubuntu
-
+安装fcitx框架 切换：ctrl&#43;space
+安装搜狗拼音,下载后双击，安装完毕后注销再登录
 "/>
 <script type="application/ld+json">
     {
     "@context": "http://schema.org",
     "@type": "BlogPosting",
-    "headline": "vps初始配置",
+    "headline": "Linuximint初始化",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https:\/\/hhaiyun.github.io\/2019\/11\/vps%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE\/"
+        "@id": "https:\/\/hhaiyun.github.io\/2019\/11\/linuximint%E5%88%9D%E5%A7%8B%E5%8C%96\/"
     },
     
         "image": {
@@ -51,15 +48,15 @@ usermod -g sudo ubuntu
     
     "genre": "posts",
     
-        "keywords": "linux",
+        "keywords": "linux, linuxmint",
     
-    "wordcount":  404 ,
-    "url": "https:\/\/hhaiyun.github.io\/2019\/11\/vps%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE\/",
+    "wordcount":  620 ,
+    "url": "https:\/\/hhaiyun.github.io\/2019\/11\/linuximint%E5%88%9D%E5%A7%8B%E5%8C%96\/",
     
-        "datePublished": "2019-11-27T13:07:24\x2b08:00",
+        "datePublished": "2019-11-27T20:01:38\x2b08:00",
     
     
-        "dateModified": "2019-11-27T13:07:24\x2b08:00",
+        "dateModified": "2019-11-27T20:01:38\x2b08:00",
     
     
         "license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.",
@@ -144,7 +141,7 @@ usermod -g sudo ubuntu
     
 
     <article class="post-warp">
-        <h1 class="post-title animated flipInX">vps初始配置</h1>
+        <h1 class="post-title animated flipInX">Linuximint初始化</h1>
 
         <div class="post-meta">
             <div class="post-meta-main">
@@ -157,15 +154,66 @@ usermod -g sudo ubuntu
             </div>
             <div class="post-meta-other">
                 <i class="far fa-calendar-alt fa-fw"></i><time datetime=2019-11-27>2019-11-27</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>约 404 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>预计阅读 1 分钟&nbsp;<span id="/2019/11/vps%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE/" class="leancloud_visitors" data-flag-title="vps初始配置">
+                <i class="fas fa-pencil-alt fa-fw"></i>约 620 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>预计阅读 2 分钟&nbsp;<span id="/2019/11/linuximint%E5%88%9D%E5%A7%8B%E5%8C%96/" class="leancloud_visitors" data-flag-title="Linuximint初始化">
                         <i class="far fa-eye fa-fw"></i><span class=leancloud-visitors-count></span> 次阅读
                     </span>&nbsp;</div>
         </div>
 
         
 
-        
+        <div class="post-toc" id="post-toc">
+                <h2 class="post-toc-title">目录</h2>
+                <div class="post-toc-content">
+                    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#开机黑屏">开机黑屏</a></li>
+<li><a href="#输入法">输入法</a></li>
+<li><a href="#删除楷体">删除楷体</a></li>
+<li><a href="#换源">换源</a></li>
+<li><a href="#字体发虚">字体发虚</a></li>
+<li><a href="#修改firefox默认缩放比">修改firefox默认缩放比</a></li>
+<li><a href="#安装v2ray">安装v2ray</a></li>
+<li><a href="#全局代理">全局代理</a></li>
+<li><a href="#换用gedit并解决中文乱码">换用gedit并解决中文乱码</a></li>
+<li><a href="#安装主题">安装主题</a></li>
+<li><a href="#安装图标">安装图标</a></li>
+<li><a href="#开机自动挂载硬盘">开机自动挂载硬盘</a></li>
+</ul></li>
+</ul>
+</nav>
+                </div>
+            </div>
+            <div class="post-toc-mobile" id="post-toc-mobile">
+                <details>
+                    <summary><div class="post-toc-title"><span>目录</span><span><i class="details icon fas fa-angle-down"></i></span></div></summary>
+                    <div class="post-toc-content">
+                        
+                        
+                        <nav id="TableOfContentsMobile">
+<ul>
+<li>
+<ul>
+<li><a href="#开机黑屏">开机黑屏</a></li>
+<li><a href="#输入法">输入法</a></li>
+<li><a href="#删除楷体">删除楷体</a></li>
+<li><a href="#换源">换源</a></li>
+<li><a href="#字体发虚">字体发虚</a></li>
+<li><a href="#修改firefox默认缩放比">修改firefox默认缩放比</a></li>
+<li><a href="#安装v2ray">安装v2ray</a></li>
+<li><a href="#全局代理">全局代理</a></li>
+<li><a href="#换用gedit并解决中文乱码">换用gedit并解决中文乱码</a></li>
+<li><a href="#安装主题">安装主题</a></li>
+<li><a href="#安装图标">安装图标</a></li>
+<li><a href="#开机自动挂载硬盘">开机自动挂载硬盘</a></li>
+</ul></li>
+</ul>
+</nav>
+                    </div>
+                </details>
+            </div>
 
         <div class="post-content">
             
@@ -193,7 +241,115 @@ usermod -g sudo ubuntu
             
             
             
-            <a class="post-dummy-target" id="添加用户并授予root权限"></a><h2>添加用户并授予root权限</h2>
+            <a class="post-dummy-target" id="开机黑屏"></a><h2>开机黑屏</h2>
+
+<p>用recovery模式进，改驱动为nvidia闭源驱动</p>
+
+<a class="post-dummy-target" id="输入法"></a><h2>输入法</h2>
+
+<ol>
+<li>安装fcitx框架 切换：ctrl+space</li>
+<li>安装搜狗拼音,下载后双击，安装完毕后注销再登录</li>
+</ol>
+
+<a class="post-dummy-target" id="删除楷体"></a><h2>删除楷体</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt remove fonts-arphic-ukai fonts-arphic-uming</code></pre></td></tr></table>
+</div>
+</div>
+<a class="post-dummy-target" id="换源"></a><h2>换源</h2>
+
+<p>同过软件源换源，再打开<code>/etc/apt/sources.list.d/official-package-repositories.list</code>换security项</p>
+
+<a class="post-dummy-target" id="字体发虚"></a><h2>字体发虚</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt-get install language-selector-*  
+<span class="c1">#重启boot</span></code></pre></td></tr></table>
+</div>
+</div>
+<a class="post-dummy-target" id="修改firefox默认缩放比"></a><h2>修改firefox默认缩放比</h2>
+
+<p>在firefox网址栏打开about:config，搜索layout.css.devPixelsPerPx，修改为1.2（120%）</p>
+
+<a class="post-dummy-target" id="安装v2ray"></a><h2>安装v2ray</h2>
+
+<p>按照<code>sudo bash go.sh</code>安装，配置<code>config.json</code> 重启<code>service v2ray start</code></p>
+
+<a class="post-dummy-target" id="全局代理"></a><h2>全局代理</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">sudo apt-get install proxychains4
+修改 /etc/proxychains4.conf
+proxychains4 google-chrome</pre></td></tr></table>
+</div>
+</div>
+<p>下载chrome、网易云、百度云、guake</p>
+
+<p>查看环境变量：
+<code>export</code>
+<code>echo $all_proxy</code></p>
+
+<a class="post-dummy-target" id="换用gedit并解决中文乱码"></a><h2>换用gedit并解决中文乱码</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt-get install dconf-tools</code></pre></td></tr></table>
+</div>
+</div>
+<p>修改xed的配置<code>/org/x/editor/preferences/encodings</code>
+Candidate Encodings的值替换为<code>['GB18030', 'UTF-8', 'CURRENT', 'ISO-8859-15', 'UTF-16']</code></p>
+
+<a class="post-dummy-target" id="安装主题"></a><h2>安装主题</h2>
+
+<ol>
+<li><p>adapta</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt install software-properties-common
+sudo add-apt-repository ppa:tista/adapta
+sudo apt-get update
+sudo apt-get install adapta-gtk-theme</code></pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>arc</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt-get install arc-theme</code></pre></td></tr></table>
+</div>
+</div>
+<p>安装后在设置-&gt;窗口管理器选择主题</p></li>
+</ol>
+
+<a class="post-dummy-target" id="安装图标"></a><h2>安装图标</h2>
+
+<ol>
+<li><p>papirus</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
@@ -201,12 +357,28 @@ usermod -g sudo ubuntu
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">adduser ubuntu
-<span class="c1">#记住自己输入了啥密码</span>
-usermod -g sudo ubuntu</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo add-apt-repository ppa:papirus/papirus
+sudo apt-get update
+sudo apt-get install papirus-icon-theme</code></pre></td></tr></table>
 </div>
+</div></li>
+
+<li><p>安装Hardcode-Tray</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo add-apt-repository ppa:papirus/hardcode-tray
+sudo apt update
+sudo apt install sni-qt sni-qt:i386 hardcode-tray</code></pre></td></tr></table>
 </div>
-<a class="post-dummy-target" id="修改主机名"></a><h2>修改主机名</h2>
+</div></li>
+</ol>
+
+<a class="post-dummy-target" id="开机自动挂载硬盘"></a><h2>开机自动挂载硬盘</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
@@ -214,96 +386,21 @@ usermod -g sudo ubuntu</code></pre></td></tr></table>
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">nano /etc/hostname
-<span class="c1">#改为想要的</span>
-nano /etc/hosts
-<span class="c1">#第一行改为127.0.0.1      localhost newname</span>
-hostname newname</code></pre></td></tr></table>
-</div>
-</div>
-<p>重启，祈祷有用</p>
-
-<a class="post-dummy-target" id="修改防火墙"></a><h2>修改防火墙</h2>
-
-<p>1.查看状态</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo ufw status</code></pre></td></tr></table>
-</div>
-</div>
-<p>2.启用</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo ufw enable</code></pre></td></tr></table>
-</div>
-</div>
-<p>3.开启/禁用</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo ufw allow<span class="p">|</span>deny <span class="o">[</span>service<span class="o">]</span>
-<span class="c1">#例：sudo ufw allow 22/tcp</span></code></pre></td></tr></table>
-</div>
-</div>
-<p>4.删除规则</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo ufw delete allow <span class="m">53</span></code></pre></td></tr></table>
-</div>
-</div>
-<p>记得开启防火墙前打开ssh端口！！！！</p>
-
-<a class="post-dummy-target" id="设置ssh密钥"></a><h2>设置ssh密钥</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">#生成密钥</span>
-ssh-keygen
-<span class="c1">#下载id_rsa密钥</span>
-<span class="c1">#把生成的公钥导入到ssh的配置文件中</span>
-cat /root/.ssh/id_rsa.pub &gt;&gt; /root/.ssh/authorized_keys 
-<span class="c1">#设置访问权限，不正确会报错</span>
-chmod <span class="m">600</span> authorized_keys
-chmod <span class="m">700</span> /root/.ssh
-
-<span class="c1">#打开ssh配置文件</span>
-nano /etc/ssh/sshd_config 
-找到PubkeyAuthentication（在第37行）,默认的话，是被注释的，并且为no，我们把注释去掉，并且改为yes //开启密钥登陆
-找到PasswordAuthentication（在第56行）,默认的话，是被注释的，并且为yes，我们把注释去掉，并且改为no //关闭密码登陆
-
-<span class="c1">#重启ssh服务</span>
-service sshd restart </code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">#查看硬盘信息</span>
+sudo blkid
+sudo nano /etc/fstab
+<span class="c1">#在末尾添加以下内容</span>
+<span class="nv">UUID</span><span class="o">=</span>B8D0FF63D0FF25F2 <span class="o">[</span>/media/sherry/C<span class="o">](</span>/media/sherry/C<span class="o">)</span> ntfs defaults <span class="m">0</span> <span class="m">1</span>
+<span class="nv">UUID</span><span class="o">=</span>A87C9D797C9D42CC <span class="o">[</span>/media/sherry/D<span class="o">](</span>/media/sherry/D<span class="o">)</span> ntfs defaults <span class="m">0</span> <span class="m">1</span>
+<span class="nv">UUID</span><span class="o">=</span>76D4C71BD4C6DD0D <span class="o">[</span>/media/sherry/G<span class="o">](</span>/media/sherry/G<span class="o">)</span> ntfs defaults <span class="m">0</span> <span class="m">1</span>
+<span class="nv">UUID</span><span class="o">=</span>FA4EE32C4EE2DFFD <span class="o">[</span>/media/sherry/F<span class="o">](</span>/media/sherry/F<span class="o">)</span> ntfs defaults <span class="m">0</span> <span class="m">1</span>
+<span class="c1">#boot重启</span></code></pre></td></tr></table>
 </div>
 </div>
         </div>
@@ -322,7 +419,7 @@ service sshd restart </code></pre></td></tr></table>
             <div class="post-info-md">
                 
                     
-                        <span><a class="link-to-markdown" href="https://hhaiyun.github.io/2019/11/vps%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE/index.md" target="_blank">阅读原始文档</a></span>
+                        <span><a class="link-to-markdown" href="https://hhaiyun.github.io/2019/11/linuximint%E5%88%9D%E5%A7%8B%E5%8C%96/index.md" target="_blank">阅读原始文档</a></span>
                     
                 
             </div>
@@ -330,13 +427,13 @@ service sshd restart </code></pre></td></tr></table>
                 
                     <span>
     
-        <a href="//twitter.com/share?url=https%3a%2f%2fhhaiyun.github.io%2f2019%2f11%2fvps%25E5%2588%259D%25E5%25A7%258B%25E9%2585%258D%25E7%25BD%25AE%2f&amp;text=vps%e5%88%9d%e5%a7%8b%e9%85%8d%e7%bd%ae&amp;via=solarpowerinncr" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fhhaiyun.github.io%2f2019%2f11%2flinuximint%25E5%2588%259D%25E5%25A7%258B%25E5%258C%2596%2f&amp;text=Linuximint%e5%88%9d%e5%a7%8b%e5%8c%96&amp;via=solarpowerinncr" target="_blank" title="Share on Twitter">
             <i class="fab fa-twitter fa-fw"></i>
         </a>
     
     
     
-        <a href="//reddit.com/submit?url=https%3a%2f%2fhhaiyun.github.io%2f2019%2f11%2fvps%25E5%2588%259D%25E5%25A7%258B%25E9%2585%258D%25E7%25BD%25AE%2f&amp;title=vps%e5%88%9d%e5%a7%8b%e9%85%8d%e7%bd%ae" target="_blank" title="Share on Reddit">
+        <a href="//reddit.com/submit?url=https%3a%2f%2fhhaiyun.github.io%2f2019%2f11%2flinuximint%25E5%2588%259D%25E5%25A7%258B%25E5%258C%2596%2f&amp;title=Linuximint%e5%88%9d%e5%a7%8b%e5%8c%96" target="_blank" title="Share on Reddit">
             <i class="fab fa-reddit fa-fw"></i>
         </a>
     
@@ -347,7 +444,7 @@ service sshd restart </code></pre></td></tr></table>
     
     
     
-        <a href="//service.weibo.com/share/share.php?url=https%3a%2f%2fhhaiyun.github.io%2f2019%2f11%2fvps%25E5%2588%259D%25E5%25A7%258B%25E9%2585%258D%25E7%25BD%25AE%2f&amp;appkey=&amp;title=vps%e5%88%9d%e5%a7%8b%e9%85%8d%e7%bd%ae" target="_blank" title="Share on Weibo">
+        <a href="//service.weibo.com/share/share.php?url=https%3a%2f%2fhhaiyun.github.io%2f2019%2f11%2flinuximint%25E5%2588%259D%25E5%25A7%258B%25E5%258C%2596%2f&amp;appkey=&amp;title=Linuximint%e5%88%9d%e5%a7%8b%e5%8c%96" target="_blank" title="Share on Weibo">
             <i class="fab fa-weibo fa-fw"></i>
         </a>
     
@@ -365,6 +462,10 @@ service sshd restart </code></pre></td></tr></table>
                         <a href="https://hhaiyun.github.io/tags/linux/"><i class="fas fa-tag fa-fw"></i>linux</a>
                     </span>
                 
+                    <span class="tag">
+                        <a href="https://hhaiyun.github.io/tags/linuxmint/"><i class="fas fa-tag fa-fw"></i>linuxmint</a>
+                    </span>
+                
             
         </section>
         <section>
@@ -374,10 +475,10 @@ service sshd restart </code></pre></td></tr></table>
 
     <div class="post-nav">
         
-            <a href="https://hhaiyun.github.io/2019/11/bashrc%E9%85%8D%E7%BD%AE/" class="prev" rel="prev" title="Bashrc配置"><i class="fas fa-angle-left fa-fw"></i>Bashrc配置</a>
+            <a href="https://hhaiyun.github.io/2019/11/vps%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE/" class="prev" rel="prev" title="vps初始配置"><i class="fas fa-angle-left fa-fw"></i>vps初始配置</a>
         
         
-            <a href="https://hhaiyun.github.io/2019/11/linuximint%E5%88%9D%E5%A7%8B%E5%8C%96/" class="next" rel="next" title="Linuximint初始化">Linuximint初始化<i class="fas fa-angle-right fa-fw"></i></a>
+            <a href="https://hhaiyun.github.io/2019/11/%E5%9C%A8%E8%B7%AF%E7%94%B1%E5%99%A8%E4%B8%8A%E6%A0%BC%E5%BC%8F%E5%8C%96u%E7%9B%98%E7%A1%AC%E7%9B%98/" class="next" rel="next" title="在路由器上格式化U盘硬盘">在路由器上格式化U盘硬盘<i class="fas fa-angle-right fa-fw"></i></a>
         
     </div>
 </div>
