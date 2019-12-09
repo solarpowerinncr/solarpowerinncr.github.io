@@ -3,7 +3,7 @@
         <url>
             <loc>https://hhaiyun.github.io/categories/</loc>
             
-                <lastmod>2019-11-27T20:23:10+08:00</lastmod>
+                <lastmod>2019-12-09T22:07:36+08:00</lastmod>
             
             
                 <changefreq>weekly</changefreq>
@@ -17,7 +17,63 @@
         <url>
             <loc>https://hhaiyun.github.io/posts/</loc>
             
-                <lastmod>2019-11-27T20:23:10+08:00</lastmod>
+                <lastmod>2019-12-09T22:07:36+08:00</lastmod>
+            
+            
+                <changefreq>weekly</changefreq>
+            
+            
+                <priority>0.5</priority>
+            
+            
+        </url>
+    
+        <url>
+            <loc>https://hhaiyun.github.io/2019/12/%E5%85%B4%E5%94%90%E4%BC%A0%E7%BD%97%E6%88%90%E5%85%A8%E6%9E%90/</loc>
+            
+                <lastmod>2019-12-09T22:07:36+08:00</lastmod>
+            
+            
+                <changefreq>weekly</changefreq>
+            
+            
+                <priority>0.5</priority>
+            
+            
+        </url>
+    
+        <url>
+            <loc>https://hhaiyun.github.io/</loc>
+            
+                <lastmod>2019-12-09T22:07:36+08:00</lastmod>
+            
+            
+                <changefreq>weekly</changefreq>
+            
+            
+                <priority>0.5</priority>
+            
+            
+        </url>
+    
+        <url>
+            <loc>https://hhaiyun.github.io/categories/%E7%BD%91%E8%B7%AF%E6%8B%BE%E9%81%97/</loc>
+            
+                <lastmod>2019-12-09T22:07:36+08:00</lastmod>
+            
+            
+                <changefreq>weekly</changefreq>
+            
+            
+                <priority>0.5</priority>
+            
+            
+        </url>
+    
+        <url>
+            <loc>https://hhaiyun.github.io/2019/12/%E7%BD%97%E6%88%90/</loc>
+            
+                <lastmod>2019-12-09T21:07:34+08:00</lastmod>
             
             
                 <changefreq>weekly</changefreq>
@@ -58,34 +114,6 @@
     
         <url>
             <loc>https://hhaiyun.github.io/tags/%E5%90%8C%E4%BA%BA/</loc>
-            
-                <lastmod>2019-11-27T20:23:10+08:00</lastmod>
-            
-            
-                <changefreq>weekly</changefreq>
-            
-            
-                <priority>0.5</priority>
-            
-            
-        </url>
-    
-        <url>
-            <loc>https://hhaiyun.github.io/</loc>
-            
-                <lastmod>2019-11-27T20:23:10+08:00</lastmod>
-            
-            
-                <changefreq>weekly</changefreq>
-            
-            
-                <priority>0.5</priority>
-            
-            
-        </url>
-    
-        <url>
-            <loc>https://hhaiyun.github.io/categories/%E7%BD%91%E8%B7%AF%E6%8B%BE%E9%81%97/</loc>
             
                 <lastmod>2019-11-27T20:23:10+08:00</lastmod>
             
@@ -365,7 +393,7 @@
         </url>
     
         <url>
-            <loc>https://hhaiyun.github.io/tags/hugo/</loc>
+            <loc>https://hhaiyun.github.io/categories/hugo/</loc>
             
                 <lastmod>2019-08-25T16:22:42+08:00</lastmod>
             
@@ -379,7 +407,7 @@
         </url>
     
         <url>
-            <loc>https://hhaiyun.github.io/categories/hugo/</loc>
+            <loc>https://hhaiyun.github.io/tags/hugo/</loc>
             
                 <lastmod>2019-08-25T16:22:42+08:00</lastmod>
             
