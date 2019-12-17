@@ -220,6 +220,9 @@ awesome icon复制：[https://fontawesome.com/cheatsheet?from=io](https://fontaw
 
 ## 安装wicd
 先安装提示器
+
+1. xfce4-notifyd
+
 ```shell
 sudo apt remove dunst
 sudo apt install xfce4-notifyd
@@ -230,6 +233,22 @@ systemctl --user start xfce4-notifyd
 #配置
 xfce4-notifyd-config
 ```
+2. dunst
+
+```shell
+//安装
+sudo apt install dunst 
+//配置文件
+wget https://raw.githubusercontent.com/dunst-project/dunst/master/dunstrc
+mkdir -p ~/.config/dunst/
+mv dunstrc  ~/.config/dunst/ 
+//修改systemd文件
+sudo nano /usr/lib/system/user/dunst.service
+//在 Service项 添加 Environment=DISPLAY=:0
+systemctl --user daemon-reload
+systemctl --user start dunst
+```
+
 安装wicd
 ```shell
 sudo apt install wicd python-wicd wicd-cli wicd-curses wicd-daemon wicd-gtk

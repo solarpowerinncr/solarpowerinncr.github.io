@@ -7,10 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Wed, 27 Nov 2019 20:14:22 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 17 Dec 2019 22:47:12 +0800</lastBuildDate>
     
 	<atom:link href="https://hhaiyun.github.io/categories/%E9%81%8D%E5%9C%B0%E6%98%AF%E5%9D%91/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SSR命令行代理</title>
+      <link>https://hhaiyun.github.io/2019/12/ssr%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BB%A3%E7%90%86/</link>
+      <pubDate>Tue, 17 Dec 2019 22:47:12 +0800</pubDate>
+      
+      <guid>https://hhaiyun.github.io/2019/12/ssr%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BB%A3%E7%90%86/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux Deploy的各种坑爹问题</title>
+      <link>https://hhaiyun.github.io/2019/12/linux-deploy%E7%9A%84%E5%90%84%E7%A7%8D%E5%9D%91%E7%88%B9%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Tue, 17 Dec 2019 21:54:52 +0800</pubDate>
+      
+      <guid>https://hhaiyun.github.io/2019/12/linux-deploy%E7%9A%84%E5%90%84%E7%A7%8D%E5%9D%91%E7%88%B9%E9%97%AE%E9%A2%98/</guid>
+      <description>&lt;p&gt;首先就是因为和安卓公用内核，所以安卓6.0及以下的内核太旧了好多软件不能用，比如docker
+然后不知为啥chroot环境下不能设置system，导致大多数需要后台的软件跑不起来&lt;/p&gt;
+
+&lt;p&gt;不过跑个caddy搭个网盘还是可以的&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>在路由器上格式化U盘硬盘</title>

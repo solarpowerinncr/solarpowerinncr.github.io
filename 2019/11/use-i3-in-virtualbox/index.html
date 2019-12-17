@@ -41,7 +41,7 @@
     
         "keywords": "linux, i3wm",
     
-    "wordcount":  2046 ,
+    "wordcount":  2118 ,
     "url": "https:\/\/hhaiyun.github.io\/2019\/11\/use-i3-in-virtualbox\/",
     
         "datePublished": "2019-11-26T16:16:01\x2b08:00",
@@ -145,7 +145,7 @@
             </div>
             <div class="post-meta-other">
                 <i class="far fa-calendar-alt fa-fw"></i><time datetime=2019-11-26>2019-11-26</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>约 2046 字&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>约 2118 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>预计阅读 5 分钟&nbsp;<span id="/2019/11/use-i3-in-virtualbox/" class="leancloud_visitors" data-flag-title="在virtualbox里折腾i3wm">
                         <i class="far fa-eye fa-fw"></i><span class=leancloud-visitors-count></span> 次阅读
                     </span>&nbsp;</div>
@@ -645,6 +645,9 @@ awesome icon复制：<a href="https://fontawesome.com/cheatsheet?from=io">https:
 <a class="post-dummy-target" id="安装wicd"></a><h2>安装wicd</h2>
 
 <p>先安装提示器</p>
+
+<ol>
+<li><p>xfce4-notifyd</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
@@ -666,7 +669,39 @@ systemctl --user start xfce4-notifyd
 <span class="c1">#配置</span>
 xfce4-notifyd-config</code></pre></td></tr></table>
 </div>
+</div></li>
+
+<li><p>dunst</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">//安装
+sudo apt install dunst 
+//配置文件
+wget https://raw.githubusercontent.com/dunst-project/dunst/master/dunstrc
+mkdir -p ~/.config/dunst/
+mv dunstrc  ~/.config/dunst/ 
+//修改systemd文件
+sudo nano /usr/lib/system/user/dunst.service
+//在 Service项 添加 <span class="nv">Environment</span><span class="o">=</span><span class="nv">DISPLAY</span><span class="o">=</span>:0
+systemctl --user daemon-reload
+systemctl --user start dunst</code></pre></td></tr></table>
 </div>
+</div></li>
+</ol>
+
 <p>安装wicd</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
