@@ -3,7 +3,21 @@
         <url>
             <loc>https://hhaiyun.github.io/categories/</loc>
             
-                <lastmod>2019-12-17T22:47:12+08:00</lastmod>
+                <lastmod>2020-02-05T19:23:53+08:00</lastmod>
+            
+            
+                <changefreq>weekly</changefreq>
+            
+            
+                <priority>0.5</priority>
+            
+            
+        </url>
+    
+        <url>
+            <loc>https://hhaiyun.github.io/2020/02/centos7%E9%9D%99%E9%BB%98%E5%AE%89%E8%A3%85oracle-database-11.2.0.1/</loc>
+            
+                <lastmod>2020-02-05T19:23:53+08:00</lastmod>
             
             
                 <changefreq>weekly</changefreq>
@@ -17,7 +31,7 @@
         <url>
             <loc>https://hhaiyun.github.io/tags/linux/</loc>
             
-                <lastmod>2019-12-17T22:47:12+08:00</lastmod>
+                <lastmod>2020-02-05T19:23:53+08:00</lastmod>
             
             
                 <changefreq>weekly</changefreq>
@@ -31,7 +45,49 @@
         <url>
             <loc>https://hhaiyun.github.io/posts/</loc>
             
-                <lastmod>2019-12-17T22:47:12+08:00</lastmod>
+                <lastmod>2020-02-05T19:23:53+08:00</lastmod>
+            
+            
+                <changefreq>weekly</changefreq>
+            
+            
+                <priority>0.5</priority>
+            
+            
+        </url>
+    
+        <url>
+            <loc>https://hhaiyun.github.io/tags/</loc>
+            
+                <lastmod>2020-02-05T19:23:53+08:00</lastmod>
+            
+            
+                <changefreq>weekly</changefreq>
+            
+            
+                <priority>0.5</priority>
+            
+            
+        </url>
+    
+        <url>
+            <loc>https://hhaiyun.github.io/</loc>
+            
+                <lastmod>2020-02-05T19:23:53+08:00</lastmod>
+            
+            
+                <changefreq>weekly</changefreq>
+            
+            
+                <priority>0.5</priority>
+            
+            
+        </url>
+    
+        <url>
+            <loc>https://hhaiyun.github.io/categories/%E9%81%8D%E5%9C%B0%E6%98%AF%E5%9D%91/</loc>
+            
+                <lastmod>2020-02-05T19:23:53+08:00</lastmod>
             
             
                 <changefreq>weekly</changefreq>
@@ -57,49 +113,7 @@
         </url>
     
         <url>
-            <loc>https://hhaiyun.github.io/tags/</loc>
-            
-                <lastmod>2019-12-17T22:47:12+08:00</lastmod>
-            
-            
-                <changefreq>weekly</changefreq>
-            
-            
-                <priority>0.5</priority>
-            
-            
-        </url>
-    
-        <url>
             <loc>https://hhaiyun.github.io/tags/%E5%B0%8A%E9%87%8D%E7%A7%91%E5%AD%A6/</loc>
-            
-                <lastmod>2019-12-17T22:47:12+08:00</lastmod>
-            
-            
-                <changefreq>weekly</changefreq>
-            
-            
-                <priority>0.5</priority>
-            
-            
-        </url>
-    
-        <url>
-            <loc>https://hhaiyun.github.io/</loc>
-            
-                <lastmod>2019-12-17T22:47:12+08:00</lastmod>
-            
-            
-                <changefreq>weekly</changefreq>
-            
-            
-                <priority>0.5</priority>
-            
-            
-        </url>
-    
-        <url>
-            <loc>https://hhaiyun.github.io/categories/%E9%81%8D%E5%9C%B0%E6%98%AF%E5%9D%91/</loc>
             
                 <lastmod>2019-12-17T22:47:12+08:00</lastmod>
             
@@ -491,7 +505,7 @@
         </url>
     
         <url>
-            <loc>https://hhaiyun.github.io/categories/hugo/</loc>
+            <loc>https://hhaiyun.github.io/tags/hugo/</loc>
             
                 <lastmod>2019-08-25T16:22:42+08:00</lastmod>
             
@@ -505,7 +519,7 @@
         </url>
     
         <url>
-            <loc>https://hhaiyun.github.io/tags/hugo/</loc>
+            <loc>https://hhaiyun.github.io/categories/hugo/</loc>
             
                 <lastmod>2019-08-25T16:22:42+08:00</lastmod>
             
