@@ -1,145 +1,110 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>linux on 网路拾遗</title>
-    <link>https://hhaiyun.github.io/tags/linux/</link>
-    <description>Recent content in linux on 网路拾遗</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
-    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Wed, 05 Feb 2020 19:23:53 +0800</lastBuildDate>
-    
-	<atom:link href="https://hhaiyun.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Centos7静默安装oracle Database 11.2.0</title>
-      <link>https://hhaiyun.github.io/2020/02/centos7%E9%9D%99%E9%BB%98%E5%AE%89%E8%A3%85oracle-database-11.2.0.1/</link>
-      <pubDate>Wed, 05 Feb 2020 19:23:53 +0800</pubDate>
-      
-      <guid>https://hhaiyun.github.io/2020/02/centos7%E9%9D%99%E9%BB%98%E5%AE%89%E8%A3%85oracle-database-11.2.0.1/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>SSR命令行代理</title>
-      <link>https://hhaiyun.github.io/2019/12/ssr%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BB%A3%E7%90%86/</link>
-      <pubDate>Tue, 17 Dec 2019 22:47:12 +0800</pubDate>
-      
-      <guid>https://hhaiyun.github.io/2019/12/ssr%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BB%A3%E7%90%86/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Rime输入法配置</title>
-      <link>https://hhaiyun.github.io/2019/12/rime%E8%BE%93%E5%85%A5%E6%B3%95%E9%85%8D%E7%BD%AE/</link>
-      <pubDate>Tue, 17 Dec 2019 22:38:38 +0800</pubDate>
-      
-      <guid>https://hhaiyun.github.io/2019/12/rime%E8%BE%93%E5%85%A5%E6%B3%95%E9%85%8D%E7%BD%AE/</guid>
-      <description>&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
-
-&lt;p&gt;ubuntu:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;sudo apt-get install fcitx fcitx-sunpinyin fcitx-configtool 
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>linux - 标签 - 网路拾遗</title>
+        <link>/tags/linux/</link>
+        <description>linux - 标签 - 网路拾遗</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 05 Feb 2020 19:23:53 &#43;0800</lastBuildDate><atom:link href="/tags/linux/" rel="self" type="application/rss+xml" /><item>
+    <title>Centos7静默安装oracle Database 11.2.0</title>
+    <link>/centos7%E9%9D%99%E9%BB%98%E5%AE%89%E8%A3%85oracle-database-11.2.0.1/</link>
+    <pubDate>Wed, 05 Feb 2020 19:23:53 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>/centos7%E9%9D%99%E9%BB%98%E5%AE%89%E8%A3%85oracle-database-11.2.0.1/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>SSR命令行代理</title>
+    <link>/ssr%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BB%A3%E7%90%86/</link>
+    <pubDate>Tue, 17 Dec 2019 22:47:12 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>/ssr%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BB%A3%E7%90%86/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Rime输入法配置</title>
+    <link>/rime%E8%BE%93%E5%85%A5%E6%B3%95%E9%85%8D%E7%BD%AE/</link>
+    <pubDate>Tue, 17 Dec 2019 22:38:38 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>/rime%E8%BE%93%E5%85%A5%E6%B3%95%E9%85%8D%E7%BD%AE/</guid>
+    <description><![CDATA[<h2 id="安装">安装</h2>
+<p>ubuntu:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">sudo apt-get install fcitx fcitx-sunpinyin fcitx-configtool 
 sudo apt-get install im-config fcitx-frontend-gtk2 fcitx-frontend-gtk3
-im-config&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;</description>
-    </item>
-    
-    <item>
-      <title>Linux Deploy的各种坑爹问题</title>
-      <link>https://hhaiyun.github.io/2019/12/linux-deploy%E7%9A%84%E5%90%84%E7%A7%8D%E5%9D%91%E7%88%B9%E9%97%AE%E9%A2%98/</link>
-      <pubDate>Tue, 17 Dec 2019 21:54:52 +0800</pubDate>
-      
-      <guid>https://hhaiyun.github.io/2019/12/linux-deploy%E7%9A%84%E5%90%84%E7%A7%8D%E5%9D%91%E7%88%B9%E9%97%AE%E9%A2%98/</guid>
-      <description>&lt;p&gt;首先就是因为和安卓公用内核，所以安卓6.0及以下的内核太旧了好多软件不能用，比如docker
-然后不知为啥chroot环境下不能设置system，导致大多数需要后台的软件跑不起来&lt;/p&gt;
-
-&lt;p&gt;不过跑个caddy搭个网盘还是可以的&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>在路由器上格式化U盘硬盘</title>
-      <link>https://hhaiyun.github.io/2019/11/%E5%9C%A8%E8%B7%AF%E7%94%B1%E5%99%A8%E4%B8%8A%E6%A0%BC%E5%BC%8F%E5%8C%96u%E7%9B%98%E7%A1%AC%E7%9B%98/</link>
-      <pubDate>Wed, 27 Nov 2019 20:14:22 +0800</pubDate>
-      
-      <guid>https://hhaiyun.github.io/2019/11/%E5%9C%A8%E8%B7%AF%E7%94%B1%E5%99%A8%E4%B8%8A%E6%A0%BC%E5%BC%8F%E5%8C%96u%E7%9B%98%E7%A1%AC%E7%9B%98/</guid>
-      <description>&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;
-
-&lt;p&gt;本教程适用于梅林、padavan、LEDE（openwrt）等固件&lt;/p&gt;
-
-&lt;p&gt;以下具体方法都基于 ext4，NTFS 相关错误不做回答&lt;/p&gt;
-
-&lt;p&gt;使用ssh连接路由器，把U盘插到路由器上&lt;/p&gt;
-
-&lt;p&gt;我们需要在命令行进行以下4步操作：&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Linuximint初始化</title>
-      <link>https://hhaiyun.github.io/2019/11/linuximint%E5%88%9D%E5%A7%8B%E5%8C%96/</link>
-      <pubDate>Wed, 27 Nov 2019 20:01:38 +0800</pubDate>
-      
-      <guid>https://hhaiyun.github.io/2019/11/linuximint%E5%88%9D%E5%A7%8B%E5%8C%96/</guid>
-      <description>&lt;h2 id=&#34;开机黑屏&#34;&gt;开机黑屏&lt;/h2&gt;
-
-&lt;p&gt;用recovery模式进，改驱动为nvidia闭源驱动&lt;/p&gt;
-
-&lt;h2 id=&#34;输入法&#34;&gt;输入法&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;安装fcitx框架 切换：ctrl+space&lt;/li&gt;
-&lt;li&gt;安装搜狗拼音,下载后双击，安装完毕后注销再登录&lt;/li&gt;
-&lt;/ol&gt;</description>
-    </item>
-    
-    <item>
-      <title>vps初始配置</title>
-      <link>https://hhaiyun.github.io/2019/11/vps%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE/</link>
-      <pubDate>Wed, 27 Nov 2019 13:07:24 +0800</pubDate>
-      
-      <guid>https://hhaiyun.github.io/2019/11/vps%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE/</guid>
-      <description>&lt;h2 id=&#34;添加用户并授予root权限&#34;&gt;添加用户并授予root权限&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;adduser ubuntu
-&lt;span class=&#34;c1&#34;&gt;#记住自己输入了啥密码&lt;/span&gt;
-usermod -g sudo ubuntu&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;</description>
-    </item>
-    
-    <item>
-      <title>Bashrc配置</title>
-      <link>https://hhaiyun.github.io/2019/11/bashrc%E9%85%8D%E7%BD%AE/</link>
-      <pubDate>Wed, 27 Nov 2019 12:57:58 +0800</pubDate>
-      
-      <guid>https://hhaiyun.github.io/2019/11/bashrc%E9%85%8D%E7%BD%AE/</guid>
-      <description>&lt;p&gt;&lt;code&gt;LS_COLORS=&#39;di=1;36:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43&#39;&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;PS1=&#39;\[\033[38;5;11m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\h:\[$(tput sgr0)\]\[\033[38;5;14m\]\w\[$(tput sgr0)\]\[\033[38;5;209m\] λ\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]&#39;&lt;/code&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>在virtualbox里折腾i3wm</title>
-      <link>https://hhaiyun.github.io/2019/11/use-i3-in-virtualbox/</link>
-      <pubDate>Tue, 26 Nov 2019 16:16:01 +0800</pubDate>
-      
-      <guid>https://hhaiyun.github.io/2019/11/use-i3-in-virtualbox/</guid>
-      <description>&lt;p&gt;选用了一个作死的版本：ubuntu mini ISO，安装的时候记得选国内源，&lt;del&gt;时区现在还没调回来&lt;/del&gt;&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+im-config
+</code></pre></td></tr></table>
+</div>
+</div>]]></description>
+</item><item>
+    <title>Linux Deploy的各种坑爹问题</title>
+    <link>/linux-deploy%E7%9A%84%E5%90%84%E7%A7%8D%E5%9D%91%E7%88%B9%E9%97%AE%E9%A2%98/</link>
+    <pubDate>Tue, 17 Dec 2019 21:54:52 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>/linux-deploy%E7%9A%84%E5%90%84%E7%A7%8D%E5%9D%91%E7%88%B9%E9%97%AE%E9%A2%98/</guid>
+    <description><![CDATA[<p>首先就是因为和安卓公用内核，所以安卓6.0及以下的内核太旧了好多软件不能用，比如docker
+然后不知为啥chroot环境下不能设置system，导致大多数需要后台的软件跑不起来</p>
+<p>不过跑个caddy搭个网盘还是可以的</p>]]></description>
+</item><item>
+    <title>在路由器上格式化U盘硬盘</title>
+    <link>/%E5%9C%A8%E8%B7%AF%E7%94%B1%E5%99%A8%E4%B8%8A%E6%A0%BC%E5%BC%8F%E5%8C%96u%E7%9B%98%E7%A1%AC%E7%9B%98/</link>
+    <pubDate>Wed, 27 Nov 2019 20:14:22 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>/%E5%9C%A8%E8%B7%AF%E7%94%B1%E5%99%A8%E4%B8%8A%E6%A0%BC%E5%BC%8F%E5%8C%96u%E7%9B%98%E7%A1%AC%E7%9B%98/</guid>
+    <description><![CDATA[<h2 id="引言">引言</h2>
+<p>本教程适用于梅林、padavan、LEDE（openwrt）等固件</p>
+<p>以下具体方法都基于 ext4，NTFS 相关错误不做回答</p>
+<p>使用ssh连接路由器，把U盘插到路由器上</p>
+<p>我们需要在命令行进行以下4步操作：</p>]]></description>
+</item><item>
+    <title>Linuximint初始化</title>
+    <link>/linuximint%E5%88%9D%E5%A7%8B%E5%8C%96/</link>
+    <pubDate>Wed, 27 Nov 2019 20:01:38 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>/linuximint%E5%88%9D%E5%A7%8B%E5%8C%96/</guid>
+    <description><![CDATA[<h2 id="开机黑屏">开机黑屏</h2>
+<p>用recovery模式进，改驱动为nvidia闭源驱动</p>
+<h2 id="输入法">输入法</h2>
+<ol>
+<li>安装fcitx框架 切换：ctrl+space</li>
+<li>安装搜狗拼音,下载后双击，安装完毕后注销再登录</li>
+</ol>]]></description>
+</item><item>
+    <title>vps初始配置</title>
+    <link>/vps%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE/</link>
+    <pubDate>Wed, 27 Nov 2019 13:07:24 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>/vps%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE/</guid>
+    <description><![CDATA[<h2 id="添加用户并授予root权限">添加用户并授予root权限</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">adduser ubuntu
+<span class="c1">#记住自己输入了啥密码</span>
+usermod -g sudo ubuntu
+</code></pre></td></tr></table>
+</div>
+</div>]]></description>
+</item><item>
+    <title>Bashrc配置</title>
+    <link>/bashrc%E9%85%8D%E7%BD%AE/</link>
+    <pubDate>Wed, 27 Nov 2019 12:57:58 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>/bashrc%E9%85%8D%E7%BD%AE/</guid>
+    <description><![CDATA[<p><code>LS_COLORS='di=1;36:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43'</code></p>
+<p><code>PS1='\[\033[38;5;11m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\h:\[$(tput sgr0)\]\[\033[38;5;14m\]\w\[$(tput sgr0)\]\[\033[38;5;209m\] λ\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]'</code></p>]]></description>
+</item><item>
+    <title>在virtualbox里折腾i3wm</title>
+    <link>/use-i3-in-virtualbox/</link>
+    <pubDate>Tue, 26 Nov 2019 16:16:01 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>/use-i3-in-virtualbox/</guid>
+    <description><![CDATA[<p>选用了一个作死的版本：ubuntu mini ISO，安装的时候记得选国内源，<del>时区现在还没调回来</del></p>]]></description>
+</item></channel>
 </rss>

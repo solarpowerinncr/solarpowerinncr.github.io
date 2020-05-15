@@ -1,49 +1,97 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>网路拾遗 on 网路拾遗</title>
-        <link>https://hhaiyun.github.io/</link>
-        <description>Recent content in 网路拾遗 on 网路拾遗</description>
-        <generator>Hugo -- gohugo.io</generator>
-        
-            <language>zh</language>
-        
-        
-        
-            <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-        
-        
-            <lastBuildDate>Mon, 09 Mar 2020 20:24:39 +0800</lastBuildDate>
-        
-        <atom:link href="https://hhaiyun.github.io/" rel="self" type="application/rss+xml" />
-        
-            <item>
-                <title>Posts</title>
-                <link>https://hhaiyun.github.io/posts/</link>
-                <pubDate>Mon, 09 Mar 2020 20:24:39 +0800</pubDate>
-                
-                <guid>https://hhaiyun.github.io/posts/</guid>
-                <description></description>
-            </item>
-        
-            <item>
-                <title>关于</title>
-                <link>https://hhaiyun.github.io/about/</link>
-                <pubDate>Fri, 02 Aug 2019 11:04:49 +0800</pubDate>
-                
-                <guid>https://hhaiyun.github.io/about/</guid>
-                <description>&lt;blockquote&gt;
-&lt;p&gt;欢迎来到我的小站呀，很高兴遇见你！🤝&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;strong&gt;🏡 关于本站&lt;/strong&gt;：存储一些年久失修的网页&amp;amp;发牢骚&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;👨‍💻 博主是谁&lt;/strong&gt;：一事无成奔三肥宅&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;🎨 兴趣爱好&lt;/strong&gt;：混吃等死&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;📬 联系我呀&lt;/strong&gt;：见头像下方&lt;/p&gt;
-</description>
-            </item>
-        
-    </channel>
+        <title>网路拾遗</title>
+        <link>/</link>
+        <description>仓鼠症患者</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 02 Aug 2019 11:04:49 &#43;0800</lastBuildDate><atom:link href="/" rel="self" type="application/rss+xml" /><item>
+    <title>[2002德足]金色的天，黑色的地</title>
+    <link>/%E9%87%91%E8%89%B2%E7%9A%84%E5%A4%A9-%E9%BB%91%E8%89%B2%E7%9A%84%E5%9C%B0/</link>
+    <pubDate>Mon, 09 Mar 2020 20:24:39 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>/%E9%87%91%E8%89%B2%E7%9A%84%E5%A4%A9-%E9%BB%91%E8%89%B2%E7%9A%84%E5%9C%B0/</guid>
+    <description><![CDATA[<blockquote>
+<p>作者：纳拉</p>
+</blockquote>]]></description>
+</item><item>
+    <title>一个大纲</title>
+    <link>/%E4%B8%80%E4%B8%AA%E5%A4%A7%E7%BA%B2/</link>
+    <pubDate>Sun, 01 Mar 2020 01:53:56 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>/%E4%B8%80%E4%B8%AA%E5%A4%A7%E7%BA%B2/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Safe House</title>
+    <link>/safe-house/</link>
+    <pubDate>Sun, 01 Mar 2020 01:52:43 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>/safe-house/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>[了不起的盖茨比]逆转</title>
+    <link>/%E4%BA%86%E4%B8%8D%E8%B5%B7%E7%9A%84%E7%9B%96%E8%8C%A8%E6%AF%94%E9%80%86%E8%BD%AC/</link>
+    <pubDate>Sat, 15 Feb 2020 20:05:57 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>/%E4%BA%86%E4%B8%8D%E8%B5%B7%E7%9A%84%E7%9B%96%E8%8C%A8%E6%AF%94%E9%80%86%E8%BD%AC/</guid>
+    <description><![CDATA[<p>作者：言白</p>]]></description>
+</item><item>
+    <title>Centos7静默安装oracle Database 11.2.0</title>
+    <link>/centos7%E9%9D%99%E9%BB%98%E5%AE%89%E8%A3%85oracle-database-11.2.0.1/</link>
+    <pubDate>Wed, 05 Feb 2020 19:23:53 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>/centos7%E9%9D%99%E9%BB%98%E5%AE%89%E8%A3%85oracle-database-11.2.0.1/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>SSR命令行代理</title>
+    <link>/ssr%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BB%A3%E7%90%86/</link>
+    <pubDate>Tue, 17 Dec 2019 22:47:12 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>/ssr%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BB%A3%E7%90%86/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Rime输入法配置</title>
+    <link>/rime%E8%BE%93%E5%85%A5%E6%B3%95%E9%85%8D%E7%BD%AE/</link>
+    <pubDate>Tue, 17 Dec 2019 22:38:38 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>/rime%E8%BE%93%E5%85%A5%E6%B3%95%E9%85%8D%E7%BD%AE/</guid>
+    <description><![CDATA[<h2 id="安装">安装</h2>
+<p>ubuntu:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">sudo apt-get install fcitx fcitx-sunpinyin fcitx-configtool 
+sudo apt-get install im-config fcitx-frontend-gtk2 fcitx-frontend-gtk3
+im-config
+</code></pre></td></tr></table>
+</div>
+</div>]]></description>
+</item><item>
+    <title>Linux Deploy的各种坑爹问题</title>
+    <link>/linux-deploy%E7%9A%84%E5%90%84%E7%A7%8D%E5%9D%91%E7%88%B9%E9%97%AE%E9%A2%98/</link>
+    <pubDate>Tue, 17 Dec 2019 21:54:52 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>/linux-deploy%E7%9A%84%E5%90%84%E7%A7%8D%E5%9D%91%E7%88%B9%E9%97%AE%E9%A2%98/</guid>
+    <description><![CDATA[<p>首先就是因为和安卓公用内核，所以安卓6.0及以下的内核太旧了好多软件不能用，比如docker
+然后不知为啥chroot环境下不能设置system，导致大多数需要后台的软件跑不起来</p>
+<p>不过跑个caddy搭个网盘还是可以的</p>]]></description>
+</item><item>
+    <title>[静临]梦境衍生</title>
+    <link>/%E6%A2%A6%E5%A2%83%E8%A1%8D%E7%94%9F/</link>
+    <pubDate>Tue, 10 Dec 2019 14:02:05 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>/%E6%A2%A6%E5%A2%83%E8%A1%8D%E7%94%9F/</guid>
+    <description><![CDATA[<p>他想这个结局是谁都会想到的，因此当那个人的遗体就躺在自己的眼前的时候也就不觉得有一点违和。</p>
+<p>折原临也，确认死亡。</p>
+<p>天下起一场雨，平和岛静雄想起一个吻，梦里纠缠无法摆脱的魇，让他有泪流满面错觉的真。</p>]]></description>
+</item><item>
+    <title>The Hand Beneath Your Head</title>
+    <link>/the-hand-beneath-your-head/</link>
+    <pubDate>Tue, 10 Dec 2019 12:15:46 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>/the-hand-beneath-your-head/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
 </rss>

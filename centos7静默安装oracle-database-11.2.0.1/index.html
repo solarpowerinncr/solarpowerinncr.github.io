@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Centos7静默安装oracle Database 11.2.0 - 网路拾遗</title>
+        <meta name="Description" content="仓鼠症患者"><meta property="og:title" content="Centos7静默安装oracle Database 11.2.0" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/centos7%E9%9D%99%E9%BB%98%E5%AE%89%E8%A3%85oracle-database-11.2.0.1/" />
+<meta property="og:image" content="/logo.png"/>
+<meta property="article:published_time" content="2020-02-05T19:23:53+08:00" />
+<meta property="article:modified_time" content="2020-02-05T19:23:53+08:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/logo.png"/>
+
+<meta name="twitter:title" content="Centos7静默安装oracle Database 11.2.0"/>
+<meta name="twitter:description" content=""/>
+<meta name="application-name" content="太阳风">
+<meta name="apple-mobile-web-app-title" content="太阳风"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="/centos7%E9%9D%99%E9%BB%98%E5%AE%89%E8%A3%85oracle-database-11.2.0.1/" /><link rel="prev" href="/ssr%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BB%A3%E7%90%86/" /><link rel="next" href="/%E4%BA%86%E4%B8%8D%E8%B5%B7%E7%9A%84%E7%9B%96%E8%8C%A8%E6%AF%94%E9%80%86%E8%BD%AC/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Centos7静默安装oracle Database 11.2.0",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "\/centos7%E9%9D%99%E9%BB%98%E5%AE%89%E8%A3%85oracle-database-11.2.0.1\/"
+        },"image": {
+                "@type": "ImageObject",
+                "url": "cover.png",
+                "width":  800 ,
+                "height":  600 
+            },"genre": "posts","keywords": "linux","wordcount":  6714 ,
+        "url": "\/centos7%E9%9D%99%E9%BB%98%E5%AE%89%E8%A3%85oracle-database-11.2.0.1\/","datePublished": "2020-02-05T19:23:53+08:00","dateModified": "2020-02-05T19:23:53+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+                "@type": "Organization",
+                "name": "太阳风",
+                "logo": {
+                "@type": "ImageObject",
+                "url": "logo.png",
+                "width":  127 ,
+                "height":  40 
+                }
+            },"author": {
+                "@type": "Person",
+                "name": "太阳风"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="网路拾遗"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>网路拾遗</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="/https:/github.com/dillonzq/LoveIt" title="GitHub"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/centos7%E9%9D%99%E9%BB%98%E5%AE%89%E8%A3%85oracle-database-11.2.0.1/" selected>简体中文</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="网路拾遗"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>网路拾遗</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="/https:/github.com/dillonzq/LoveIt" title="GitHub"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/centos7%E9%9D%99%E9%BB%98%E5%AE%89%E8%A3%85oracle-database-11.2.0.1/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Centos7静默安装oracle Database 11.2.0</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>太阳风</a></span>&nbsp;
+                    <span class="post-category">收录于<a href="/categories/%E9%81%8D%E5%9C%B0%E6%98%AF%E5%9D%91/">
+                                <i class="far fa-folder fa-fw"></i>遍地是坑
+                            </a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime=2020-02-05>2020-02-05</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 6714 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 14 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#前言">前言</a></li>
+        <li><a href="#安装前准备工作">安装前准备工作</a>
+          <ul>
+            <li><a href="#硬件需求">硬件需求</a></li>
+            <li><a href="#软件需求">软件需求</a></li>
+            <li><a href="#验证udp和tcp内核参数">验证UDP和TCP内核参数</a></li>
+            <li><a href="#安装cvuqdiskrpm">安装cvuqdisk.rpm</a></li>
+            <li><a href="#确认主机名解析">确认主机名解析</a></li>
+            <li><a href="#禁用transparent-hugepages">禁用Transparent HugePages</a></li>
+            <li><a href="#创建所需的系统组和用户">创建所需的系统组和用户</a></li>
+            <li><a href="#配置内核参数">配置内核参数</a></li>
+            <li><a href="#资源限制需求">资源限制需求</a></li>
+            <li><a href="#创建所需目录">创建所需目录</a></li>
+            <li><a href="#设置oracle用户的环境变量">设置oracle用户的环境变量</a></li>
+          </ul>
+        </li>
+        <li><a href="#静默安装">静默安装</a></li>
+        <li><a href="#配置监听程序">配置监听程序</a></li>
+        <li><a href="#静默创建数据库">静默创建数据库</a></li>
+        <li><a href="#设置oracle开机启动">设置Oracle开机启动</a></li>
+        <li><a href="#防火墙配置放开oracle的端口">防火墙配置放开Oracle的端口</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h3 id="前言">前言</h3>
+<p>oracle安装方式：GUI，silent mode，response mod
+silent mode：把所有交互参数保存在response file里，启动Oracle Universal Installer时加 -silent
+使用response文件夹里的文件定义安装需要的变量
+<code>db_install.rsp</code>：对应Oracle Configuration Manager registration
+<code>dbca.rsp</code>：对应Oracle database configuration assistant
+<code>netca.rsp</code>：对应Oracle net configuration assistant</p>
+<p>静默安装ASM:
+在创建使用Oracle ASM的数据库之前，必须运行root.sh脚本。因此，在静默方式安装期间，不能使用Oracle ASM作为数据库文件的存储选项来创建数据库。相反，您可以使用静默模式完成纯软件安装，然后在完成纯软件安装并运行root.sh脚本后，以静默模式运行Oracle Net Configuration Assistant和Database Configuration Assistant。</p>
+<h3 id="安装前准备工作">安装前准备工作</h3>
+<p>用root用户登录</p>
+<h4 id="硬件需求">硬件需求</h4>
+<p><strong>内存：</strong>
+最小 1 GB，推荐 2 GB 以上
+查看内存大小：<code>grep MemTotal /proc/meminfo</code></p>
+<p><strong>交换分区：</strong></p>
+<blockquote>
+<p>Note：
+在Linux上，HugePages功能使用内存映射文件为大型页表分配不可交换的内存。如果启用了HugePages，则应在计算交换空间之前从可用的RAM中扣除分配给HugePages的内存。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>可用内存</th>
+<th>交换分区</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 GB~2 GB</td>
+<td>1.5倍内存大小</td>
+</tr>
+<tr>
+<td>2 GB~16 GB</td>
+<td>等同内存大小</td>
+</tr>
+<tr>
+<td>超过16GB</td>
+<td>16GB</td>
+</tr>
+</tbody>
+</table>
+<p>查看交换分区大小：<code>grep SwapTotal /proc/meminfo</code>
+查看内存和交换分区：<code>free</code></p>
+<p><strong>ASM:</strong>
+从Oracle Database 11g开始，自动内存管理功能需要更多的共享内存（<code>/dev/shm</code>）和文件描述符。共享内存的大小至少应大于该计算机上每个Oracle实例的<code>MEMORY_MAX_TARGET</code>和<code>MEMORY_TARGET</code>。
+查看共享内存大小：<code>df -h /dev/shm/</code></p>
+<p>可以通过如下命令修改shm的大小：
+<code>mount -t tmpfs shmfs -o size=8g /dev/shm</code>
+为了系统重启也可以生效，需要修改<code>/etc/fstab</code>文件，添加如下内容：
+<code>shmfs /dev/shm tmpfs size=8g 0 0</code></p>
+<blockquote>
+<p>Note:
+当启用<code>LOCK_SGA</code>或在Linux上使用HugePages时，不能使用<code>MEMORY_MAX_TARGET</code>和<code>MEMORY_TARGET</code>。</p>
+</blockquote>
+<p><strong>硬盘：</strong>
+一、
+至少1GB可用空间，挂载在<code>/tmp</code>
+查看<code>/tmp</code>大小：<code>df -h /tmp</code></p>
+<p>可用空间不够时，两种办法：</p>
+<ol>
+<li>删除<code>/tmp</code>下不必要的文件</li>
+<li>配置<code>oracle</code>用户的环境时，设置<code>TMP</code>和<code>TMPDIR</code>环境变量。
+1）创建一个临时目录，并在该目录上设置适当的权限：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo mkdir /mount_point/tmp
+$ sudo chmod a+wr /mount_point/tmp
+# exit
+</code></pre></td></tr></table>
+</div>
+</div><p>2）设置<code>TMP</code>和<code>TMPDIR</code>环境变量：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ TMP=/mount_point/tmp
+$ TMPDIR=/mount_point/tmp
+$ export TMP TMPDIR
+</code></pre></td></tr></table>
+</div>
+</div><p>二、
+Linux x86-64上安装所需的Software Files和Data Files的大小</p>
+<table>
+<thead>
+<tr>
+<th>安装类型</th>
+<th>Software Files要求（GB）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enterprise Edition</td>
+<td>4.7</td>
+</tr>
+<tr>
+<td>Standard Edition</td>
+<td>4.6</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>安装类型</th>
+<th>Data Files要求（GB）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enterprise Edition</td>
+<td>1.7</td>
+</tr>
+<tr>
+<td>Standard Edition</td>
+<td>1.5</td>
+</tr>
+</tbody>
+</table>
+<p>如果选择配置自动备份，则无论是安装在file system或OracleASM磁盘组上，快速恢复区域需要额外的磁盘空间。</p>
+<h4 id="软件需求">软件需求</h4>
+<p><strong>操作系统：</strong>
+<code>cat /proc/version</code>
+Oracle Linux 7
+Red Hat Enterprise Linux 7</p>
+<p>从Oracle Database 11g Release 2 (11.2)开始，Oracle Linux 4，Oracle Linux 5，Oracle Linux 6，Red Hat Enterprise Linux 4, Red Hat Enterprise Linux 5, and Red Hat Enterprise Linux 6支持 SE Linux 功能。</p>
+<p><strong>内核:</strong>
+3.10.0-54.0.1.el7.x86_64 or later</p>
+<p><strong>软件包：</strong></p>
+<blockquote>
+<p>Note：
+从Oracle Database 11g Release 2 (11.2.0.2)开始，下表中列出的除<code>gcc-32bit-4.3</code>之外的所有32位软件包都不再需要在Linux x86-64上安装数据库，仅需要64位软件包。但是，对于11.2.0.2之前的任何Oracle Database 11g发行版，下表中列出的32位和64位软件包都是必需的。</p>
+</blockquote>
+<p>对 Oracle Linux 7 和 Red Hat Enterprise Linux 7，以下软件包必须安装：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">binutils-2.23.52.0.1-12.el7.x86_64 
+compat-libcap1-1.10-3.el7.x86_64 
+<span class="c1">#compat-libstdc++-33-3.2.3-71.el7.i686</span>
+compat-libstdc++-33-3.2.3-71.el7.x86_64
+gcc-4.8.2-3.el7.x86_64 
+gcc-c++-4.8.2-3.el7.x86_64 
+<span class="c1">#glibc-2.17-36.el7.i686</span> 
+glibc-2.17-36.el7.x86_64 
+<span class="c1">#glibc-devel-2.17-36.el7.i686</span> 
+glibc-devel-2.17-36.el7.x86_64 
+ksh
+<span class="c1">#libaio-0.3.109-9.el7.i686</span> 
+libaio-0.3.109-9.el7.x86_64 
+<span class="c1">#libaio-devel-0.3.109-9.el7.i686</span> 
+libaio-devel-0.3.109-9.el7.x86_64 
+<span class="c1">#libgcc-4.8.2-3.el7.i686</span> 
+libgcc-4.8.2-3.el7.x86_64 
+<span class="c1">#libstdc++-4.8.2-3.el7.i686</span> 
+libstdc++-4.8.2-3.el7.x86_64 
+<span class="c1">#libstdc++-devel-4.8.2-3.el7.i686</span> 
+libstdc++-devel-4.8.2-3.el7.x86_64 
+<span class="c1">#libXi-1.7.2-1.el7.i686</span> 
+libXi-1.7.2-1.el7.x86_64 
+<span class="c1">#libXtst-1.2.2-1.el7.i686</span> 
+libXtst-1.2.2-1.el7.x86_64 
+make-3.82-19.el7.x86_64 
+sysstat-10.1.5-1.el7.x86_64
+</code></pre></td></tr></table>
+</div>
+</div><p>可能需要安装：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">#Oracle ODBC Drivers</span>
+unixODBC-2.3.1-6.el7.x86_64 or later
+unixODBC-2.3.1-6.el7.i686 or later
+unixODBC-devel-2.3.1-6.el7.x86_64 or later
+unixODBC-devel-2.3.1-6.el7.i686 or later
+<span class="c1">#X11其他扩展库</span>
+libXext
+<span class="c1">#mksh是一个用于交互式和shell脚本的命令解释器</span>
+<span class="c1">#它的命令语言是一种超集sh(C)shell语言，基本上兼容原来Kom shell</span>
+mksh.x86_64
+</code></pre></td></tr></table>
+</div>
+</div><p>11.2.0.2之前</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">yum -y install binutils compat-libcap1 compat-libstdc++-33 compat-libstdc++-33*i686 compat-libstdc++-33*.devel compat-libstdc++-33 compat-libstdc++-33*.devel gcc gcc-c++ glibc glibc*.i686 glibc-devel glibc-devel*.i686 ksh libaio libaio*.i686 libaio-devel libaio-devel*.devel libgcc libgcc*.i686 libstdc++ libstdc++*.i686 libstdc++-devel libstdc++-devel*.devel libXi libXi*.i686 libXtst libXtst*.i686 make sysstat unixODBC unixODBC*.i686 unixODBC-devel unixODBC-devel*.i686 elfutils-libelf-devel
+</code></pre></td></tr></table>
+</div>
+</div><p>11.2.0.2之后</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">yum install binutils compat-libcap1 compat-libstdc++-33 gcc gcc-c++ glibc glibc-devel ksh libaio libaio-devel libgcc libstdc++ libstdc++-devel libXi libXtst  make sysstat unixODBC unixODBC-devel
+</code></pre></td></tr></table>
+</div>
+</div><p>查看软件包是否安装：<code>rpm -q package_name</code></p>
+<h4 id="验证udp和tcp内核参数">验证UDP和TCP内核参数</h4>
+<p>设置TCP / IP临时端口范围参数，以为预期的服务器工作负载提供足够的临时端口。确保将下限范围设置为9000或更高，以避免Oracle和其他服务器端口通常使用的已注册端口范围内的端口。如果该范围的下限值大于9000，且该范围足够大以应付预期的工作负荷，则可以忽略有关临时端口范围的OUI警告。
+检查当前的临时端口范围：<code>cat /proc/sys/net/ipv4/ip_local_port_range</code>
+永久修改参数：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">vim /etc/sysctl.conf
+...
+net.ipv4.ip_local_port_range = 9000 65500
+...
+#重启网络
+/etc/rc.d/init.d/network restart
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="安装cvuqdiskrpm">安装cvuqdisk.rpm</h4>
+<p>没有<code>cvuqdisk</code>，Cluster Verification Utility（CVU）找不到共享磁盘，并且在运行CVU时收到“Package cvuqdisk not installed”错误。</p>
+<blockquote>
+<p>Note:
+可以修改文件<code>oracle_home1/cv/admin/cvu_config</code>禁用CVU共享磁盘检查：<code>CV_RAW_CHECK_ENABLED =FALSE</code>
+在此示例中，<code>oracle_home1</code>是数据库安装所在的Oracle主目录。</p>
+</blockquote>
+<ol>
+<li>在安装包的rpm目录中找到cvuqdisk RPM软件包。如果安装了Oracle Grid Infrastructure，则位于<code>oracle_home1/cv/rpm</code>目录中。</li>
+<li>登录root用户</li>
+<li>查看是否已安装cvuqdisk：<code># rpm -qi cvuqdisk</code>
+如果存在已安装版本，卸载：<code># rpm -e cvuqdisk</code></li>
+<li>将环境变量<code>CVUQDISK_GRP</code>设置为拥有<code>cvuqdisk</code>的组，通常是<code>oinstall</code>，例如：<code># CVUQDISK_GRP=oinstall; export CVUQDISK_GRP</code></li>
+<li>在保存<code>cvuqdisk</code>的目录下，安装：<code>rpm -iv cvuqdisk-1.0.7-1.rpm</code></li>
+</ol>
+<h4 id="确认主机名解析">确认主机名解析</h4>
+<p>能ping通：<code>ping centos</code></p>
+<h4 id="禁用transparent-hugepages">禁用Transparent HugePages</h4>
+<p>从Red Hat Enterprise Linux 6开始，Transparent HugePages默认启用。但是，Transparent HugePages可能会导致内存分配延迟，因为内存是动态分配的。
+Oracle建议您使用标准的HugePages来增强性能。
+查看Transparent HugePages是否启用：<code>cat /sys/kernel/mm/transparent_hugepage/enabled</code>
+默认情况下,状态为always，需要调整为never</p>
+<p>关闭Transparent HugePages：</p>
+<ol>
+<li>修改<code>etc/default/grub</code>文件，添加<code>transparent_hugepage=never</code></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">GRUB_TIMEOUT=5
+GRUB_DISTRIBUTOR=&#34;$(sed &#39;s, release .*$,,g&#39; /etc/system-release)&#34;
+GRUB_DEFAULT=saved
+GRUB_DISABLE_SUBMENU=true
+GRUB_TERMINAL_OUTPUT=&#34;console&#34;
+GRUB_CMDLINE_LINUX=&#34;crashkernel=auto spectre_v2=retpoline rhgb quiet transparent_hugepage=never&#34;
+GRUB_DISABLE_RECOVERY=&#34;true&#34;
+</code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>执行生效命令<code>grub2-mkconfig -o /boot/grub2/grub.cfg</code></li>
+<li>重启reboot</li>
+</ol>
+<h4 id="创建所需的系统组和用户">创建所需的系统组和用户</h4>
+<p>安装Oracle数据库，需要以下本地系统组和用户：</p>
+<ul>
+<li>The Oracle Inventory group (typically, <code>oinstall</code>)</li>
+<li>The OSDBA group (typically, <code>dba</code>)</li>
+<li>The Oracle software owner (typically, <code>oracle</code>)</li>
+<li>The OSOPER group (optional. Typically, <code>oper</code>)
+<a href="https://www.oracle.com/technetwork/cn/articles/hunter-rac11gr2-iscsi-2-092412-zhs.html#13" target="_blank" rel="noopener noreffer">创建任务角色划分操作系统权限组、用户和目录参考</a></li>
+</ul>
+<p>查看Oracle Inventory group是否存在：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">more /etc/oraInst.loc
+</code></pre></td></tr></table>
+</div>
+</div><p>如果oraInst.loc存在，那么此命令的输出类似于以下内容：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">inventory_loc=/u01/app/oraInventory
+inst_group=oinstall
+</code></pre></td></tr></table>
+</div>
+</div><p><code>inventory_loc</code>显示Oracle Central Inventory的位置
+<code>inst_group</code>显示Oracle Inventory group的名称</p>
+<p>如不存在，创建<code>oinstall</code>和<code>dba</code>用户组：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">/usr/sbin/groupadd oinstall
+/usr/sbin/groupadd dba
+</code></pre></td></tr></table>
+</div>
+</div><p>创建<code>oracle</code>用户：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">/usr/sbin/useradd -g oinstall -G dba oracle
+</code></pre></td></tr></table>
+</div>
+</div><p>将oinstall指定为primary group，并将dba指定为secondary group。</p>
+<p>设置<code>oracle</code>的密码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">passwd oracle
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="配置内核参数">配置内核参数</h4>
+<p>最小值（如果参数的当前值大于此表中列出的值，则不更改）：</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>File</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>semmsl</td>
+<td>250</td>
+<td>/proc/sys/kernel/sem</td>
+</tr>
+<tr>
+<td>semmns</td>
+<td>32000</td>
+<td></td>
+</tr>
+<tr>
+<td>semopm</td>
+<td>100</td>
+<td></td>
+</tr>
+<tr>
+<td>semmni</td>
+<td>128</td>
+<td></td>
+</tr>
+<tr>
+<td>shmall</td>
+<td>2097152</td>
+<td>/proc/sys/kernel/shmall</td>
+</tr>
+<tr>
+<td>shmmax</td>
+<td>最小: 536870912；最大: 比物理内存小1byte；推荐：大于等于物理内存一半</td>
+<td>/proc/sys/kernel/shmmax</td>
+</tr>
+<tr>
+<td>shmmni</td>
+<td>4096</td>
+<td>/proc/sys/kernel/shmmni</td>
+</tr>
+<tr>
+<td>file-max</td>
+<td>6815744</td>
+<td>/proc/sys/fs/file-max</td>
+</tr>
+<tr>
+<td>aio-max-nr</td>
+<td>1048576 注意：该值限制了并发的未完成请求，应设置为避免I/O子系统故障</td>
+<td>/proc/sys/fs/aio-max-nr</td>
+</tr>
+<tr>
+<td>ip_local_port_range</td>
+<td>最小：9000 最大：65500</td>
+<td>/proc/sys/net/ipv4/ip_local_port_range</td>
+</tr>
+<tr>
+<td>rmem_default</td>
+<td>262144</td>
+<td>/proc/sys/net/core/rmem_default</td>
+</tr>
+<tr>
+<td>rmem_max</td>
+<td>4194304</td>
+<td>/proc/sys/net/core/rmem_max</td>
+</tr>
+<tr>
+<td>wmem_default</td>
+<td>262144</td>
+<td>/proc/sys/net/core/wmem_default</td>
+</tr>
+<tr>
+<td>wmem_max</td>
+<td>1048576</td>
+<td>/proc/sys/net/core/wmem_max</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://docs.oracle.com/cd/E11882_01/install.112/e47689/pre_install.htm#LADBI1188" target="_blank" rel="noopener noreffer">查看当前参数值</a></p>
+<p><strong>更改参数：</strong></p>
+<ol>
+<li>创建或编辑<code>/etc/sysctl.conf</code>文件，添加或编辑类似于以下行：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">fs.aio-max-nr = 1048576
+fs.file-max = 6815744
+kernel.shmall = 2097152
+kernel.shmmax = 4294967295
+kernel.shmmni = 4096
+kernel.sem = 250 32000 100 128
+net.ipv4.ip_local_port_range = 9000 65500
+net.core.rmem_default = 262144
+net.core.rmem_max = 4194304
+net.core.wmem_default = 262144
+net.core.wmem_max = 1048576
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>Note:
+对于信号量参数（kernel.sem），必须指定所有四个值。如果任何当前值大于最小值，指定较大的值。</p>
+</blockquote>
+<ol start="2">
+<li>
+<p>更改内核参数的当前值：
+<code>/sbin/sysctl -p</code>
+对比输出值以验证正确。如果值不正确，编辑<code>/etc/sysctl.conf</code>，并再次执行。</p>
+</li>
+<li>
+<p>输入<code>/sbin/sysctl -a</code>确认设置正确</p>
+</li>
+<li>
+<p>重启或<code>sysctl -p</code></p>
+</li>
+</ol>
+<h4 id="资源限制需求">资源限制需求</h4>
+<p>installation owner资源限制的建议范围</p>
+<table>
+<thead>
+<tr>
+<th>Resource Shell Limit</th>
+<th>Resource</th>
+<th>Soft Limit</th>
+<th>Hard Limit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Open file descriptors</td>
+<td>nofile</td>
+<td>at least 1024</td>
+<td>at least 65536</td>
+</tr>
+<tr>
+<td>Number of processes available to a single user</td>
+<td>nproc</td>
+<td>at least 2047</td>
+<td>at least 16384</td>
+</tr>
+<tr>
+<td>Size of the stack, segment of the process</td>
+<td>stack</td>
+<td>at least 10240 KB</td>
+<td>at least 10240 KB, and at most 32768 KB</td>
+</tr>
+</tbody>
+</table>
+<p><strong>查看资源限制：</strong></p>
+<ol>
+<li>登录安装用户<code>oracle</code></li>
+<li>检查file descriptor的软限制和硬限制，确保结果在建议范围内：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ ulimit -Sn
+1024
+$ ulimit -Hn
+4096
+
+</code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>检查用户可用进程数的软限制和硬限制，确保结果在建议范围内：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ ulimit -Su
+4096
+$ ulimit -Hu
+7268
+
+</code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>检查stack的软限制，确保结果在建议范围内：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ ulimit -Ss
+8192
+$ ulimit -Hs
+unlimited
+</code></pre></td></tr></table>
+</div>
+</div><p>如有必要，为安装用户更新<code>/etc/security/limits.conf</code>配置文件中的资源限制。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">nano /etc/security/limits.conf
+...
+oracle           soft    nproc           2047
+oracle           hard    nproc           16384
+oracle           soft    nofile          1024
+oracle           hard    nofile          65536
+oracle           soft    stack           10240
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>Note：
+如果<code>grid</code>或<code>oracle</code>用户已登录，则在注销并重新登录之后，limits.conf文件中的更改才会生效。</p>
+</blockquote>
+<h4 id="创建所需目录">创建所需目录</h4>
+<p>创建类似于以下名字的目录，并为其指定正确的所有者，组和权限：</p>
+<ul>
+<li>The Oracle base directory</li>
+<li>An optional Oracle data file directory
+The Oracle base directory必须具有3GB的可用磁盘空间，如果选择不创建单独的Oracle data file directory，则必须具有4GB的可用磁盘空间（不推荐）。
+创建Oracle base directory：</li>
+</ul>
+<ol>
+<li>查看所有挂载点</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">df -k
+</code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>选择满足条件的挂载点</li>
+<li>创建子目录，并为其设置适当的所有者，组和权限：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mkdir -p /home/oracle/app/
+chown -R oracle:oinstall /home/oracle/app/
+chmod -R 775 /home/oracle/app/
+</code></pre></td></tr></table>
+</div>
+</div><p>默认Oracle Inventory Directory：<code>ORACLE_BASE/../oraInventory</code>
+默认Oracle Home Directory：<code>ORACLE_BASE/product/11.1.0/dbhome_1</code></p>
+<h4 id="设置oracle用户的环境变量">设置oracle用户的环境变量</h4>
+<p>编辑 .bash_profile，添加：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">umask 022
+#oracle基目录
+export ORACLE_BASE=/home/oracle/app
+#oracle主目录
+export ORACLE_HOME=$ORACLE_BASE/oracle/product/11.2.0/dbhome_1
+#SID数据库名
+export ORACLE_SID=orcl
+export PATH=$PATH:$HOME/bin:$ORACLE_HOME/bin
+#export LD_LIBRARY_PATH=$ORACLE_HOME/lib:/usr/lib
+</code></pre></td></tr></table>
+</div>
+</div><p>生效：<code>source .bash_profile </code></p>
+<blockquote>
+<p>Note:
+如果设置了ORACLE_HOME环境变量，那么Oracle Universal Installer将使用它指定的值作为Oracle主目录的默认路径。如果存在ORACLE_BASE环境变量，则Oracle建议您取消设置ORACLE_HOME环境变量，并选择Oracle Universal Installer建议的默认路径。</p>
+</blockquote>
+<p>查看环境变量：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ umask
+$ env | more
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="静默安装">静默安装</h3>
+<blockquote>
+<p>Note:
+一份完整的响应文件包含数据库管理帐户和OSDBA组用户（自动备份必需）的密码。确保只有Oracle软件所有者用户才能查看或修改响应文件，或考虑在安装成功后删除它们。</p>
+</blockquote>
+<ol>
+<li>
+<p>切换oracle用户</p>
+</li>
+<li>
+<p>如果要完成响应文件模式的安装，请设置<code>DISPLAY</code>环境变量。</p>
+</li>
+<li>
+<p>unzip linux.x64_11gR2_database_1of2.zip
+unzip linux.x64_11gR2_database_1of2.zip</p>
+</li>
+<li>
+<p>修改<code>db_install.rsp</code></p>
+</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">oracle.install.option=INSTALL_DB_SWONLY
+ORACLE_HOSTNAME=localhost
+UNIX_GROUP_NAME=oinstall
+INVENTORY_LOCATION=/home/oracle/app/oraInventory
+SELECTED_LANGUAGES=en,zh_CN
+ORACLE_HOME=/home/oracle/app/product/11.2.0/dbhome_1 
+ORACLE_BASE=/home/oracle/app
+oracle.install.db.InstallEdition=EE
+oracle.install.db.isCustomInstall=true
+oracle.install.db.DBA_GROUP=dba
+oracle.install.db.OPER_GROUP=oinstall
+oracle.install.db.config.starterdb.type=GENERAL_PURPOSE
+oracle.install.db.config.starterdb.globalDBName=orcl
+oracle.install.db.config.starterdb.SID=orcl
+oracle.install.db.config.starterdb.characterSet=ZHS16GBK
+oracle.install.db.config.starterdb.memoryOption=true（自动内存管理）
+oracle.install.db.config.starterdb.memoryLimit=1800（根据实际内存设置）
+oracle.install.db.config.starterdb.installExampleSchemas=false
+oracle.install.db.config.starterdb.enableSecuritySettings=true
+oracle.install.db.config.starterdb.password.ALL=123456
+oracle.install.db.config.starterdb.control=DB_CONTROL
+oracle.install.db.config.starterdb.dbcontrol.enableEmailNotification=false
+DECLINE_SECURITY_UPDATES=true
+</code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>运行Oracle Universal Installer</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">/directory_path/runInstaller [-silent] [-noconfig] \
+ -responseFile responsefilename
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><code>-silent</code>  静默安装</li>
+<li><code>-noconfig</code> 禁止在安装过程中运行配置助手，而是执行仅软件安装。</li>
+<li><code>responsefilename</code> 响应文件的绝对路径
+例：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">./runInstaller -silent -responseFile /home/oracle/database/response/db_install.rsp
+</code></pre></td></tr></table>
+</div>
+</div><p>[WARING]可暂时忽略，此时安装程序仍在后台进行，如果出现[FATAL]，则安装程序已经停止了。
+安装需要一会儿，如果想看安装进度，可以再打开一个窗口，输出会话日志</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">tail -f 日志文件
+</code></pre></td></tr></table>
+</div>
+</div><ol start="5">
+<li>要确定静默方式安装是成功还是失败，请参考以下日志文件：
+<code>/oraInventory_location/logs/silentInstalldate_time.log</code></li>
+</ol>
+<p>两个错误：</p>
+<ul>
+<li>调用 makefile &lsquo;/home/oracle/app/product/11.2.0/dbhome_1/ctx/lib/ins_ctx.mk&rsquo; 的目标 &lsquo;install&rsquo; 时出错
+解决方法：经检查，libstdc++3.3.3 已正确安装，也就是/usr/lib64/libstdc++.so.5.0.7 /usr/lib64/libstdc++.so.5两个文件，发现可能是这两个文件有问题，换成mandriva的 libstdc++5-3.3.6-4mdv2009.0.x86_64即可，也可以用redhat上的。</li>
+<li>ins_emagent.mk 链接错误
+解决方法：
+修改<code> $ORACLE_HOME/sysman/lib/ins_emagent.mk</code>
+找到 <code>$(MK_EMAGENT_NMECTL)</code>
+改成:
+<code>$(MK_EMAGENT_NMECTL) -lnnz11</code></li>
+</ul>
+<ol start="6">
+<li>安装失败后清理
+卸载工具（deinstall）在安装介质中可用，安装后在Oracle主目录中可用。它位于<code>$ORACLE_HOME/deinstall</code>目录中。</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">deinstall -home complete path of Oracle home [-silent] [-checkonly] [-local] [-paramfile complete path of input parameter property file] [-params name1=value
+name2=value . . .] [-o complete path of directory for saving files]
+[-tmpdir complete path of temporary directory to use]
+[-logdir complete path of log directory to use] [-help]
+</code></pre></td></tr></table>
+</div>
+</div><p><a href="https://docs.oracle.com/cd/E11882_01/install.112/e47689/remove_oracle_sw.htm#LADBI1334" target="_blank" rel="noopener noreffer">参数设置</a></p>
+<ol start="7">
+<li>安装完成后如果有类似如下提示，说明安装完成</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">以下配置脚本需要以 &#34;root&#34; 用户的身份执行。
+   #!/bin/sh
+   #要运行的 Root 脚本
+ /home/oracle/app/oraInventory/orainstRoot.sh
+/home/oracle/app/oracle/product/11.2.0/db_1/root.sh
+  要执行配置脚本, 请执行以下操作:
+     1. 打开一个终端窗口
+     2. 以 &#34;root&#34; 身份登录
+     3. 运行脚本
+     4. 返回此窗口并按 &#34;Enter&#34; 键继续
+  Successfully Setup Software.
+</code></pre></td></tr></table>
+</div>
+</div><ol start="8">
+<li>使用root用户执行脚本</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">sudo su
+sh /home/oracle/app/oraInventory/orainstRoot.sh
+sh /home/oracle/app/product/11.2.0/db_1/root.sh
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="配置监听程序">配置监听程序</h3>
+<ol>
+<li>切换oracle用户</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">export ORACLE_BASE=/home/oracle/app
+export ORACLE_HOME=$ORACLE_BASE/oracle/product/11.2.0/dbhome_1
+#配置DISPLAY环境变量：export DISPLAY=本机IP:0.0
+export DISPLAY=192.168.123.82:0.0
+</code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>以静默模式运行Net Configuration Assistant</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ORACLE_HOME/bin/netca -silent -responsefile /home/oracle/database/response/netca.rsp
+
+#输出结果：
+正在对命令行参数进行语法分析:
+参数&#34;silent&#34; = true
+参数&#34;responsefile&#34; = /home/oracle/database/response/netca.rsp
+完成对命令行参数进行语法分析。
+Oracle Net Services 配置:
+完成概要文件配置。
+Oracle Net 监听程序启动:
+    正在运行监听程序控制:
+      /home/oracle/app/product/11.2.0/dbhome_1/bin/lsnrctl start LISTENER
+    监听程序控制完成。
+    监听程序已成功启动。
+监听程序配置完成。
+成功完成 Oracle Net Services 配置。退出代码是0
+</code></pre></td></tr></table>
+</div>
+</div><p>成功运行后，在<code>$ORACLE_HOME/network/admin</code>目录下生成<code>sqlnet.ora</code>和<code>listener.ora</code>两个文件。
+完成后通过命令<code>netstat -tnpl | grep 1521</code>可以查看到1521端口已开</p>
+<h3 id="静默创建数据库">静默创建数据库</h3>
+<blockquote>
+<p>See Also：
+&ldquo;Oracle ASM Configuration Assistant Command-Line Interface&rdquo; section in <a href="https://docs.oracle.com/cd/E11882_01/server.112/e18951/toc.htm" target="_blank" rel="noopener noreffer">Oracle Automatic Storage Management Administrator&rsquo;s Guide</a>
+，提供了有关以非交互方式运行Oracle ASMCA的信息</p>
+</blockquote>
+<ol>
+<li>编辑响应文件<code>response/dbca.rsp</code></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">[GENERAL]
+RESPONSEFILE_VERSION = &#34;11.2.0&#34;
+OPERATION_TYPE = &#34;createDatabase&#34;
+[CREATEDATABASE]
+GDBNAME = &#34;orcl&#34;
+SID = &#34;orcl&#34;
+TEMPLATENAME = &#34;General_Purpose.dbc&#34;
+#SYSPASSWORD = &#34;oracle&#34;
+#SYSTEMPASSWORD = &#34;oracle&#34;
+#SYSMANPASSWORD = &#34;oracle&#34;
+#DBSNMPPASSWORD = &#34;oracle&#34;
+#DATAFILEDESTINATION =/home/oracle/oradata
+RECOVERYAREADESTINATION=/data/app/oracle/fast_recovery_area
+CHARACTERSET = &#34;ZHS16GBK&#34;
+NATIONALCHARACTERSET= &#34;AL16UTF16&#34;
+AUTOMATICMEMORYMANAGEMENT = &#34;TRUE&#34;
+TOTALMEMORY = &#34;1800&#34;
+</code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>执行静默建库</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ORACLE_HOME/bin/dbca -silent -sysPassword joyin -systemPassword joyin -responseFile /home/oracle/database/response/dbca.rsp 
+</code></pre></td></tr></table>
+</div>
+</div><p>执行过程如下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">复制数据库文件
+1% 已完成
+3% 已完成
+11% 已完成
+18% 已完成
+26% 已完成
+37% 已完成
+正在创建并启动 Oracle 实例
+40% 已完成
+45% 已完成
+50% 已完成
+55% 已完成
+56% 已完成
+60% 已完成
+62% 已完成
+正在进行数据库创建
+66% 已完成
+70% 已完成
+73% 已完成
+85% 已完成
+96% 已完成
+100% 已完成
+有关详细信息, 请参阅日志文件 &#34;/home/oracle/app/cfgtoollogs/dbca/orcl/orcl.log&#34;。
+</code></pre></td></tr></table>
+</div>
+</div><p>查看进程</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">ps -ef | grep ora_ | grep -v grep
+# 执行结果
+oracle   25717     1  0 12:24 ?        00:00:00 ora_pmon_orcl
+oracle   25719     1  0 12:24 ?        00:00:01 ora_vktm_orcl
+oracle   25724     1  0 12:24 ?        00:00:00 ora_gen0_orcl
+oracle   25726     1  0 12:24 ?        00:00:00 ora_diag_orcl
+oracle   25728     1  0 12:24 ?        00:00:00 ora_dbrm_orcl
+oracle   25730     1  0 12:24 ?        00:00:00 ora_psp0_orcl
+oracle   25732     1  0 12:24 ?        00:00:00 ora_dia0_orcl
+oracle   25734     1  0 12:24 ?        00:00:00 ora_mman_orcl
+oracle   25736     1  0 12:24 ?        00:00:00 ora_dbw0_orcl
+oracle   25738     1  0 12:24 ?        00:00:00 ora_lgwr_orcl
+oracle   25740     1  0 12:24 ?        00:00:00 ora_ckpt_orcl
+oracle   25742     1  0 12:24 ?        00:00:00 ora_smon_orcl
+oracle   25744     1  0 12:24 ?        00:00:00 ora_reco_orcl
+oracle   25746     1  0 12:24 ?        00:00:00 ora_mmon_orcl
+oracle   25748     1  0 12:24 ?        00:00:00 ora_mmnl_orcl
+oracle   25750     1  0 12:24 ?        00:00:00 ora_d000_orcl
+oracle   25752     1  0 12:24 ?        00:00:00 ora_s000_orcl
+oracle   25809     1  0 12:24 ?        00:00:00 ora_qmnc_orcl
+oracle   25828     1  0 12:24 ?        00:00:00 ora_cjq0_orcl
+oracle   25834     1  0 12:24 ?        00:00:00 ora_q000_orcl
+oracle   25836     1  0 12:24 ?        00:00:00 ora_q001_orcl
+oracle   26071     1  0 12:29 ?        00:00:00 ora_smco_orcl
+</code></pre></td></tr></table>
+</div>
+</div><p>查看监听状态</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ORACLE_HOME/bin/lsnrctl status
+# 执行结果
+LSNRCTL for Linux: Version 11.2.0.1.0 - Production on 05-FEB-2020 12:32:23
+
+Copyright (c) 1991, 2009, Oracle.  All rights reserved.
+
+Connecting to (DESCRIPTION=(ADDRESS=(PROTOCOL=IPC)(KEY=EXTPROC1521)))
+STATUS of the LISTENER
+------------------------
+Alias                     LISTENER
+Version                   TNSLSNR for Linux: Version 11.2.0.1.0 - Production
+Start Date                05-FEB-2020 11:08:57
+Uptime                    0 days 1 hr. 23 min. 25 sec
+Trace Level               off
+Security                  ON: Local OS Authentication
+SNMP                      OFF
+Listener Parameter File   /home/oracle/app/product/11.2.0/dbhome_1/network/admin/listener.ora
+Listener Log File         /home/oracle/app/diag/tnslsnr/centos/listener/alert/log.xml
+Listening Endpoints Summary...
+  (DESCRIPTION=(ADDRESS=(PROTOCOL=ipc)(KEY=EXTPROC1521)))
+  (DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=centos.lan)(PORT=1521)))
+Services Summary...
+Service &#34;orcl&#34; has 1 instance(s).
+  Instance &#34;orcl&#34;, status READY, has 1 handler(s) for this service...
+Service &#34;orclXDB&#34; has 1 instance(s).
+  Instance &#34;orcl&#34;, status READY, has 1 handler(s) for this service...
+The command completed successfully
+</code></pre></td></tr></table>
+</div>
+</div><p>登录数据库：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">su oracle
+sqlplus / as sysdba
+</code></pre></td></tr></table>
+</div>
+</div><p>查看数据库版本</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">SQL&gt; select * from v$version;
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="设置oracle开机启动">设置Oracle开机启动</h3>
+<p>修改<code>$ORACLE_HOME/bin/dbstart</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">ORACLE_HOME_LISTNER=$ORACLE_HOME
+</code></pre></td></tr></table>
+</div>
+</div><p>修改<code>$ORACLE_HOME/bin/dbshut</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">ORACLE_HOME_LISTNER=$ORACLE_HOME
+</code></pre></td></tr></table>
+</div>
+</div><p>修改<code>/etc/oratab</code>
+格式如下：
+<code>$ORACLE_SID:$ORACLE_HOME:&lt;N|Y&gt;</code>
+例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">orcl:/home/oracle/app/product/11.2.0/dbhome_1:Y
+</code></pre></td></tr></table>
+</div>
+</div><p>新建文件<code>/etc/rc.d/init.d/oracle</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#! /bin/bash
+</span><span class="cp"></span><span class="c1"># oracle: Start/Stop Oracle Database 11g R2</span>
+#
+<span class="c1"># chkconfig: 345 90 10</span>
+<span class="c1"># description: The Oracle Database is an Object-Relational Database Management System.</span>
+#
+<span class="c1"># processname: oracle</span>
+. /etc/rc.d/init.d/functions
+<span class="nv">LOCKFILE</span><span class="o">=</span>/var/lock/subsys/oracle
+<span class="nv">ORACLE_HOME</span><span class="o">=</span>/data/app/oracle/product/11.2.0
+<span class="nv">ORACLE_USER</span><span class="o">=</span>oracle
+<span class="k">case</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> in
+<span class="s1">&#39;start&#39;</span><span class="o">)</span>
+   <span class="k">if</span> <span class="o">[</span> -f <span class="nv">$LOCKFILE</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+      <span class="nb">echo</span> <span class="nv">$0</span> already running.
+      <span class="nb">exit</span> <span class="m">1</span>
+   <span class="k">fi</span>
+   <span class="nb">echo</span> -n <span class="s2">$&#34;Starting Oracle Database:&#34;</span>
+   su - <span class="nv">$ORACLE_USER</span> -c <span class="s2">&#34;</span><span class="nv">$ORACLE_HOME</span><span class="s2">/bin/lsnrctl start&#34;</span>
+   su - <span class="nv">$ORACLE_USER</span> -c <span class="s2">&#34;</span><span class="nv">$ORACLE_HOME</span><span class="s2">/bin/dbstart </span><span class="nv">$ORACLE_HOME</span><span class="s2">&#34;</span>
+   su - <span class="nv">$ORACLE_USER</span> -c <span class="s2">&#34;</span><span class="nv">$ORACLE_HOME</span><span class="s2">/bin/emctl start dbconsole&#34;</span>
+   touch <span class="nv">$LOCKFILE</span>
+   <span class="p">;;</span>
+<span class="s1">&#39;stop&#39;</span><span class="o">)</span>
+   <span class="k">if</span> <span class="o">[</span> ! -f <span class="nv">$LOCKFILE</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+      <span class="nb">echo</span> <span class="nv">$0</span> already stopping.
+      <span class="nb">exit</span> <span class="m">1</span>
+   <span class="k">fi</span>
+   <span class="nb">echo</span> -n <span class="s2">$&#34;Stopping Oracle Database:&#34;</span>
+   su - <span class="nv">$ORACLE_USER</span> -c <span class="s2">&#34;</span><span class="nv">$ORACLE_HOME</span><span class="s2">/bin/lsnrctl stop&#34;</span>
+   su - <span class="nv">$ORACLE_USER</span> -c <span class="s2">&#34;</span><span class="nv">$ORACLE_HOME</span><span class="s2">/bin/dbshut&#34;</span>
+   su - <span class="nv">$ORACLE_USER</span> -c <span class="s2">&#34;</span><span class="nv">$ORACLE_HOME</span><span class="s2">/bin/emctl stop dbconsole&#34;</span>
+   rm -f <span class="nv">$LOCKFILE</span>
+   <span class="p">;;</span>
+<span class="s1">&#39;restart&#39;</span><span class="o">)</span>
+   <span class="nv">$0</span> stop
+   <span class="nv">$0</span> start
+   <span class="p">;;</span>
+<span class="s1">&#39;status&#39;</span><span class="o">)</span>
+   <span class="k">if</span> <span class="o">[</span> -f <span class="nv">$LOCKFILE</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+      <span class="nb">echo</span> <span class="nv">$0</span> started.
+      <span class="k">else</span>
+      <span class="nb">echo</span> <span class="nv">$0</span> stopped.
+   <span class="k">fi</span>
+   <span class="p">;;</span>
+*<span class="o">)</span>
+   <span class="nb">echo</span> <span class="s2">&#34;Usage: </span><span class="nv">$0</span><span class="s2"> [start|stop|status]&#34;</span>
+   <span class="nb">exit</span> <span class="m">1</span>
+<span class="k">esac</span>
+<span class="nb">exit</span> <span class="m">0</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>更改权限：<code>chmod +x /etc/init.d/oracle</code>
+开机启动oracle：<code>chkconfig oracle on</code>
+停止oracle：<code>service oracle stop</code>
+开启oracle：<code>service oracle start</code>
+启动监听：<code>lsnrctl status</code>
+启动数据库：<code>SQL&gt; statup</code></p>
+<h3 id="防火墙配置放开oracle的端口">防火墙配置放开Oracle的端口</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">firewall-cmd --zone<span class="o">=</span>public --add-port<span class="o">=</span>1521/tcp --permanent
+firewall-cmd --reload
+</code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>本文于 2020-02-05 更新</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/centos7%E9%9D%99%E9%BB%98%E5%AE%89%E8%A3%85oracle-database-11.2.0.1/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="/centos7%E9%9D%99%E9%BB%98%E5%AE%89%E8%A3%85oracle-database-11.2.0.1/" data-title="Centos7静默安装oracle Database 11.2.0" data-via="solarpowerinncr" data-hashtags="linux"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="/centos7%E9%9D%99%E9%BB%98%E5%AE%89%E8%A3%85oracle-database-11.2.0.1/" data-title="Centos7静默安装oracle Database 11.2.0"><i class="fab fa-line fa-fw"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="/centos7%E9%9D%99%E9%BB%98%E5%AE%89%E8%A3%85oracle-database-11.2.0.1/" data-title="Centos7静默安装oracle Database 11.2.0"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="/centos7%E9%9D%99%E9%BB%98%E5%AE%89%E8%A3%85oracle-database-11.2.0.1/" data-title="Centos7静默安装oracle Database 11.2.0" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="/centos7%E9%9D%99%E9%BB%98%E5%AE%89%E8%A3%85oracle-database-11.2.0.1/" data-title="Centos7静默安装oracle Database 11.2.0"><i class="fab fa-evernote fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/linux/">linux</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/ssr%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BB%A3%E7%90%86/" class="prev" rel="prev" title="SSR命令行代理"><i class="fas fa-angle-left fa-fw"></i>SSR命令行代理</a>
+            <a href="/%E4%BA%86%E4%B8%8D%E8%B5%B7%E7%9A%84%E7%9B%96%E8%8C%A8%E6%AF%94%E9%80%86%E8%BD%AC/" class="next" rel="next" title="[了不起的盖茨比]逆转">[了不起的盖茨比]逆转<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.70.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.7"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2018 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">太阳风</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript">
+    window.config = {"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"search":{"algoliaAppID":"Q2BMK7S768","algoliaIndex":"hugo-index","algoliaSearchKey":"49c4d3b658a4986f40d67dceb6718565","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};
+</script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=html5shiv%2CElement.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.0/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/object-fit-images@3.2.4/dist/ofi.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

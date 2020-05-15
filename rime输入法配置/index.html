@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Rime输入法配置 - 网路拾遗</title>
+        <meta name="Description" content="仓鼠症患者"><meta property="og:title" content="Rime输入法配置" />
+<meta property="og:description" content="安装
+ubuntu:
+
+
+1
+2
+3
+
+
+sudo apt-get install fcitx fcitx-sunpinyin fcitx-configtool 
+sudo apt-get install im-config fcitx-frontend-gtk2 fcitx-frontend-gtk3
+im-config
+
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/rime%E8%BE%93%E5%85%A5%E6%B3%95%E9%85%8D%E7%BD%AE/" />
+<meta property="og:image" content="/logo.png"/>
+<meta property="article:published_time" content="2019-12-17T22:38:38+08:00" />
+<meta property="article:modified_time" content="2019-12-17T22:38:38+08:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/logo.png"/>
+
+<meta name="twitter:title" content="Rime输入法配置"/>
+<meta name="twitter:description" content="安装
+ubuntu:
+
+
+1
+2
+3
+
+
+sudo apt-get install fcitx fcitx-sunpinyin fcitx-configtool 
+sudo apt-get install im-config fcitx-frontend-gtk2 fcitx-frontend-gtk3
+im-config
+
+
+"/>
+<meta name="application-name" content="太阳风">
+<meta name="apple-mobile-web-app-title" content="太阳风"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="/rime%E8%BE%93%E5%85%A5%E6%B3%95%E9%85%8D%E7%BD%AE/" /><link rel="prev" href="/linux-deploy%E7%9A%84%E5%90%84%E7%A7%8D%E5%9D%91%E7%88%B9%E9%97%AE%E9%A2%98/" /><link rel="next" href="/ssr%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BB%A3%E7%90%86/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Rime输入法配置",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "\/rime%E8%BE%93%E5%85%A5%E6%B3%95%E9%85%8D%E7%BD%AE\/"
+        },"image": {
+                "@type": "ImageObject",
+                "url": "cover.png",
+                "width":  800 ,
+                "height":  600 
+            },"genre": "posts","keywords": "linux","wordcount":  1150 ,
+        "url": "\/rime%E8%BE%93%E5%85%A5%E6%B3%95%E9%85%8D%E7%BD%AE\/","datePublished": "2019-12-17T22:38:38+08:00","dateModified": "2019-12-17T22:38:38+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+                "@type": "Organization",
+                "name": "太阳风",
+                "logo": {
+                "@type": "ImageObject",
+                "url": "logo.png",
+                "width":  127 ,
+                "height":  40 
+                }
+            },"author": {
+                "@type": "Person",
+                "name": "太阳风"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="网路拾遗"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>网路拾遗</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="/https:/github.com/dillonzq/LoveIt" title="GitHub"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/rime%E8%BE%93%E5%85%A5%E6%B3%95%E9%85%8D%E7%BD%AE/" selected>简体中文</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="网路拾遗"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>网路拾遗</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="/https:/github.com/dillonzq/LoveIt" title="GitHub"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/rime%E8%BE%93%E5%85%A5%E6%B3%95%E9%85%8D%E7%BD%AE/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><article class="page single"><h1 class="single-title animated flipInX">Rime输入法配置</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>太阳风</a></span>&nbsp;
+                    <span class="post-category">收录于<a href="/categories/%E9%81%8D%E5%9C%B0%E6%98%AF%E5%9D%91/">
+                                <i class="far fa-folder fa-fw"></i>遍地是坑
+                            </a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime=2019-12-17>2019-12-17</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1150 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+        </div><div class="content" id="content"><h2 id="安装">安装</h2>
+<p>ubuntu:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">sudo apt-get install fcitx fcitx-sunpinyin fcitx-configtool 
+sudo apt-get install im-config fcitx-frontend-gtk2 fcitx-frontend-gtk3
+im-config
+</code></pre></td></tr></table>
+</div>
+</div><p>arch:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">pacman -S fcitx fcitx-im fcitx-configtool
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="安装中文字体">安装中文字体</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">sudo pacman -S ttf-dejavu wqy-microhei
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="添加对-gtkqt的支持">添加对 gtk、qt的支持</h2>
+<p>nano ~/.xprofile</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">#export LC_ALL=“zh_CN.UTF-8”
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=&#34;@im=fcitx&#34;
+</code></pre></td></tr></table>
+</div>
+</div><p>重启即可使用fcitx，快速切换中英输入可用快捷键：ctrl+space</p>
+<h2 id="基本配置">基本配置</h2>
+<p>以下提到的配置文件皆放置或创建在<code>~/.config/fcitx/rime</code>文件夹下。</p>
+<p>在<code>~/.config/fcitx/rime/</code>中新建<code>default.custom.yaml</code></p>
+<p><strong>注意缩进！</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="c"># default.custom.yaml</span><span class="w">
+</span><span class="w"></span><span class="c"># save it to:</span><span class="w">
+</span><span class="w"></span><span class="c">#   ~/.config/ibus/rime  (linux)</span><span class="w">
+</span><span class="w"></span><span class="c">#   ~/Library/Rime       (macos)</span><span class="w">
+</span><span class="w"></span><span class="c">#   %APPDATA%\Rime       (windows)</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="k">patch</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="k">schema_list</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- <span class="k">schema</span><span class="p">:</span><span class="w"> </span>luna_pinyin_simp<span class="w">          </span><span class="c"># 朙月拼音</span><span class="w">
+</span><span class="w">    </span>- <span class="k">schema</span><span class="p">:</span><span class="w"> </span>double_pinyin<span class="w">        </span><span class="c"># 自然碼雙拼</span><span class="w">
+</span><span class="w">
+</span><span class="w">  </span><span class="s2">&#34;ascii_composer/switch_key&#34;</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="k">Caps_Lock</span><span class="p">:</span><span class="w"> </span>noop<span class="w">
+</span><span class="w">    </span><span class="k">Shift_L</span><span class="p">:</span><span class="w"> </span>commit_code<span class="w"> </span><span class="c"># 左Shift上屏编码并切换为英文状态，inline_ascii 设[&gt;</span><span class="w">
+</span><span class="w">    </span><span class="k">Shift_R</span><span class="p">:</span><span class="w"> </span>inline_ascii<span class="w"> </span><span class="c"># 不上屏，字符转变为英文输入，按Enter键英文字符上[&gt;</span><span class="w">
+</span><span class="w">
+</span><span class="w">  </span><span class="s2">&#34;punctuator/full_shape&#34;</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="k">&#34;/&#34;: </span><span class="s2">&#34;/&#34;</span><span class="w">
+</span><span class="w">  </span><span class="s2">&#34;punctuator/half_shape&#34;</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="k">&#34;/&#34;: </span><span class="s2">&#34;/&#34;</span><span class="w">
+</span><span class="w">
+</span><span class="w">  </span><span class="k">&#34;menu/page_size&#34;: </span><span class="m">9</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><h2 id="皮肤">皮肤</h2>
+<h3 id="ibus-rime">ibus-rime</h3>
+<p>ibus-rime的皮肤配置写入如下文件就好</p>
+<p><code>~/.config/ibus/rime/default.custom.yaml</code></p>
+<p>记录一个配置皮肤的网页工具：https://rime.netlify.com/</p>
+<h3 id="fcitx-rime">fcitx-rime</h3>
+<p>下载皮肤配置文件并复制到目录</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">/usr/share/fcitx/skin   ##全局设置
+~/.config/fcitx/skin    #特定用户设置
+</code></pre></td></tr></table>
+</div>
+</div><p>推荐皮肤：</p>
+<p>1.fcitx-skin-material</p>
+<p>archlinux下可以直接使用<code>pacman -S fcitx-skin-material</code>进行安装。</p>
+<p>2.mantis</p>
+<p>3.fcitx-artwork</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git clone https://github.com/fcitx/fcitx-artwork
+<span class="nb">cd</span> fcitx-artwork
+cp -r skin ~/.config/fcitx/
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="扩展词库">扩展词库</h2>
+<p>RIME的默认词库并没有多大，因为作者希望用户在与 RIME 磨合的过程中自己积累用户词库，确实自己养起来的词库更顺手，但养词库的过程多少还是有点痛苦的，好在RIME支持扩展词库。</p>
+<p>这里使用的是 <a href="https://github.com/xiaoTaoist" target="_blank" rel="noopener noreffer">xiaoTaoist</a> 制作的词库扩展包</p>
+<p><a href="https://github.com/xiaoTaoist/rime-dict" target="_blank" rel="noopener noreffer">GitHub 地址</a>  <a href="https://github.com/Mogeko/blog-commits/releases/download/031/rime-dict.zip" target="_blank" rel="noopener noreffer">下载地址</a></p>
+<p><strong>使用方法</strong></p>
+<p>将解压出来的所以文件复制到<code>~/.config/fcitx/rime</code>文件夹下，将<code>luna_pinyin.custom.yaml</code>重命名为<code>luna_pinyin_simp.custom.yaml</code></p>
+<p>这个扩展词库的<code>luna_pinyin.custom.yaml</code>中也包含了模糊拼音的功能，按注释开启即可。</p>
+<p>右下角图标-&gt;重新部署，检查是否运行成功</p>
+<h2 id="同步">同步</h2>
+<p>打开<code>~/.config/fcitx/rime</code>下的<code>installation.yaml</code>文件，添加或修改内容参考如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">installation_id: &#34;manjaro-i3&#34; # 可以自定义 id 用来区分不同的电脑上的配置
+sync_dir: &#34;~/RimeSync&#34; # 自定义同步文件夹位置，可以将其加入到同步盘中用于同步
+</code></pre></td></tr></table>
+</div>
+</div><p>然后，部署 -&gt; 同步，你的用户配置、用户词库等都会被放在你配置的同步文件地址里。</p>
+<p>如果你换了新的电脑，只需要将同步文件拷贝过去，然后配置一下 installation.yaml 文件，执行 部署 -&gt; 同步 -&gt; 部署 ，你的 用户配置、用户词库 都回来了。</p>
+<blockquote>
+<p>参考：</p>
+<p><a href="https://mogeko.me/2018/031/" target="_blank" rel="noopener noreffer">GNU/Linux 输入法折腾笔记 (RIME)</a></p>
+<p><a href="https://10101.io/2019/01/30/rime-configuration" target="_blank" rel="noopener noreffer">Rime 输入法配置记录</a></p>
+<p><a href="https://kelvin.mbioq.com/configuring-fcitxrime-input-method-under-arch-linux.html" target="_blank" rel="noopener noreffer">在 arch linux 下 配置 fcitx-rime 输入法</a></p>
+</blockquote></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>本文于 2019-12-17 更新</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/rime%E8%BE%93%E5%85%A5%E6%B3%95%E9%85%8D%E7%BD%AE/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="/rime%E8%BE%93%E5%85%A5%E6%B3%95%E9%85%8D%E7%BD%AE/" data-title="Rime输入法配置" data-via="solarpowerinncr" data-hashtags="linux"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="/rime%E8%BE%93%E5%85%A5%E6%B3%95%E9%85%8D%E7%BD%AE/" data-title="Rime输入法配置"><i class="fab fa-line fa-fw"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="/rime%E8%BE%93%E5%85%A5%E6%B3%95%E9%85%8D%E7%BD%AE/" data-title="Rime输入法配置"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="/rime%E8%BE%93%E5%85%A5%E6%B3%95%E9%85%8D%E7%BD%AE/" data-title="Rime输入法配置" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="/rime%E8%BE%93%E5%85%A5%E6%B3%95%E9%85%8D%E7%BD%AE/" data-title="Rime输入法配置"><i class="fab fa-evernote fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/linux/">linux</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/linux-deploy%E7%9A%84%E5%90%84%E7%A7%8D%E5%9D%91%E7%88%B9%E9%97%AE%E9%A2%98/" class="prev" rel="prev" title="Linux Deploy的各种坑爹问题"><i class="fas fa-angle-left fa-fw"></i>Linux Deploy的各种坑爹问题</a>
+            <a href="/ssr%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BB%A3%E7%90%86/" class="next" rel="next" title="SSR命令行代理">SSR命令行代理<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.70.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.7"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2018 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">太阳风</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript">
+    window.config = {"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"search":{"algoliaAppID":"Q2BMK7S768","algoliaIndex":"hugo-index","algoliaSearchKey":"49c4d3b658a4986f40d67dceb6718565","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};
+</script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=html5shiv%2CElement.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.0/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/object-fit-images@3.2.4/dist/ofi.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

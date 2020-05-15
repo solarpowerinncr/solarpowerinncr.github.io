@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>在virtualbox里折腾i3wm - 网路拾遗</title>
+        <meta name="Description" content="仓鼠症患者"><meta property="og:title" content="在virtualbox里折腾i3wm" />
+<meta property="og:description" content="选用了一个作死的版本：ubuntu mini ISO，安装的时候记得选国内源，时区现在还没调回来" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/use-i3-in-virtualbox/" />
+<meta property="og:image" content="/logo.png"/>
+<meta property="article:published_time" content="2019-11-26T16:16:01+08:00" />
+<meta property="article:modified_time" content="2019-11-26T16:16:01+08:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/logo.png"/>
+
+<meta name="twitter:title" content="在virtualbox里折腾i3wm"/>
+<meta name="twitter:description" content="选用了一个作死的版本：ubuntu mini ISO，安装的时候记得选国内源，时区现在还没调回来"/>
+<meta name="application-name" content="太阳风">
+<meta name="apple-mobile-web-app-title" content="太阳风"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="/use-i3-in-virtualbox/" /><link rel="prev" href="/basic-markdown-preview/" /><link rel="next" href="/%E9%95%BF%E5%AE%89%E4%B8%80%E5%A4%9C%E9%A3%8E%E5%90%B9%E9%9B%AA/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "在virtualbox里折腾i3wm",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "\/use-i3-in-virtualbox\/"
+        },"image": {
+                "@type": "ImageObject",
+                "url": "cover.png",
+                "width":  800 ,
+                "height":  600 
+            },"genre": "posts","keywords": "linux, i3wm","wordcount":  2119 ,
+        "url": "\/use-i3-in-virtualbox\/","datePublished": "2019-11-26T16:16:01+08:00","dateModified": "2019-11-26T16:16:01+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+                "@type": "Organization",
+                "name": "太阳风",
+                "logo": {
+                "@type": "ImageObject",
+                "url": "logo.png",
+                "width":  127 ,
+                "height":  40 
+                }
+            },"author": {
+                "@type": "Person",
+                "name": "太阳风"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="网路拾遗"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>网路拾遗</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="/https:/github.com/dillonzq/LoveIt" title="GitHub"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/use-i3-in-virtualbox/" selected>简体中文</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="网路拾遗"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>网路拾遗</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="/https:/github.com/dillonzq/LoveIt" title="GitHub"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/use-i3-in-virtualbox/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">在virtualbox里折腾i3wm</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>太阳风</a></span>&nbsp;
+                    <span class="post-category">收录于<a href="/categories/%E9%81%8D%E5%9C%B0%E6%98%AF%E5%9D%91/">
+                                <i class="far fa-folder fa-fw"></i>遍地是坑
+                            </a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime=2019-11-26>2019-11-26</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2119 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 5 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#安装i3">安装i3</a></li>
+    <li><a href="#安装xinit">安装xinit</a></li>
+    <li><a href="#vb安装增强功能">VB安装增强功能</a></li>
+    <li><a href="#ubuntu自定义桌面分辨率">Ubuntu自定义桌面分辨率</a></li>
+    <li><a href="#中文输入法">中文输入法</a></li>
+    <li><a href="#安装字体">安装字体</a></li>
+    <li><a href="#gtk修改主题">gtk修改主题</a></li>
+    <li><a href="#安装mpd">安装mpd</a>
+      <ul>
+        <li><a href="#安装alsa">安装alsa</a></li>
+        <li><a href="#安装pulseaudio">安装pulseaudio</a></li>
+        <li><a href="#安装pamixer">安装pamixer</a></li>
+        <li><a href="#安装mpd并配置">安装mpd并配置：</a></li>
+      </ul>
+    </li>
+    <li><a href="#安装compton">安装compton</a></li>
+    <li><a href="#安装feh">安装feh</a></li>
+    <li><a href="#显卡驱动">显卡驱动</a></li>
+    <li><a href="#使用py3status装饰i3bar">使用py3status装饰i3bar</a></li>
+    <li><a href="#安装wicd">安装wicd</a></li>
+    <li><a href="#rofi">rofi</a></li>
+    <li><a href="#i3lock">i3lock</a></li>
+    <li><a href="#软件">软件</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>选用了一个作死的版本：ubuntu mini ISO，安装的时候记得选国内源，<del>时区现在还没调回来</del></p>
+<h2 id="安装i3">安装i3</h2>
+<p>sudo apt install i3 （i3wm i3status i3lock i3bar）</p>
+<h2 id="安装xinit">安装xinit</h2>
+<p>sudo apt install xinit
+输入startx打开桌面
+如果希望有回落环境，可以考虑安装 Xfce ( 只是核心包)，这仍然会使膨胀的最小程度：
+sudo apt install xfce4</p>
+<h2 id="vb安装增强功能">VB安装增强功能</h2>
+<p>1.mount /dev/cdrom  /mnt
+2.cd /mnt
+3../VBoxLinx**.run
+ubuntu mini里居然没有装gcc make perl git！！
+还有build-essential</p>
+<h2 id="ubuntu自定义桌面分辨率">Ubuntu自定义桌面分辨率</h2>
+<p><a href="https://www.jianshu.com/p/d278d0d24748" target="_blank" rel="noopener noreffer">https://www.jianshu.com/p/d278d0d24748</a>
+:xrandr（查看当前分辨率和所有分辨率选项）
+然后再在上面数你要设置的分辨率是第几行，比如我要设置1280*960，是在第七行
+:xrandr -s 7 就这样，设置好了</p>
+<p><del>安装ly登陆管理器
+<a href="https://github.com/cylgom/ly" target="_blank" rel="noopener noreffer">https://github.com/cylgom/ly</a>
+没看懂makefile怎么工作的，但是记得安装依赖库<code>libpam0g-dev</code>和<code>libxcb1-dev</code></del></p>
+<h2 id="中文输入法">中文输入法</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">sudo apt-get install fcitx fcitx-sunpinyin fcitx-configtool 
+sudo apt-get install im-config fcitx-frontend-gtk2 fcitx-frontend-gtk3
+im-config
+</code></pre></td></tr></table>
+</div>
+</div><p>根据提示设置默认输入法
+在<code>.bashrc</code>中加入</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">export</span> <span class="nv">GTK_IM_MODULE</span><span class="o">=</span>fcitx
+<span class="nb">export</span> <span class="nv">QT_IM_MODULE</span><span class="o">=</span>fcitx
+<span class="nb">export</span> <span class="nv">XMODIFIERS</span><span class="o">=</span><span class="s2">&#34;@im=fcitx&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>在i3config中加入<code>exec fcitx</code>
+待解决：为啥fcitx自启动和ly不能兼容？
+安装搜狗输入法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">sudo dpkg -i sogoupinyin_2.2.0.0108_amd64.deb
+sudo apt-get  -f install <span class="c1">#解决依赖</span>
+sudo dpkg -i sogoupinyin_2.2.0.0108_amd64.deb
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="安装字体">安装字体</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">sudo cp ~/Desktop/font/*.ttf /usr/local/share/fonts
+<span class="c1">#然后，改变权限</span>
+sudo chmod <span class="m">744</span> /usr/share/fonts/winFonts/*.ttf
+<span class="c1">#开始安装</span>
+<span class="nb">cd</span> /usr/share/fonts/winFonts/
+sudo mkfontscale  <span class="c1">#创建字体的fonts.scale文件，它用来控制字体旋转缩放</span>
+sudo mkfontdir  <span class="c1">#创建字体的fonts.dir文件，它用来控制字体粗斜体产生</span>
+sudo fc-cache -fv * <span class="c1">#建立字体缓存信息，也就是让系统认识雅黑</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>修改dmenu的字体</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">修改 .config/i3/config 中找到 
+bindsym $mod+d exec dmenu_run
+添加参数
+bindsym $mod+d exec dmenu_run -fn monaco
+// 以Monaco字体为例
+使用 $mod+shift+r 应用配置
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="gtk修改主题">gtk修改主题</h2>
+<p>使用lxappearance</p>
+<h2 id="安装mpd">安装mpd</h2>
+<h3 id="安装alsa">安装alsa</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">sudo apt install libasound2 libasound2-plugins alsa-base alsa-utils alsa-oss
+cat /proc/asound/version <span class="c1">#打印当前版本</span>
+alsamixer <span class="c1">#调音量</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="安装pulseaudio">安装pulseaudio</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">sudo apt-get install pulseaudio pulseaudio-utils pavucontrol
+pavucontrol <span class="c1">#调音量</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="安装pamixer">安装pamixer</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">sudo apt install libpulse-dev libboost-program-options-dev
+git clone https://github.com/cdemoulins/pamixer.git
+<span class="nb">cd</span> pamixer
+make
+ln -s pamixer ~/.local/bin/pamixer
+pacmd list-sinks <span class="p">|</span> grep name <span class="c1">#查看声卡名称</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="安装mpd并配置">安装mpd并配置：</h3>
+<p><a href="https://wiki.archlinux.org/index.php/Music_Player_Daemon_%28%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%29#%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%8B" target="_blank" rel="noopener noreffer">Archwiki</a>
+<strong>我在这里才发现.xinitc和.xprofile这俩玩意我完全没搞懂！！到底怎么启动用户下的文件</strong>
+<strong>全局配置会自动使用/etc/mpd.conf，这里使用本地配置，启动需要手动mpd ~.config/mpd/mpd.conf，为了启动需要先disable掉全局的systemctl mpd.serevice&amp;mpd.socket</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">sudo apt install mpd mpc
+sudo systemctl disable mpd.service
+mkdir ~/.config/mpd
+<span class="nb">cd</span> .config/mpd/
+cp /usr/share/doc/mpd/mpdconf.example.gz  mpd.conf.gz
+gunzip mpd.conf.gz 
+
+<span class="c1"># mpd.conf</span>
+music_directory     <span class="s2">&#34;~/music&#34;</span>
+playlist_directory      <span class="s2">&#34;~/.config/mpd/playlists&#34;</span>
+db_file         <span class="s2">&#34;~/.config/mpd/database&#34;</span>
+log_file            <span class="s2">&#34;~/.config/mpd/log&#34;</span>
+pid_file            <span class="s2">&#34;~/.config/mpd/pid&#34;</span>
+state_file          <span class="s2">&#34;~/.config/mpd/state&#34;</span>
+sticker_file            <span class="s2">&#34;~/.config/mpd/sticker.sql&#34;</span>
+bind_to_address     <span class="s2">&#34;localhost&#34;</span>
+port                <span class="s2">&#34;6600&#34;</span>
+
+input <span class="o">{</span>
+        plugin <span class="s2">&#34;curl&#34;</span>
+<span class="c1">#       proxy &#34;proxy.isp.com:8080&#34;</span>
+<span class="c1">#       proxy_user &#34;user&#34;</span>
+<span class="c1">#       proxy_password &#34;password&#34;</span>
+<span class="o">}</span>
+
+audio_output <span class="o">{</span>  <span class="c1">#配合ncmpcpp用的</span>
+    <span class="nb">type</span>                    <span class="s2">&#34;fifo&#34;</span>
+    name                    <span class="s2">&#34;my_fifo&#34;</span>
+    path                    <span class="s2">&#34;/tmp/mpd.fifo&#34;</span>
+    format                  <span class="s2">&#34;44100:16:2&#34;</span>
+<span class="o">}</span>
+
+audio_output <span class="o">{</span>
+        <span class="nb">type</span>            <span class="s2">&#34;pulse&#34;</span>
+        name            <span class="s2">&#34;pulse audio&#34;</span>
+        mixer_type       <span class="s2">&#34;software&#34;</span>
+<span class="o">}</span>
+<span class="c1">#这段貌似是关于自动更新，不用也行反正我没用</span>
+log_level            <span class="s2">&#34;verbose&#34;</span>
+auto_update    <span class="s2">&#34;yes&#34;</span>
+auto_update_depth <span class="s2">&#34;3&#34;</span>
+follow_outside_symlinks    <span class="s2">&#34;yes&#34;</span>
+follow_inside_symlinks        <span class="s2">&#34;yes&#34;</span>
+
+...
+</code></pre></td></tr></table>
+</div>
+</div><p>创建所有上述配置中提及的文件和目录</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">mkdir ~/.config/mpd/playlists
+mkdir ~/music
+touch ~/.config/mpd/<span class="o">{</span>database,log,pid,state,sticker.sql<span class="o">}</span>
+mpd --kill
+mpd ~/.config/mpd/mpd.conf <span class="c1">#重启配置</span>
+<span class="c1">#使用mpc客户端</span>
+mpc update
+mpc add sleep.mp3 
+mpc add http://relay3.slayradio.org:8000
+mpc play
+</code></pre></td></tr></table>
+</div>
+</div><p>开机自启动
+添加<code>exec --no-startup-id mpd ~/.config/mpd/mpd.conf</code>到<code>.config/i3/config</code>
+mpc常用参数：<a href="https://www.jianshu.com/p/2d5884a6d317" target="_blank" rel="noopener noreffer">https://www.jianshu.com/p/2d5884a6d317</a></p>
+<h2 id="安装compton">安装compton</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">sudo apt install compton
+nano ~/.config/compton.conf <span class="c1">#创建配置文件</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>在<code>.config/i3/config</code>里加入<code>exec --no-startup-id compton -b</code></p>
+<h2 id="安装feh">安装feh</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">sudo apt install feh
+<span class="c1">#在i3config中加入</span>
+<span class="nb">exec</span> feh --bg-scale /path/to/image.file
+</code></pre></td></tr></table>
+</div>
+</div><p>feh浏览图片功能<a href="https://www.cnblogs.com/dylancao/p/9524516.html" target="_blank" rel="noopener noreffer">看这里</a></p>
+<h2 id="显卡驱动">显卡驱动</h2>
+<p><a href="https://wiki.manjaro.org/index.php?title=Configure_Graphics_Cards#How_check_driver" target="_blank" rel="noopener noreffer">配置显卡驱动</a>
+<a href="https://link.jianshu.com/?t=https%3A%2F%2Fwiki.manjaro.org%2Findex.php%3Ftitle%3DConfigure_NVIDIA_%28non-free%29_settings_and_load_them_on_Startup" target="_blank" rel="noopener noreffer">配置nvidia闭源显卡驱动</a></p>
+<h2 id="使用py3status装饰i3bar">使用py3status装饰i3bar</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">sudo apt-get install py3status
+sudo apt-get install fonts-font-awesome
+sudo cp /etc/i3status.conf  ~/.config/i3status/config <span class="c1">#初始化配置</span>
+chown sherry:sherry ~/.config/i3status/config
+</code></pre></td></tr></table>
+</div>
+</div><p>在i3bar中加入<code>status_command py3status -c ~/.config/i3status/config</code>
+例子：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">bar {
+        font pango:Noto Sans,FontAwesome Regular  11
+        status_command py3status
+
+colors {
+    background #3C3C3C
+    statusline #FFFFFF
+    separator  #525252
+
+    focused_workspace  #629BC6 #285577 #FFFFFF
+    active_workspace   #333333 #3C3C3C #FFFFFF
+    inactive_workspace #333333 #3C3C3C #888888
+    urgent_workspace   #2F343A #904A00 #FFFFFF
+    binding_mode       #3C3C3C #904A00 #FFFFFF
+  }
+}
+</code></pre></td></tr></table>
+</div>
+</div><p>i3status配置：https://py3status.readthedocs.io/en/latest/configuration.html
+awesome icon复制：<a href="https://fontawesome.com/cheatsheet?from=io" target="_blank" rel="noopener noreffer">https://fontawesome.com/cheatsheet?from=io</a>
+在线主题颜色编辑：<a href="https://thomashunter.name/i3-configurator/" target="_blank" rel="noopener noreffer">https://thomashunter.name/i3-configurator/</a>
+模块依赖的程序：xbacklight</p>
+<h2 id="安装wicd">安装wicd</h2>
+<p>先安装提示器</p>
+<ol>
+<li>xfce4-notifyd</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">sudo apt remove dunst
+sudo apt install xfce4-notifyd
+<span class="c1">#手动运行</span>
+/usr/lib/x86_64-linux-gnu/xfce4/notifyd/xfce4-notifyd
+<span class="c1">#后台运行</span>
+systemctl --user start xfce4-notifyd
+<span class="c1">#配置</span>
+xfce4-notifyd-config
+</code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>dunst</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">//安装
+sudo apt install dunst 
+//配置文件
+wget https://raw.githubusercontent.com/dunst-project/dunst/master/dunstrc
+mkdir -p ~/.config/dunst/
+mv dunstrc  ~/.config/dunst/ 
+//修改systemd文件
+sudo nano /usr/lib/system/user/dunst.service
+//在 Service项 添加 <span class="nv">Environment</span><span class="o">=</span><span class="nv">DISPLAY</span><span class="o">=</span>:0
+systemctl --user daemon-reload
+systemctl --user start dunst
+</code></pre></td></tr></table>
+</div>
+</div><p>安装wicd</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">sudo apt install wicd python-wicd wicd-cli wicd-curses wicd-daemon wicd-gtk
+<span class="c1">#禁用各种网络管理守护进程，包括network, dhcdbd, 和 networkmanager：</span>
+systemctl stop netcfg
+systemctl stop dhcpcd@.service
+systemctl stop NetworkManager.service
+systemctl disable netcfg
+systemctl disable dhcpcd@.service
+systemctl disable NetworkManager.service
+
+sudo systemctl <span class="nb">enable</span> wicd.service
+sudo gpasswd -a <span class="nv">$USERNAME</span> users
+sudo systemctl start wicd
+</code></pre></td></tr></table>
+</div>
+</div><p>可以访问wicd的用户组可能不是 users. 检查<code>/etc/dbus-1/system.d/wicd.conf</code>中指定的用户组,并将你的用户加入该组。
+可以把wicd加入i3config：<code>exec --no-startup-id wicd-client</code></p>
+<h2 id="rofi">rofi</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">sudo apt install rofi
+mkdir ~/.config/rofi
+nano ~/.config/rofi/config
+<span class="c1">#输入以下内容：</span>
+rofi.combi-modi:    window,drun,ssh,run
+rofi.theme:         solarized
+rofi.font:          Noto Sans <span class="m">11</span>
+rofi.modi:          combi
+...
+
+<span class="c1">#在i3config中加入</span>
+bindsym <span class="nv">$mod</span>+d <span class="nb">exec</span> --no-startup-id rofi -show combi
+
+</code></pre></td></tr></table>
+</div>
+</div><p>修改桌面图标：https://www.jianshu.com/p/f25465ca5e73</p>
+<h2 id="i3lock">i3lock</h2>
+<h2 id="软件">软件</h2>
+<p><a href="https://www.douban.com/group/topic/22778587/?type=like" target="_blank" rel="noopener noreffer">超级好用的pdf阅读器推荐：Zathura</a>
+<a href="http://x-wei.github.io/TeXmacs_intro.html" target="_blank" rel="noopener noreffer">学术文章写作利器: TeXmacs介绍</a>
+Powerline
+Conky</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>本文于 2019-11-26 更新</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/use-i3-in-virtualbox/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="/use-i3-in-virtualbox/" data-title="在virtualbox里折腾i3wm" data-via="solarpowerinncr" data-hashtags="linux,i3wm"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="/use-i3-in-virtualbox/" data-title="在virtualbox里折腾i3wm"><i class="fab fa-line fa-fw"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="/use-i3-in-virtualbox/" data-title="在virtualbox里折腾i3wm"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="/use-i3-in-virtualbox/" data-title="在virtualbox里折腾i3wm" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="/use-i3-in-virtualbox/" data-title="在virtualbox里折腾i3wm"><i class="fab fa-evernote fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/linux/">linux</a>,&nbsp;<a href="/tags/i3wm/">i3wm</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/basic-markdown-preview/" class="prev" rel="prev" title="Markdown 基本语法预览"><i class="fas fa-angle-left fa-fw"></i>Markdown 基本语法预览</a>
+            <a href="/%E9%95%BF%E5%AE%89%E4%B8%80%E5%A4%9C%E9%A3%8E%E5%90%B9%E9%9B%AA/" class="next" rel="next" title="长安一夜风吹雪">长安一夜风吹雪<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.70.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.7"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2018 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">太阳风</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript">
+    window.config = {"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"search":{"algoliaAppID":"Q2BMK7S768","algoliaIndex":"hugo-index","algoliaSearchKey":"49c4d3b658a4986f40d67dceb6718565","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};
+</script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=html5shiv%2CElement.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.0/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/object-fit-images@3.2.4/dist/ofi.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
