@@ -3,7 +3,14 @@
         <title>所有文章 - 网路拾遗</title>
         <link>/posts/</link>
         <description>所有文章 | 网路拾遗</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 09 Mar 2020 20:24:39 &#43;0800</lastBuildDate><atom:link href="/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 15 May 2020 16:09:49 &#43;0800</lastBuildDate><atom:link href="/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>If</title>
+    <link>/if/</link>
+    <pubDate>Fri, 15 May 2020 16:09:49 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>/if/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>[2002德足]金色的天，黑色的地</title>
     <link>/%E9%87%91%E8%89%B2%E7%9A%84%E5%A4%A9-%E9%BB%91%E8%89%B2%E7%9A%84%E5%9C%B0/</link>
     <pubDate>Mon, 09 Mar 2020 20:24:39 &#43;0800</pubDate>
@@ -86,12 +93,5 @@ im-config
     <description><![CDATA[<p>他想这个结局是谁都会想到的，因此当那个人的遗体就躺在自己的眼前的时候也就不觉得有一点违和。</p>
 <p>折原临也，确认死亡。</p>
 <p>天下起一场雨，平和岛静雄想起一个吻，梦里纠缠无法摆脱的魇，让他有泪流满面错觉的真。</p>]]></description>
-</item><item>
-    <title>The Hand Beneath Your Head</title>
-    <link>/the-hand-beneath-your-head/</link>
-    <pubDate>Tue, 10 Dec 2019 12:15:46 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>/the-hand-beneath-your-head/</guid>
-    <description><![CDATA[]]></description>
 </item></channel>
 </rss>
