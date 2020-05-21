@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>00Q - 标签 - 网路拾遗</title>
-        <link>/tags/00q/</link>
+        <link>https://solarpowerinncr.github.io/tags/00q/</link>
         <description>00Q - 标签 - 网路拾遗</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 10 Dec 2019 12:15:46 &#43;0800</lastBuildDate><atom:link href="/tags/00q/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 10 Dec 2019 12:15:46 &#43;0800</lastBuildDate><atom:link href="https://solarpowerinncr.github.io/tags/00q/" rel="self" type="application/rss+xml" /><item>
     <title>The Hand Beneath Your Head</title>
-    <link>/the-hand-beneath-your-head/</link>
+    <link>https://solarpowerinncr.github.io/the-hand-beneath-your-head/</link>
     <pubDate>Tue, 10 Dec 2019 12:15:46 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>/the-hand-beneath-your-head/</guid>
+    <guid>https://solarpowerinncr.github.io/the-hand-beneath-your-head/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>

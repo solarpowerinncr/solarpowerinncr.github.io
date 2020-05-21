@@ -2,55 +2,39 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>/en/categories/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>https://solarpowerinncr.github.io/en/categories/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
-                        href="/categories/"
-                        /><xhtml:link
-                        rel="alternate"
-                        hreflang="fr"
-                        href="/fr/categories/"
+                        href="https://solarpowerinncr.github.io/categories/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
-                    href="/en/categories/"
+                    href="https://solarpowerinncr.github.io/en/categories/"
                     /></url><url>
-            <loc>/en/categories/documentation/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>https://solarpowerinncr.github.io/en/categories/documentation/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
-                        href="/categories/documentation/"
-                        /><xhtml:link
-                        rel="alternate"
-                        hreflang="fr"
-                        href="/fr/categories/documentation/"
+                        href="https://solarpowerinncr.github.io/categories/documentation/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
-                    href="/en/categories/documentation/"
+                    href="https://solarpowerinncr.github.io/en/categories/documentation/"
                     /></url><url>
-            <loc>/en/tags/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>https://solarpowerinncr.github.io/en/tags/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
-                        href="/tags/"
-                        /><xhtml:link
-                        rel="alternate"
-                        hreflang="fr"
-                        href="/fr/tags/"
+                        href="https://solarpowerinncr.github.io/tags/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
-                    href="/en/tags/"
+                    href="https://solarpowerinncr.github.io/en/tags/"
                     /></url><url>
-            <loc>/en/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>https://solarpowerinncr.github.io/en/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
-                        href="/"
-                        /><xhtml:link
-                        rel="alternate"
-                        hreflang="fr"
-                        href="/fr/"
+                        href="https://solarpowerinncr.github.io/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
-                    href="/en/"
+                    href="https://solarpowerinncr.github.io/en/"
                     /></url></urlset>

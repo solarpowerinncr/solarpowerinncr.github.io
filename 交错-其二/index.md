@@ -1,9 +1,6 @@
 # 交错 其二
 
 
-
-Yuri X Soap(Modern Warfare 3)
-
 <!--more-->
 
 &nbsp;

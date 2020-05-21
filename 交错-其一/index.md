@@ -3,8 +3,6 @@
 
 作者：插座板
 
-Mason X Woods(Black ops)
-
 <!--more-->
 
 &nbsp;

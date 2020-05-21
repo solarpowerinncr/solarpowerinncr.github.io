@@ -2,19 +2,14 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	
 	<sitemap>
-	   	<loc>en/sitemap.xml</loc>
+	   	<loc>https://solarpowerinncr.github.io/en/sitemap.xml</loc>
 		
 	</sitemap>
 	
 	<sitemap>
-	   	<loc>zh-cn/sitemap.xml</loc>
+	   	<loc>https://solarpowerinncr.github.io/zh-cn/sitemap.xml</loc>
 		
 	   	<lastmod>2020-05-15T16:09:49+08:00</lastmod>
-		
-	</sitemap>
-	
-	<sitemap>
-	   	<loc>fr/sitemap.xml</loc>
 		
 	</sitemap>
 	
