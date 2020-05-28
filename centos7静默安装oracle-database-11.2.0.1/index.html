@@ -34,7 +34,7 @@
                 "url": "https:\/\/solarpowerinncr.github.io\/cover.png",
                 "width":  800 ,
                 "height":  600 
-            },"genre": "posts","keywords": "linux","wordcount":  6714 ,
+            },"genre": "posts","keywords": "linux","wordcount":  6890 ,
         "url": "https:\/\/solarpowerinncr.github.io\/centos7%E9%9D%99%E9%BB%98%E5%AE%89%E8%A3%85oracle-database-11.2.0.1\/","datePublished": "2020-02-05T19:23:53+08:00","dateModified": "2020-02-05T19:23:53+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
                 "@type": "Organization",
                 "name": "太阳风",
@@ -122,7 +122,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Centos7静默安装oracle Database 11.2.0</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>太阳风</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E9%81%8D%E5%9C%B0%E6%98%AF%E5%9D%91/"><i class="far fa-folder fa-fw"></i>遍地是坑</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-02-05">2020-02-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 6714 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-02-05">2020-02-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 6890 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 14 分钟&nbsp;<span id="/centos7%E9%9D%99%E9%BB%98%E5%AE%89%E8%A3%85oracle-database-11.2.0.1/" class="leancloud_visitors" data-flag-title="Centos7静默安装oracle Database 11.2.0">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -151,7 +151,11 @@
             <li><a href="#设置oracle用户的环境变量">设置oracle用户的环境变量</a></li>
           </ul>
         </li>
-        <li><a href="#静默安装">静默安装</a></li>
+        <li><a href="#静默安装">静默安装</a>
+          <ul>
+            <li><a href="#troubleshooting">troubleshooting</a></li>
+          </ul>
+        </li>
         <li><a href="#配置监听程序">配置监听程序</a></li>
         <li><a href="#静默创建数据库">静默创建数据库</a></li>
         <li><a href="#设置oracle开机启动">设置Oracle开机启动</a></li>
@@ -161,24 +165,24 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h3 id="前言">前言</h3>
-<p>oracle安装方式：GUI，silent mode，response mod
-silent mode：把所有交互参数保存在response file里，启动Oracle Universal Installer时加 -silent
-使用response文件夹里的文件定义安装需要的变量
-<code>db_install.rsp</code>：对应Oracle Configuration Manager registration
-<code>dbca.rsp</code>：对应Oracle database configuration assistant
-<code>netca.rsp</code>：对应Oracle net configuration assistant</p>
-<p>静默安装ASM:
-在创建使用Oracle ASM的数据库之前，必须运行root.sh脚本。因此，在静默方式安装期间，不能使用Oracle ASM作为数据库文件的存储选项来创建数据库。相反，您可以使用静默模式完成纯软件安装，然后在完成纯软件安装并运行root.sh脚本后，以静默模式运行Oracle Net Configuration Assistant和Database Configuration Assistant。</p>
+<p>oracle安装方式：GUI，silent mode，response mod</p>
+<p>silent mode：把所有交互参数保存在response file里，启动Oracle Universal Installer时加 -silent</p>
+<p>使用response文件夹里的文件定义安装需要的变量</p>
+<p><code>db_install.rsp</code>：对应Oracle Configuration Manager registration</p>
+<p><code>dbca.rsp</code>：对应Oracle database configuration assistant</p>
+<p><code>netca.rsp</code>：对应Oracle net configuration assistant</p>
+<p>静默安装ASM:</p>
+<p>在创建使用Oracle ASM的数据库之前，必须运行root.sh脚本。因此，在静默方式安装期间，不能使用Oracle ASM作为数据库文件的存储选项来创建数据库。相反，您可以使用静默模式完成纯软件安装，然后在完成纯软件安装并运行root.sh脚本后，以静默模式运行Oracle Net Configuration Assistant和Database Configuration Assistant。</p>
 <h3 id="安装前准备工作">安装前准备工作</h3>
 <p>用root用户登录</p>
 <h4 id="硬件需求">硬件需求</h4>
 <p><strong>内存：</strong>
-最小 1 GB，推荐 2 GB 以上
-查看内存大小：<code>grep MemTotal /proc/meminfo</code></p>
+最小 1 GB，推荐 2 GB 以上</p>
+<p>查看内存大小：<code>grep MemTotal /proc/meminfo</code></p>
 <p><strong>交换分区：</strong></p>
 <blockquote>
-<p>Note：
-在Linux上，HugePages功能使用内存映射文件为大型页表分配不可交换的内存。如果启用了HugePages，则应在计算交换空间之前从可用的RAM中扣除分配给HugePages的内存。</p>
+<p>Note：</p>
+<p>在Linux上，HugePages功能使用内存映射文件为大型页表分配不可交换的内存。如果启用了HugePages，则应在计算交换空间之前从可用的RAM中扣除分配给HugePages的内存。</p>
 </blockquote>
 <table>
 <thead>
@@ -202,28 +206,46 @@ silent mode：把所有交互参数保存在response file里，启动Oracle Univ
 </tr>
 </tbody>
 </table>
-<p>查看交换分区大小：<code>grep SwapTotal /proc/meminfo</code>
-查看内存和交换分区：<code>free</code></p>
-<p><strong>ASM:</strong>
-从Oracle Database 11g开始，自动内存管理功能需要更多的共享内存（<code>/dev/shm</code>）和文件描述符。共享内存的大小至少应大于该计算机上每个Oracle实例的<code>MEMORY_MAX_TARGET</code>和<code>MEMORY_TARGET</code>。
-查看共享内存大小：<code>df -h /dev/shm/</code></p>
-<p>可以通过如下命令修改shm的大小：
-<code>mount -t tmpfs shmfs -o size=8g /dev/shm</code>
-为了系统重启也可以生效，需要修改<code>/etc/fstab</code>文件，添加如下内容：
-<code>shmfs /dev/shm tmpfs size=8g 0 0</code></p>
-<blockquote>
-<p>Note:
-当启用<code>LOCK_SGA</code>或在Linux上使用HugePages时，不能使用<code>MEMORY_MAX_TARGET</code>和<code>MEMORY_TARGET</code>。</p>
+<p>查看交换分区大小：<code>grep SwapTotal /proc/meminfo</code></p>
+<p>查看内存和交换分区：<code>free</code></p>
+<p><strong>ASM:</strong></p>
+<p>从Oracle Database 11g开始，自动内存管理功能需要更多的共享内存(<code>/dev/shm</code>)和文件描述符。共享内存的大小至少应大于该计算机上每个Oracle实例的<code>MEMORY_MAX_TARGET</code>和<code>MEMORY_TARGET</code>。</p>
+<p>查看共享内存大小：<code>df -h /dev/shm/</code></p>
+<p>可以通过如下命令修改shm的大小：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mount -t tmpfs shmfs -o size=8g /dev/shm
+</code></pre></td></tr></table>
+</div>
+</div><p>为了系统重启也可以生效，需要修改<code>/etc/fstab</code>文件，添加如下内容：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">shmfs /dev/shm tmpfs size=8g 0 0
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>Note:</p>
+<p>当启用<code>LOCK_SGA</code>或在Linux上使用HugePages时，不能使用<code>MEMORY_MAX_TARGET</code>和<code>MEMORY_TARGET</code>。</p>
 </blockquote>
-<p><strong>硬盘：</strong>
-一、
-至少1GB可用空间，挂载在<code>/tmp</code>
-查看<code>/tmp</code>大小：<code>df -h /tmp</code></p>
+<p><strong>硬盘：</strong></p>
+<p>一、</p>
+<p>至少1GB可用空间，挂载在<code>/tmp</code></p>
+<p>查看<code>/tmp</code>大小：<code>df -h /tmp</code></p>
 <p>可用空间不够时，两种办法：</p>
 <ol>
-<li>删除<code>/tmp</code>下不必要的文件</li>
-<li>配置<code>oracle</code>用户的环境时，设置<code>TMP</code>和<code>TMPDIR</code>环境变量。
-1）创建一个临时目录，并在该目录上设置适当的权限：</li>
+<li>
+<p>删除<code>/tmp</code>下不必要的文件</p>
+</li>
+<li>
+<p>配置<code>oracle</code>用户的环境时，设置<code>TMP</code>和<code>TMPDIR</code>环境变量。</p>
+<ol>
+<li>创建一个临时目录，并在该目录上设置适当的权限：</li>
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -237,7 +259,9 @@ $ sudo chmod a+wr /mount_point/tmp
 # exit
 </code></pre></td></tr></table>
 </div>
-</div><p>2）设置<code>TMP</code>和<code>TMPDIR</code>环境变量：</p>
+</div><ol start="2">
+<li>设置<code>TMP</code>和<code>TMPDIR</code>环境变量：</li>
+</ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -250,8 +274,10 @@ $ TMPDIR=/mount_point/tmp
 $ export TMP TMPDIR
 </code></pre></td></tr></table>
 </div>
-</div><p>二、
-Linux x86-64上安装所需的Software Files和Data Files的大小</p>
+</div></li>
+</ol>
+<p>二、</p>
+<p>Linux x86-64上安装所需的Software Files和Data Files的大小</p>
 <table>
 <thead>
 <tr>
@@ -290,17 +316,17 @@ Linux x86-64上安装所需的Software Files和Data Files的大小</p>
 </table>
 <p>如果选择配置自动备份，则无论是安装在file system或OracleASM磁盘组上，快速恢复区域需要额外的磁盘空间。</p>
 <h4 id="软件需求">软件需求</h4>
-<p><strong>操作系统：</strong>
-<code>cat /proc/version</code>
-Oracle Linux 7
-Red Hat Enterprise Linux 7</p>
+<p><strong>操作系统：</strong></p>
+<p><code>cat /proc/version</code></p>
+<p>Oracle Linux 7</p>
+<p>Red Hat Enterprise Linux 7</p>
 <p>从Oracle Database 11g Release 2 (11.2)开始，Oracle Linux 4，Oracle Linux 5，Oracle Linux 6，Red Hat Enterprise Linux 4, Red Hat Enterprise Linux 5, and Red Hat Enterprise Linux 6支持 SE Linux 功能。</p>
-<p><strong>内核:</strong>
-3.10.0-54.0.1.el7.x86_64 or later</p>
+<p><strong>内核:</strong></p>
+<p>3.10.0-54.0.1.el7.x86_64 or later</p>
 <p><strong>软件包：</strong></p>
 <blockquote>
-<p>Note：
-从Oracle Database 11g Release 2 (11.2.0.2)开始，下表中列出的除<code>gcc-32bit-4.3</code>之外的所有32位软件包都不再需要在Linux x86-64上安装数据库，仅需要64位软件包。但是，对于11.2.0.2之前的任何Oracle Database 11g发行版，下表中列出的32位和64位软件包都是必需的。</p>
+<p>Note：</p>
+<p>从Oracle Database 11g Release 2 (11.2.0.2)开始，下表中列出的除<code>gcc-32bit-4.3</code>之外的所有32位软件包都不再需要在Linux x86-64上安装数据库，仅需要64位软件包。但是，对于11.2.0.2之前的任何Oracle Database 11g发行版，下表中列出的32位和64位软件包都是必需的。</p>
 </blockquote>
 <p>对 Oracle Linux 7 和 Red Hat Enterprise Linux 7，以下软件包必须安装：</p>
 <div class="highlight"><div class="chroma">
@@ -410,8 +436,8 @@ mksh.x86_64
 </div>
 </div><p>查看软件包是否安装：<code>rpm -q package_name</code></p>
 <h4 id="验证udp和tcp内核参数">验证UDP和TCP内核参数</h4>
-<p>设置TCP / IP临时端口范围参数，以为预期的服务器工作负载提供足够的临时端口。确保将下限范围设置为9000或更高，以避免Oracle和其他服务器端口通常使用的已注册端口范围内的端口。如果该范围的下限值大于9000，且该范围足够大以应付预期的工作负荷，则可以忽略有关临时端口范围的OUI警告。
-检查当前的临时端口范围：<code>cat /proc/sys/net/ipv4/ip_local_port_range</code>
+<p>设置TCP / IP临时端口范围参数，以为预期的服务器工作负载提供足够的临时端口。确保将下限范围设置为9000或更高，以避免Oracle和其他服务器端口通常使用的已注册端口范围内的端口。如果该范围的下限值大于9000，且该范围足够大以应付预期的工作负荷，则可以忽略有关临时端口范围的OUI警告。</p>
+<p>检查当前的临时端口范围：<code>cat /proc/sys/net/ipv4/ip_local_port_range</code>
 永久修改参数：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -434,29 +460,39 @@ net.ipv4.ip_local_port_range = 9000 65500
 </div><h4 id="安装cvuqdiskrpm">安装cvuqdisk.rpm</h4>
 <p>没有<code>cvuqdisk</code>，Cluster Verification Utility（CVU）找不到共享磁盘，并且在运行CVU时收到“Package cvuqdisk not installed”错误。</p>
 <blockquote>
-<p>Note:
-可以修改文件<code>oracle_home1/cv/admin/cvu_config</code>禁用CVU共享磁盘检查：<code>CV_RAW_CHECK_ENABLED =FALSE</code>
-在此示例中，<code>oracle_home1</code>是数据库安装所在的Oracle主目录。</p>
+<p>Note:</p>
+<p>可以修改文件<code>oracle_home1/cv/admin/cvu_config</code>禁用CVU共享磁盘检查：<code>CV_RAW_CHECK_ENABLED =FALSE</code></p>
+<p>在此示例中，<code>oracle_home1</code>是数据库安装所在的Oracle主目录。</p>
 </blockquote>
 <ol>
-<li>在安装包的rpm目录中找到cvuqdisk RPM软件包。如果安装了Oracle Grid Infrastructure，则位于<code>oracle_home1/cv/rpm</code>目录中。</li>
-<li>登录root用户</li>
-<li>查看是否已安装cvuqdisk：<code># rpm -qi cvuqdisk</code>
-如果存在已安装版本，卸载：<code># rpm -e cvuqdisk</code></li>
-<li>将环境变量<code>CVUQDISK_GRP</code>设置为拥有<code>cvuqdisk</code>的组，通常是<code>oinstall</code>，例如：<code># CVUQDISK_GRP=oinstall; export CVUQDISK_GRP</code></li>
-<li>在保存<code>cvuqdisk</code>的目录下，安装：<code>rpm -iv cvuqdisk-1.0.7-1.rpm</code></li>
+<li>
+<p>在安装包的rpm目录中找到cvuqdisk RPM软件包。如果安装了Oracle Grid Infrastructure，则位于<code>oracle_home1/cv/rpm</code>目录中。</p>
+</li>
+<li>
+<p>登录root用户</p>
+</li>
+<li>
+<p>查看是否已安装cvuqdisk：<code># rpm -qi cvuqdisk</code></p>
+<p>如果存在已安装版本，卸载：<code># rpm -e cvuqdisk</code></p>
+</li>
+<li>
+<p>将环境变量<code>CVUQDISK_GRP</code>设置为拥有<code>cvuqdisk</code>的组，通常是<code>oinstall</code>，例如：<code># CVUQDISK_GRP=oinstall; export CVUQDISK_GRP</code></p>
+</li>
+<li>
+<p>在保存<code>cvuqdisk</code>的目录下，安装：<code>rpm -iv cvuqdisk-1.0.7-1.rpm</code></p>
+</li>
 </ol>
 <h4 id="确认主机名解析">确认主机名解析</h4>
 <p>能ping通：<code>ping centos</code></p>
 <h4 id="禁用transparent-hugepages">禁用Transparent HugePages</h4>
-<p>从Red Hat Enterprise Linux 6开始，Transparent HugePages默认启用。但是，Transparent HugePages可能会导致内存分配延迟，因为内存是动态分配的。
-Oracle建议您使用标准的HugePages来增强性能。
-查看Transparent HugePages是否启用：<code>cat /sys/kernel/mm/transparent_hugepage/enabled</code>
-默认情况下,状态为always，需要调整为never</p>
+<p>从Red Hat Enterprise Linux 6开始，Transparent HugePages默认启用。但是，Transparent HugePages可能会导致内存分配延迟，因为内存是动态分配的。</p>
+<p>Oracle建议您使用标准的HugePages来增强性能。</p>
+<p>查看Transparent HugePages是否启用：<code>cat /sys/kernel/mm/transparent_hugepage/enabled</code></p>
+<p>默认情况下,状态为always，需要调整为never</p>
 <p>关闭Transparent HugePages：</p>
 <ol>
-<li>修改<code>etc/default/grub</code>文件，添加<code>transparent_hugepage=never</code></li>
-</ol>
+<li>
+<p>修改<code>etc/default/grub</code>文件，添加<code>transparent_hugepage=never</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -469,7 +505,7 @@ Oracle建议您使用标准的HugePages来增强性能。
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-fallback" data-lang="fallback">GRUB_TIMEOUT=5
-GRUB_DISTRIBUTOR=&#34;$(sed &#39;s, release .*$,,g&#39; /etc/system-release)&#34;
+GRUB_DISTRIBUTOR=&#34;$(sed &#39;s, release .*$,,g&#39; /etc/system- release)&#34;
 GRUB_DEFAULT=saved
 GRUB_DISABLE_SUBMENU=true
 GRUB_TERMINAL_OUTPUT=&#34;console&#34;
@@ -477,18 +513,30 @@ GRUB_CMDLINE_LINUX=&#34;crashkernel=auto spectre_v2=retpoline rhgb quiet transpa
 GRUB_DISABLE_RECOVERY=&#34;true&#34;
 </code></pre></td></tr></table>
 </div>
-</div><ol start="2">
-<li>执行生效命令<code>grub2-mkconfig -o /boot/grub2/grub.cfg</code></li>
-<li>重启reboot</li>
+</div></li>
+<li>
+<p>执行生效命令<code>grub2-mkconfig -o /boot/grub2/grub.cfg</code></p>
+</li>
+<li>
+<p>重启reboot</p>
+</li>
 </ol>
 <h4 id="创建所需的系统组和用户">创建所需的系统组和用户</h4>
 <p>安装Oracle数据库，需要以下本地系统组和用户：</p>
 <ul>
-<li>The Oracle Inventory group (typically, <code>oinstall</code>)</li>
-<li>The OSDBA group (typically, <code>dba</code>)</li>
-<li>The Oracle software owner (typically, <code>oracle</code>)</li>
-<li>The OSOPER group (optional. Typically, <code>oper</code>)
-<a href="https://www.oracle.com/technetwork/cn/articles/hunter-rac11gr2-iscsi-2-092412-zhs.html#13" target="_blank" rel="noopener noreffer">创建任务角色划分操作系统权限组、用户和目录参考</a></li>
+<li>
+<p>The Oracle Inventory group (typically, <code>oinstall</code>)</p>
+</li>
+<li>
+<p>The OSDBA group (typically, <code>dba</code>)</p>
+</li>
+<li>
+<p>The Oracle software owner (typically, <code>oracle</code>)</p>
+</li>
+<li>
+<p>The OSOPER group (optional. Typically, <code>oper</code>)</p>
+<p><a href="https://www.oracle.com/technetwork/cn/articles/hunter-rac11gr2-iscsi-2-092412-zhs.html#13" target="_blank" rel="noopener noreffer">创建任务角色划分操作系统权限组、用户和目录参考</a></p>
+</li>
 </ul>
 <p>查看Oracle Inventory group是否存在：</p>
 <div class="highlight"><div class="chroma">
@@ -510,8 +558,8 @@ GRUB_DISABLE_RECOVERY=&#34;true&#34;
 inst_group=oinstall
 </code></pre></td></tr></table>
 </div>
-</div><p><code>inventory_loc</code>显示Oracle Central Inventory的位置
-<code>inst_group</code>显示Oracle Inventory group的名称</p>
+</div><p><code>inventory_loc</code>显示Oracle Central Inventory的位置</p>
+<p><code>inst_group</code>显示Oracle Inventory group的名称</p>
 <p>如不存在，创建<code>oinstall</code>和<code>dba</code>用户组：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -659,14 +707,14 @@ net.core.wmem_max = 1048576
 </code></pre></td></tr></table>
 </div>
 </div><blockquote>
-<p>Note:
-对于信号量参数（kernel.sem），必须指定所有四个值。如果任何当前值大于最小值，指定较大的值。</p>
+<p>Note:</p>
+<p>对于信号量参数（kernel.sem），必须指定所有四个值。如果任何当前值大于最小值，指定较大的值。</p>
 </blockquote>
 <ol start="2">
 <li>
-<p>更改内核参数的当前值：
-<code>/sbin/sysctl -p</code>
-对比输出值以验证正确。如果值不正确，编辑<code>/etc/sysctl.conf</code>，并再次执行。</p>
+<p>更改内核参数的当前值：</p>
+<p><code>/sbin/sysctl -p</code></p>
+<p>对比输出值以验证正确。如果值不正确，编辑<code>/etc/sysctl.conf</code>，并再次执行。</p>
 </li>
 <li>
 <p>输入<code>/sbin/sysctl -a</code>确认设置正确</p>
@@ -786,17 +834,21 @@ oracle           soft    stack           10240
 </code></pre></td></tr></table>
 </div>
 </div><blockquote>
-<p>Note：
-如果<code>grid</code>或<code>oracle</code>用户已登录，则在注销并重新登录之后，limits.conf文件中的更改才会生效。</p>
+<p>Note：</p>
+<p>如果<code>grid</code>或<code>oracle</code>用户已登录，则在注销并重新登录之后，limits.conf文件中的更改才会生效。</p>
 </blockquote>
 <h4 id="创建所需目录">创建所需目录</h4>
 <p>创建类似于以下名字的目录，并为其指定正确的所有者，组和权限：</p>
 <ul>
-<li>The Oracle base directory</li>
-<li>An optional Oracle data file directory
-The Oracle base directory必须具有3GB的可用磁盘空间，如果选择不创建单独的Oracle data file directory，则必须具有4GB的可用磁盘空间（不推荐）。
-创建Oracle base directory：</li>
+<li>
+<p>The Oracle base directory</p>
+</li>
+<li>
+<p>An optional Oracle data file directory</p>
+<p>The Oracle base directory必须具有3GB的可用磁盘空间，如果选择不创建单独的Oracle data file directory，则必须具有4GB的可用磁盘空间（不推荐）。</p>
+</li>
 </ul>
+<p>创建Oracle base directory：</p>
 <ol>
 <li>查看所有挂载点</li>
 </ol>
@@ -824,8 +876,10 @@ chown -R oracle:oinstall /home/oracle/app/
 chmod -R 775 /home/oracle/app/
 </code></pre></td></tr></table>
 </div>
-</div><p>默认Oracle Inventory Directory：<code>ORACLE_BASE/../oraInventory</code>
-默认Oracle Home Directory：<code>ORACLE_BASE/product/11.1.0/dbhome_1</code></p>
+</div><p>默认Oracle Inventory Directory：</p>
+<p><code>ORACLE_BASE/../oraInventory</code></p>
+<p>默认Oracle Home Directory：</p>
+<p><code>ORACLE_BASE/product/11.1.0/dbhome_1</code></p>
 <h4 id="设置oracle用户的环境变量">设置oracle用户的环境变量</h4>
 <p>编辑 .bash_profile，添加：</p>
 <div class="highlight"><div class="chroma">
@@ -845,7 +899,7 @@ chmod -R 775 /home/oracle/app/
 #oracle基目录
 export ORACLE_BASE=/home/oracle/app
 #oracle主目录
-export ORACLE_HOME=$ORACLE_BASE/oracle/product/11.2.0/dbhome_1
+export ORACLE_HOME=$ORACLE_BASE/product/11.2.0/dbhome_1
 #SID数据库名
 export ORACLE_SID=orcl
 export PATH=$PATH:$HOME/bin:$ORACLE_HOME/bin
@@ -854,8 +908,8 @@ export PATH=$PATH:$HOME/bin:$ORACLE_HOME/bin
 </div>
 </div><p>生效：<code>source .bash_profile </code></p>
 <blockquote>
-<p>Note:
-如果设置了ORACLE_HOME环境变量，那么Oracle Universal Installer将使用它指定的值作为Oracle主目录的默认路径。如果存在ORACLE_BASE环境变量，则Oracle建议您取消设置ORACLE_HOME环境变量，并选择Oracle Universal Installer建议的默认路径。</p>
+<p>Note:</p>
+<p>如果设置了ORACLE_HOME环境变量，那么Oracle Universal Installer将使用它指定的值作为Oracle主目录的默认路径。如果存在ORACLE_BASE环境变量，则Oracle建议您取消设置ORACLE_HOME环境变量，并选择Oracle Universal Installer建议的默认路径。</p>
 </blockquote>
 <p>查看环境变量：</p>
 <div class="highlight"><div class="chroma">
@@ -870,8 +924,8 @@ $ env | more
 </div>
 </div><h3 id="静默安装">静默安装</h3>
 <blockquote>
-<p>Note:
-一份完整的响应文件包含数据库管理帐户和OSDBA组用户（自动备份必需）的密码。确保只有Oracle软件所有者用户才能查看或修改响应文件，或考虑在安装成功后删除它们。</p>
+<p>Note:</p>
+<p>一份完整的响应文件包含数据库管理帐户和OSDBA组用户（自动备份必需）的密码。确保只有Oracle软件所有者用户才能查看或修改响应文件，或考虑在安装成功后删除它们。</p>
 </blockquote>
 <ol>
 <li>
@@ -879,15 +933,21 @@ $ env | more
 </li>
 <li>
 <p>如果要完成响应文件模式的安装，请设置<code>DISPLAY</code>环境变量。</p>
-</li>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">export DISPLAY=:0.0
+</code></pre></td></tr></table>
+</div>
+</div></li>
 <li>
-<p>unzip linux.x64_11gR2_database_1of2.zip
-unzip linux.x64_11gR2_database_1of2.zip</p>
+<p>unzip linux.x64_11gR2_database_1of2.zip</p>
+<p>unzip linux.x64_11gR2_database_1of2.zip</p>
 </li>
 <li>
 <p>修改<code>db_install.rsp</code></p>
-</li>
-</ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -940,9 +1000,9 @@ oracle.install.db.config.starterdb.dbcontrol.enableEmailNotification=false
 DECLINE_SECURITY_UPDATES=true
 </code></pre></td></tr></table>
 </div>
-</div><ol start="4">
-<li>运行Oracle Universal Installer</li>
-</ol>
+</div></li>
+<li>
+<p>运行Oracle Universal Installer</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -950,15 +1010,15 @@ DECLINE_SECURITY_UPDATES=true
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-fallback" data-lang="fallback">/directory_path/runInstaller [-silent] [-noconfig] \
- -responseFile responsefilename
+-responseFile responsefilename
 </code></pre></td></tr></table>
 </div>
 </div><ul>
 <li><code>-silent</code>  静默安装</li>
 <li><code>-noconfig</code> 禁止在安装过程中运行配置助手，而是执行仅软件安装。</li>
-<li><code>responsefilename</code> 响应文件的绝对路径
-例：</li>
+<li><code>responsefilename</code> 响应文件的绝对路径</li>
 </ul>
+<p>例：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -967,8 +1027,8 @@ DECLINE_SECURITY_UPDATES=true
 <pre class="chroma"><code class="language-fallback" data-lang="fallback">./runInstaller -silent -responseFile /home/oracle/database/response/db_install.rsp
 </code></pre></td></tr></table>
 </div>
-</div><p>[WARING]可暂时忽略，此时安装程序仍在后台进行，如果出现[FATAL]，则安装程序已经停止了。
-安装需要一会儿，如果想看安装进度，可以再打开一个窗口，输出会话日志</p>
+</div><p>[WARING]可暂时忽略，此时安装程序仍在后台进行，如果出现[FATAL]，则安装程序已经停止了。</p>
+<p>安装需要一会儿，如果想看安装进度，可以再打开一个窗口，输出会话日志</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -977,43 +1037,26 @@ DECLINE_SECURITY_UPDATES=true
 <pre class="chroma"><code class="language-fallback" data-lang="fallback">tail -f 日志文件
 </code></pre></td></tr></table>
 </div>
-</div><ol start="5">
-<li>要确定静默方式安装是成功还是失败，请参考以下日志文件：
-<code>/oraInventory_location/logs/silentInstalldate_time.log</code></li>
-</ol>
-<p>两个错误：</p>
-<ul>
-<li>调用 makefile &lsquo;/home/oracle/app/product/11.2.0/dbhome_1/ctx/lib/ins_ctx.mk&rsquo; 的目标 &lsquo;install&rsquo; 时出错
-解决方法：经检查，libstdc++3.3.3 已正确安装，也就是/usr/lib64/libstdc++.so.5.0.7 /usr/lib64/libstdc++.so.5两个文件，发现可能是这两个文件有问题，换成mandriva的 libstdc++5-3.3.6-4mdv2009.0.x86_64即可，也可以用redhat上的。</li>
-<li>ins_emagent.mk 链接错误
-解决方法：
-修改<code> $ORACLE_HOME/sysman/lib/ins_emagent.mk</code>
-找到 <code>$(MK_EMAGENT_NMECTL)</code>
-改成:
-<code>$(MK_EMAGENT_NMECTL) -lnnz11</code></li>
-</ul>
-<ol start="6">
-<li>安装失败后清理
-卸载工具（deinstall）在安装介质中可用，安装后在Oracle主目录中可用。它位于<code>$ORACLE_HOME/deinstall</code>目录中。</li>
-</ol>
+</div></li>
+<li>
+<p>要确定静默方式安装是成功还是失败，请参考以下日志文件：
+<code>/oraInventory_location/logs/silentInstalldate_time.log</code></p>
+</li>
+<li>
+<p>安装失败后清理</p>
+<p>卸载工具（deinstall）在安装介质中可用，安装后在Oracle主目录中可用。它位于<code>$ORACLE_HOME/deinstall</code>目录中。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">deinstall -home complete path of Oracle home [-silent] [-checkonly] [-local] [-paramfile complete path of input parameter property file] [-params name1=value
-name2=value . . .] [-o complete path of directory for saving files]
-[-tmpdir complete path of temporary directory to use]
-[-logdir complete path of log directory to use] [-help]
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">deinstall -home complete path of Oracle home [-silent] [-checkonly] [-local] [-paramfile complete path of input parameter property file] [-params name1=value name2=value . . .] [-o complete path of directory for saving files] [-tmpdir complete path of temporary directory to use] [-logdir complete path of log directory to use] [-help]
 </code></pre></td></tr></table>
 </div>
 </div><p><a href="https://docs.oracle.com/cd/E11882_01/install.112/e47689/remove_oracle_sw.htm#LADBI1334" target="_blank" rel="noopener noreffer">参数设置</a></p>
-<ol start="7">
-<li>安装完成后如果有类似如下提示，说明安装完成</li>
-</ol>
+</li>
+<li>
+<p>安装完成后如果有类似如下提示，说明安装完成</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -1032,7 +1075,7 @@ name2=value . . .] [-o complete path of directory for saving files]
 <pre class="chroma"><code class="language-fallback" data-lang="fallback">以下配置脚本需要以 &#34;root&#34; 用户的身份执行。
    #!/bin/sh
    #要运行的 Root 脚本
- /home/oracle/app/oraInventory/orainstRoot.sh
+ /home/oracle/app/oraInventory/orainstRoo   t.sh
 /home/oracle/app/oracle/product/11.2.0/db_1/root.sh
   要执行配置脚本, 请执行以下操作:
      1. 打开一个终端窗口
@@ -1042,9 +1085,9 @@ name2=value . . .] [-o complete path of directory for saving files]
   Successfully Setup Software.
 </code></pre></td></tr></table>
 </div>
-</div><ol start="8">
-<li>使用root用户执行脚本</li>
-</ol>
+</div></li>
+<li>
+<p>使用root用户执行脚本</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1057,7 +1100,35 @@ sh /home/oracle/app/oraInventory/orainstRoot.sh
 sh /home/oracle/app/product/11.2.0/db_1/root.sh
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="配置监听程序">配置监听程序</h3>
+</div></li>
+</ol>
+<h4 id="troubleshooting">troubleshooting</h4>
+<ol>
+<li>
+<p>静默安装Oracle时报<code>No protocol specified...NoClassDefFoundError..</code>异常</p>
+<p>解决办法：</p>
+<p>在root账户下执行<code>xhost +</code></p>
+</li>
+<li>
+<p>静默安装Oracle时提示<code>[SEVERE] - Email Address Not Specified</code></p>
+<p>解决办法：</p>
+<p>修改responseFile文件，将DECLINE_SECURITY_UPDATES=的值设为true，如果为空，系统会假设该值为false。</p>
+</li>
+<li>
+<p>日志文件中，调用 makefile &lsquo;/home/oracle/app/product/11.2.0/dbhome_1/ctx/lib/ins_ctx.mk&rsquo; 的目标 &lsquo;install&rsquo; 时出错</p>
+<p>解决方法：</p>
+<p>经检查，libstdc++3.3.3 已正确安装，也就是/usr/lib64/libstdc++.so.5.0.7 /usr/lib64/libstdc++.so.5两个文件，发现可能是这两个文件有问题，换成mandriva的 libstdc++5-3.3.6-4mdv2009.0.x86_64即可，也可以用redhat上的。</p>
+</li>
+<li>
+<p>日志文件中，ins_emagent.mk 链接错误</p>
+<p>解决方法：</p>
+<p>修改<code>$ORACLE_HOME/sysman/lib/ins_emagent.mk</code></p>
+<p>找到 <code>$(MK_EMAGENT_NMECTL)</code></p>
+<p>改成:</p>
+<p><code>$(MK_EMAGENT_NMECTL) -lnnz11</code></p>
+</li>
+</ol>
+<h3 id="配置监听程序">配置监听程序</h3>
 <ol>
 <li>切换oracle用户</li>
 </ol>
@@ -1116,13 +1187,12 @@ Oracle Net 监听程序启动:
 成功完成 Oracle Net Services 配置。退出代码是0
 </code></pre></td></tr></table>
 </div>
-</div><p>成功运行后，在<code>$ORACLE_HOME/network/admin</code>目录下生成<code>sqlnet.ora</code>和<code>listener.ora</code>两个文件。
-完成后通过命令<code>netstat -tnpl | grep 1521</code>可以查看到1521端口已开</p>
+</div><p>成功运行后，在<code>$ORACLE_HOME/network/admin</code>目录下生成<code>sqlnet.ora</code>和<code>listener.ora</code>两个文件。</p>
+<p>完成后通过命令<code>netstat -tnpl | grep 1521</code>可以查看到1521端口已开</p>
 <h3 id="静默创建数据库">静默创建数据库</h3>
 <blockquote>
-<p>See Also：
-&ldquo;Oracle ASM Configuration Assistant Command-Line Interface&rdquo; section in <a href="https://docs.oracle.com/cd/E11882_01/server.112/e18951/toc.htm" target="_blank" rel="noopener noreffer">Oracle Automatic Storage Management Administrator&rsquo;s Guide</a>
-，提供了有关以非交互方式运行Oracle ASMCA的信息</p>
+<p>See Also：</p>
+<p>&ldquo;Oracle ASM Configuration Assistant Command-Line Interface&rdquo; section in <a href="https://docs.oracle.com/cd/E11882_01/server.112/e18951/toc.htm" target="_blank" rel="noopener noreffer">Oracle Automatic Storage Management Administrator&rsquo;s Guide</a>，提供了有关以非交互方式运行Oracle ASMCA的信息</p>
 </blockquote>
 <ol>
 <li>编辑响应文件<code>response/dbca.rsp</code></li>
@@ -1386,8 +1456,8 @@ sqlplus / as sysdba
 <pre class="chroma"><code class="language-fallback" data-lang="fallback">ORACLE_HOME_LISTNER=$ORACLE_HOME
 </code></pre></td></tr></table>
 </div>
-</div><p>修改<code>/etc/oratab</code>
-格式如下：
+</div><p>修改<code>/etc/oratab</code></p>
+<p>格式如下：
 <code>$ORACLE_SID:$ORACLE_HOME:&lt;N|Y&gt;</code>
 例：</p>
 <div class="highlight"><div class="chroma">
@@ -1505,12 +1575,12 @@ sqlplus / as sysdba
 <span class="nb">exit</span> <span class="m">0</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>更改权限：<code>chmod +x /etc/init.d/oracle</code>
-开机启动oracle：<code>chkconfig oracle on</code>
-停止oracle：<code>service oracle stop</code>
-开启oracle：<code>service oracle start</code>
-启动监听：<code>lsnrctl status</code>
-启动数据库：<code>SQL&gt; statup</code></p>
+</div><p>更改权限：<code>chmod +x /etc/init.d/oracle</code></p>
+<p>开机启动oracle：<code>chkconfig oracle on</code></p>
+<p>停止oracle：<code>service oracle stop</code></p>
+<p>开启oracle：<code>service oracle start</code></p>
+<p>启动监听：<code>lsnrctl status</code></p>
+<p>启动数据库：<code>SQL&gt; statup</code></p>
 <h3 id="防火墙配置放开oracle的端口">防火墙配置放开Oracle的端口</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
