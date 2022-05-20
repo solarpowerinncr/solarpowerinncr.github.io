@@ -8,10 +8,10 @@
         <title>Centos7静默安装oracle Database 11.2.0 - 网路拾遗</title><meta name="Description" content="仓鼠症患者"><meta property="og:title" content="Centos7静默安装oracle Database 11.2.0" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://solarpowerinncr.github.io/centos7%E9%9D%99%E9%BB%98%E5%AE%89%E8%A3%85oracle-database-11.2.0.1/" />
-<meta property="og:image" content="https://solarpowerinncr.github.io/logo.png"/>
+<meta property="og:url" content="https://solarpowerinncr.github.io/centos7%E9%9D%99%E9%BB%98%E5%AE%89%E8%A3%85oracle-database-11.2.0.1/" /><meta property="og:image" content="https://solarpowerinncr.github.io/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-02-05T19:23:53+08:00" />
 <meta property="article:modified_time" content="2020-02-05T19:23:53+08:00" />
+
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://solarpowerinncr.github.io/logo.png"/>
 
@@ -208,19 +208,19 @@
 <p>可以通过如下命令修改shm的大小：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">mount -t tmpfs shmfs -o size=8g /dev/shm
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">mount -t tmpfs shmfs -o size=8g /dev/shm
 </code></pre></td></tr></table>
 </div>
 </div><p>为了系统重启也可以生效，需要修改<code>/etc/fstab</code>文件，添加如下内容：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">shmfs /dev/shm tmpfs size=8g 0 0
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">shmfs /dev/shm tmpfs size=8g 0 0
 </code></pre></td></tr></table>
 </div>
 </div><blockquote>
@@ -243,12 +243,12 @@
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo mkdir /mount_point/tmp
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo mkdir /mount_point/tmp
 $ sudo chmod a+wr /mount_point/tmp
 # exit
 </code></pre></td></tr></table>
@@ -258,12 +258,12 @@ $ sudo chmod a+wr /mount_point/tmp
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ TMP=/mount_point/tmp
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ TMP=/mount_point/tmp
 $ TMPDIR=/mount_point/tmp
 $ export TMP TMPDIR
 </code></pre></td></tr></table>
@@ -325,7 +325,7 @@ $ export TMP TMPDIR
 <p>对 Oracle Linux 7 和 Red Hat Enterprise Linux 7，以下软件包必须安装：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -354,30 +354,30 @@ $ export TMP TMPDIR
 </span><span class="lnt">27
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">binutils-2.23.52.0.1-12.el7.x86_64 
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">binutils-2.23.52.0.1-12.el7.x86_64 
 compat-libcap1-1.10-3.el7.x86_64 
 <span class="c1">#compat-libstdc++-33-3.2.3-71.el7.i686</span>
 compat-libstdc++-33-3.2.3-71.el7.x86_64
 gcc-4.8.2-3.el7.x86_64 
 gcc-c++-4.8.2-3.el7.x86_64 
-<span class="c1">#glibc-2.17-36.el7.i686</span> 
+<span class="c1">#glibc-2.17-36.el7.i686 </span>
 glibc-2.17-36.el7.x86_64 
-<span class="c1">#glibc-devel-2.17-36.el7.i686</span> 
+<span class="c1">#glibc-devel-2.17-36.el7.i686 </span>
 glibc-devel-2.17-36.el7.x86_64 
 ksh
-<span class="c1">#libaio-0.3.109-9.el7.i686</span> 
+<span class="c1">#libaio-0.3.109-9.el7.i686 </span>
 libaio-0.3.109-9.el7.x86_64 
-<span class="c1">#libaio-devel-0.3.109-9.el7.i686</span> 
+<span class="c1">#libaio-devel-0.3.109-9.el7.i686 </span>
 libaio-devel-0.3.109-9.el7.x86_64 
-<span class="c1">#libgcc-4.8.2-3.el7.i686</span> 
+<span class="c1">#libgcc-4.8.2-3.el7.i686 </span>
 libgcc-4.8.2-3.el7.x86_64 
-<span class="c1">#libstdc++-4.8.2-3.el7.i686</span> 
+<span class="c1">#libstdc++-4.8.2-3.el7.i686 </span>
 libstdc++-4.8.2-3.el7.x86_64 
-<span class="c1">#libstdc++-devel-4.8.2-3.el7.i686</span> 
+<span class="c1">#libstdc++-devel-4.8.2-3.el7.i686 </span>
 libstdc++-devel-4.8.2-3.el7.x86_64 
-<span class="c1">#libXi-1.7.2-1.el7.i686</span> 
+<span class="c1">#libXi-1.7.2-1.el7.i686 </span>
 libXi-1.7.2-1.el7.x86_64 
-<span class="c1">#libXtst-1.2.2-1.el7.i686</span> 
+<span class="c1">#libXtst-1.2.2-1.el7.i686 </span>
 libXtst-1.2.2-1.el7.x86_64 
 make-3.82-19.el7.x86_64 
 sysstat-10.1.5-1.el7.x86_64
@@ -386,7 +386,7 @@ sysstat-10.1.5-1.el7.x86_64
 </div><p>可能需要安装：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -398,7 +398,7 @@ sysstat-10.1.5-1.el7.x86_64
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">#Oracle ODBC Drivers</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">#Oracle ODBC Drivers</span>
 unixODBC-2.3.1-6.el7.x86_64 or later
 unixODBC-2.3.1-6.el7.i686 or later
 unixODBC-devel-2.3.1-6.el7.x86_64 or later
@@ -413,19 +413,19 @@ mksh.x86_64
 </div><p>11.2.0.2之前</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">yum -y install binutils compat-libcap1 compat-libstdc++-33 compat-libstdc++-33*i686 compat-libstdc++-33*.devel compat-libstdc++-33 compat-libstdc++-33*.devel gcc gcc-c++ glibc glibc*.i686 glibc-devel glibc-devel*.i686 ksh libaio libaio*.i686 libaio-devel libaio-devel*.devel libgcc libgcc*.i686 libstdc++ libstdc++*.i686 libstdc++-devel libstdc++-devel*.devel libXi libXi*.i686 libXtst libXtst*.i686 make sysstat unixODBC unixODBC*.i686 unixODBC-devel unixODBC-devel*.i686 elfutils-libelf-devel
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">yum -y install binutils compat-libcap1 compat-libstdc++-33 compat-libstdc++-33*i686 compat-libstdc++-33*.devel compat-libstdc++-33 compat-libstdc++-33*.devel gcc gcc-c++ glibc glibc*.i686 glibc-devel glibc-devel*.i686 ksh libaio libaio*.i686 libaio-devel libaio-devel*.devel libgcc libgcc*.i686 libstdc++ libstdc++*.i686 libstdc++-devel libstdc++-devel*.devel libXi libXi*.i686 libXtst libXtst*.i686 make sysstat unixODBC unixODBC*.i686 unixODBC-devel unixODBC-devel*.i686 elfutils-libelf-devel
 </code></pre></td></tr></table>
 </div>
 </div><p>11.2.0.2之后</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">yum install binutils compat-libcap1 compat-libstdc++-33 gcc gcc-c++ glibc glibc-devel ksh libaio libaio-devel libgcc libstdc++ libstdc++-devel libXi libXtst  make sysstat unixODBC unixODBC-devel
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">yum install binutils compat-libcap1 compat-libstdc++-33 gcc gcc-c++ glibc glibc-devel ksh libaio libaio-devel libgcc libstdc++ libstdc++-devel libXi libXtst  make sysstat unixODBC unixODBC-devel
 </code></pre></td></tr></table>
 </div>
 </div><p>查看软件包是否安装：<code>rpm -q package_name</code></p>
@@ -435,7 +435,7 @@ mksh.x86_64
 永久修改参数：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -443,7 +443,7 @@ mksh.x86_64
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">vim /etc/sysctl.conf
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">vim /etc/sysctl.conf
 ...
 net.ipv4.ip_local_port_range = 9000 65500
 ...
@@ -489,7 +489,7 @@ net.ipv4.ip_local_port_range = 9000 65500
 <p>修改<code>etc/default/grub</code>文件，添加<code>transparent_hugepage=never</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -498,7 +498,7 @@ net.ipv4.ip_local_port_range = 9000 65500
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">GRUB_TIMEOUT=5
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">GRUB_TIMEOUT=5
 GRUB_DISTRIBUTOR=&#34;$(sed &#39;s, release .*$,,g&#39; /etc/system- release)&#34;
 GRUB_DEFAULT=saved
 GRUB_DISABLE_SUBMENU=true
@@ -535,20 +535,20 @@ GRUB_DISABLE_RECOVERY=&#34;true&#34;
 <p>查看Oracle Inventory group是否存在：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">more /etc/oraInst.loc
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">more /etc/oraInst.loc
 </code></pre></td></tr></table>
 </div>
 </div><p>如果oraInst.loc存在，那么此命令的输出类似于以下内容：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">inventory_loc=/u01/app/oraInventory
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">inventory_loc=/u01/app/oraInventory
 inst_group=oinstall
 </code></pre></td></tr></table>
 </div>
@@ -557,31 +557,31 @@ inst_group=oinstall
 <p>如不存在，创建<code>oinstall</code>和<code>dba</code>用户组：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">/usr/sbin/groupadd oinstall
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">/usr/sbin/groupadd oinstall
 /usr/sbin/groupadd dba
 </code></pre></td></tr></table>
 </div>
 </div><p>创建<code>oracle</code>用户：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">/usr/sbin/useradd -g oinstall -G dba oracle
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">/usr/sbin/useradd -g oinstall -G dba oracle
 </code></pre></td></tr></table>
 </div>
 </div><p>将oinstall指定为primary group，并将dba指定为secondary group。</p>
 <p>设置<code>oracle</code>的密码：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">passwd oracle
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">passwd oracle
 </code></pre></td></tr></table>
 </div>
 </div><h4 id="配置内核参数">配置内核参数</h4>
@@ -674,7 +674,7 @@ inst_group=oinstall
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -687,7 +687,7 @@ inst_group=oinstall
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">fs.aio-max-nr = 1048576
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">fs.aio-max-nr = 1048576
 fs.file-max = 6815744
 kernel.shmall = 2097152
 kernel.shmmax = 4294967295
@@ -756,14 +756,14 @@ net.core.wmem_max = 1048576
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ ulimit -Sn
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ ulimit -Sn
 1024
 $ ulimit -Hn
 4096
@@ -775,14 +775,14 @@ $ ulimit -Hn
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ ulimit -Su
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ ulimit -Su
 4096
 $ ulimit -Hu
 7268
@@ -794,13 +794,13 @@ $ ulimit -Hu
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ ulimit -Ss
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ ulimit -Ss
 8192
 $ ulimit -Hs
 unlimited
@@ -809,7 +809,7 @@ unlimited
 </div><p>如有必要，为安装用户更新<code>/etc/security/limits.conf</code>配置文件中的资源限制。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -818,7 +818,7 @@ unlimited
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">nano /etc/security/limits.conf
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">nano /etc/security/limits.conf
 ...
 oracle           soft    nproc           2047
 oracle           hard    nproc           16384
@@ -848,10 +848,10 @@ oracle           soft    stack           10240
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">df -k
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">df -k
 </code></pre></td></tr></table>
 </div>
 </div><ol start="2">
@@ -860,12 +860,12 @@ oracle           soft    stack           10240
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">mkdir -p /home/oracle/app/
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">mkdir -p /home/oracle/app/
 chown -R oracle:oinstall /home/oracle/app/
 chmod -R 775 /home/oracle/app/
 </code></pre></td></tr></table>
@@ -878,7 +878,7 @@ chmod -R 775 /home/oracle/app/
 <p>编辑 .bash_profile，添加：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -889,7 +889,7 @@ chmod -R 775 /home/oracle/app/
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">umask 022
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">umask 022
 #oracle基目录
 export ORACLE_BASE=/home/oracle/app
 #oracle主目录
@@ -908,11 +908,11 @@ export PATH=$PATH:$HOME/bin:$ORACLE_HOME/bin
 <p>查看环境变量：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ umask
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ umask
 $ env | more
 </code></pre></td></tr></table>
 </div>
@@ -929,10 +929,10 @@ $ env | more
 <p>如果要完成响应文件模式的安装，请设置<code>DISPLAY</code>环境变量。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">export DISPLAY=:0.0
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">export DISPLAY=:0.0
 </code></pre></td></tr></table>
 </div>
 </div></li>
@@ -944,7 +944,7 @@ $ env | more
 <p>修改<code>db_install.rsp</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -969,7 +969,7 @@ $ env | more
 </span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">oracle.install.option=INSTALL_DB_SWONLY
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">oracle.install.option=INSTALL_DB_SWONLY
 ORACLE_HOSTNAME=localhost
 UNIX_GROUP_NAME=oinstall
 INVENTORY_LOCATION=/home/oracle/app/oraInventory
@@ -999,11 +999,11 @@ DECLINE_SECURITY_UPDATES=true
 <p>运行Oracle Universal Installer</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">/directory_path/runInstaller [-silent] [-noconfig] \
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">/directory_path/runInstaller [-silent] [-noconfig] \
 -responseFile responsefilename
 </code></pre></td></tr></table>
 </div>
@@ -1015,20 +1015,20 @@ DECLINE_SECURITY_UPDATES=true
 <p>例：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">./runInstaller -silent -responseFile /home/oracle/database/response/db_install.rsp
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">./runInstaller -silent -responseFile /home/oracle/database/response/db_install.rsp
 </code></pre></td></tr></table>
 </div>
 </div><p>[WARING]可暂时忽略，此时安装程序仍在后台进行，如果出现[FATAL]，则安装程序已经停止了。</p>
 <p>安装需要一会儿，如果想看安装进度，可以再打开一个窗口，输出会话日志</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">tail -f 日志文件
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">tail -f 日志文件
 </code></pre></td></tr></table>
 </div>
 </div></li>
@@ -1041,10 +1041,10 @@ DECLINE_SECURITY_UPDATES=true
 <p>卸载工具（deinstall）在安装介质中可用，安装后在Oracle主目录中可用。它位于<code>$ORACLE_HOME/deinstall</code>目录中。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">deinstall -home complete path of Oracle home [-silent] [-checkonly] [-local] [-paramfile complete path of input parameter property file] [-params name1=value name2=value . . .] [-o complete path of directory for saving files] [-tmpdir complete path of temporary directory to use] [-logdir complete path of log directory to use] [-help]
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">deinstall -home complete path of Oracle home [-silent] [-checkonly] [-local] [-paramfile complete path of input parameter property file] [-params name1=value name2=value . . .] [-o complete path of directory for saving files] [-tmpdir complete path of temporary directory to use] [-logdir complete path of log directory to use] [-help]
 </code></pre></td></tr></table>
 </div>
 </div><p><a href="https://docs.oracle.com/cd/E11882_01/install.112/e47689/remove_oracle_sw.htm#LADBI1334" target="_blank" rel="noopener noreffer">参数设置</a></p>
@@ -1053,7 +1053,7 @@ DECLINE_SECURITY_UPDATES=true
 <p>安装完成后如果有类似如下提示，说明安装完成</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1066,7 +1066,7 @@ DECLINE_SECURITY_UPDATES=true
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">以下配置脚本需要以 &#34;root&#34; 用户的身份执行。
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">以下配置脚本需要以 &#34;root&#34; 用户的身份执行。
    #!/bin/sh
    #要运行的 Root 脚本
  /home/oracle/app/oraInventory/orainstRoo   t.sh
@@ -1084,12 +1084,12 @@ DECLINE_SECURITY_UPDATES=true
 <p>使用root用户执行脚本</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">sudo su
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sudo su
 sh /home/oracle/app/oraInventory/orainstRoot.sh
 sh /home/oracle/app/product/11.2.0/db_1/root.sh
 </code></pre></td></tr></table>
@@ -1128,13 +1128,13 @@ sh /home/oracle/app/product/11.2.0/db_1/root.sh
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">export ORACLE_BASE=/home/oracle/app
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">export ORACLE_BASE=/home/oracle/app
 export ORACLE_HOME=$ORACLE_BASE/oracle/product/11.2.0/dbhome_1
 #配置DISPLAY环境变量：export DISPLAY=本机IP:0.0
 export DISPLAY=192.168.123.82:0.0
@@ -1145,7 +1145,7 @@ export DISPLAY=192.168.123.82:0.0
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1163,7 +1163,7 @@ export DISPLAY=192.168.123.82:0.0
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ORACLE_HOME/bin/netca -silent -responsefile /home/oracle/database/response/netca.rsp
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ORACLE_HOME/bin/netca -silent -responsefile /home/oracle/database/response/netca.rsp
 
 #输出结果：
 正在对命令行参数进行语法分析:
@@ -1193,7 +1193,7 @@ Oracle Net 监听程序启动:
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1212,7 +1212,7 @@ Oracle Net 监听程序启动:
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[GENERAL]
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">[GENERAL]
 RESPONSEFILE_VERSION = &#34;11.2.0&#34;
 OPERATION_TYPE = &#34;createDatabase&#34;
 [CREATEDATABASE]
@@ -1236,16 +1236,16 @@ TOTALMEMORY = &#34;1800&#34;
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ORACLE_HOME/bin/dbca -silent -sysPassword joyin -systemPassword joyin -responseFile /home/oracle/database/response/dbca.rsp 
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ORACLE_HOME/bin/dbca -silent -sysPassword joyin -systemPassword joyin -responseFile /home/oracle/database/response/dbca.rsp 
 </code></pre></td></tr></table>
 </div>
 </div><p>执行过程如下</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1270,7 +1270,7 @@ TOTALMEMORY = &#34;1800&#34;
 </span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">复制数据库文件
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">复制数据库文件
 1% 已完成
 3% 已完成
 11% 已完成
@@ -1298,7 +1298,7 @@ TOTALMEMORY = &#34;1800&#34;
 </div><p>查看进程</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1324,7 +1324,7 @@ TOTALMEMORY = &#34;1800&#34;
 </span><span class="lnt">24
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">ps -ef | grep ora_ | grep -v grep
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">ps -ef | grep ora_ | grep -v grep
 # 执行结果
 oracle   25717     1  0 12:24 ?        00:00:00 ora_pmon_orcl
 oracle   25719     1  0 12:24 ?        00:00:01 ora_vktm_orcl
@@ -1353,7 +1353,7 @@ oracle   26071     1  0 12:29 ?        00:00:00 ora_smco_orcl
 </div><p>查看监听状态</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1382,7 +1382,7 @@ oracle   26071     1  0 12:29 ?        00:00:00 ora_smco_orcl
 </span><span class="lnt">27
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ORACLE_HOME/bin/lsnrctl status
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ORACLE_HOME/bin/lsnrctl status
 # 执行结果
 LSNRCTL for Linux: Version 11.2.0.1.0 - Production on 05-FEB-2020 12:32:23
 
@@ -1414,40 +1414,40 @@ The command completed successfully
 </div><p>登录数据库：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">su oracle
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">su oracle
 sqlplus / as sysdba
 </code></pre></td></tr></table>
 </div>
 </div><p>查看数据库版本</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">SQL&gt; select * from v$version;
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">SQL&gt; select * from v$version;
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="设置oracle开机启动">设置Oracle开机启动</h3>
 <p>修改<code>$ORACLE_HOME/bin/dbstart</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">ORACLE_HOME_LISTNER=$ORACLE_HOME
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">ORACLE_HOME_LISTNER=$ORACLE_HOME
 </code></pre></td></tr></table>
 </div>
 </div><p>修改<code>$ORACLE_HOME/bin/dbshut</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">ORACLE_HOME_LISTNER=$ORACLE_HOME
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">ORACLE_HOME_LISTNER=$ORACLE_HOME
 </code></pre></td></tr></table>
 </div>
 </div><p>修改<code>/etc/oratab</code></p>
@@ -1456,16 +1456,16 @@ sqlplus / as sysdba
 例：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">orcl:/home/oracle/app/product/11.2.0/dbhome_1:Y
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">orcl:/home/oracle/app/product/11.2.0/dbhome_1:Y
 </code></pre></td></tr></table>
 </div>
 </div><p>新建文件<code>/etc/rc.d/init.d/oracle</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1517,12 +1517,12 @@ sqlplus / as sysdba
 </span><span class="lnt">50
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#! /bin/bash
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#! /bin/bash
 </span><span class="cp"></span><span class="c1"># oracle: Start/Stop Oracle Database 11g R2</span>
-#
+<span class="c1">#</span>
 <span class="c1"># chkconfig: 345 90 10</span>
 <span class="c1"># description: The Oracle Database is an Object-Relational Database Management System.</span>
-#
+<span class="c1">#</span>
 <span class="c1"># processname: oracle</span>
 . /etc/rc.d/init.d/functions
 <span class="nv">LOCKFILE</span><span class="o">=</span>/var/lock/subsys/oracle
@@ -1578,11 +1578,11 @@ sqlplus / as sysdba
 <h3 id="防火墙配置放开oracle的端口">防火墙配置放开Oracle的端口</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">firewall-cmd --zone<span class="o">=</span>public --add-port<span class="o">=</span>1521/tcp --permanent
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">firewall-cmd --zone<span class="o">=</span>public --add-port<span class="o">=</span>1521/tcp --permanent
 firewall-cmd --reload
 </code></pre></td></tr></table>
 </div>
@@ -1618,8 +1618,8 @@ firewall-cmd --reload
                 Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.71.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.9"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2018 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">太阳风</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.92.2">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.9"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2018 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">太阳风</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 

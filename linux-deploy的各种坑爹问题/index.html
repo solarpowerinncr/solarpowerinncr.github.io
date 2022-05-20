@@ -10,10 +10,10 @@
 然后不知为啥chroot环境下不能设置system，导致大多数需要后台的软件跑不起来
 不过跑个caddy搭个网盘还是可以的" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://solarpowerinncr.github.io/linux-deploy%E7%9A%84%E5%90%84%E7%A7%8D%E5%9D%91%E7%88%B9%E9%97%AE%E9%A2%98/" />
-<meta property="og:image" content="https://solarpowerinncr.github.io/logo.png"/>
+<meta property="og:url" content="https://solarpowerinncr.github.io/linux-deploy%E7%9A%84%E5%90%84%E7%A7%8D%E5%9D%91%E7%88%B9%E9%97%AE%E9%A2%98/" /><meta property="og:image" content="https://solarpowerinncr.github.io/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2019-12-17T21:54:52+08:00" />
 <meta property="article:modified_time" content="2019-12-17T21:54:52+08:00" />
+
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://solarpowerinncr.github.io/logo.png"/>
 
@@ -157,7 +157,7 @@
 <p>可以写个启动脚本</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -167,7 +167,7 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /mnt/storage/
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /mnt/storage/
 vim startes.sh
  
 <span class="c1">#!/bin/bash</span>
@@ -190,14 +190,14 @@ sh startes.sh
 <p>或者</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">vim /etc/rc.local
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">vim /etc/rc.local
 <span class="c1">##添加</span>
 sh /mnt/storage/startes.sh
  
@@ -251,8 +251,8 @@ chmod +x /etc/rc.local
                 Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.71.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.9"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2018 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">太阳风</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.92.2">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.9"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2018 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">太阳风</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 

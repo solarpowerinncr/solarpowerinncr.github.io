@@ -3,7 +3,7 @@
         <title>所有文章 - 网路拾遗</title>
         <link>https://solarpowerinncr.github.io/posts/</link>
         <description>所有文章 | 网路拾遗</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 15 May 2020 16:09:49 &#43;0800</lastBuildDate><atom:link href="https://solarpowerinncr.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 20 May 2022 18:43:45 &#43;0800</lastBuildDate><atom:link href="https://solarpowerinncr.github.io/posts/" rel="self" type="application/rss+xml" /><item>
     <title>Markdown 基本语法</title>
     <link>https://solarpowerinncr.github.io/basic-markdown-preview/</link>
     <pubDate>Sun, 25 Aug 2019 16:22:42 &#43;0800</pubDate>
@@ -11,11 +11,11 @@
     <guid>https://solarpowerinncr.github.io/basic-markdown-preview/</guid>
     <description><![CDATA[<p>这篇文章提供了可以在 Hugo 的文章中使用的基本 Markdown 语法示例.</p>]]></description>
 </item><item>
-    <title>If</title>
-    <link>https://solarpowerinncr.github.io/if/</link>
-    <pubDate>Fri, 15 May 2020 16:09:49 &#43;0800</pubDate>
+    <title>[kaplaz]Upper Limit</title>
+    <link>https://solarpowerinncr.github.io/kaplazupper-limit/</link>
+    <pubDate>Fri, 20 May 2022 18:43:45 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://solarpowerinncr.github.io/if/</guid>
+    <guid>https://solarpowerinncr.github.io/kaplazupper-limit/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>[2002德足]金色的天，黑色的地</title>
@@ -71,12 +71,12 @@
 <p>ubuntu:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">sudo apt-get install fcitx fcitx-sunpinyin fcitx-configtool 
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sudo apt-get install fcitx fcitx-sunpinyin fcitx-configtool 
 sudo apt-get install im-config fcitx-frontend-gtk2 fcitx-frontend-gtk3
 im-config
 </code></pre></td></tr></table>

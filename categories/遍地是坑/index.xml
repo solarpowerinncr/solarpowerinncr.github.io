@@ -27,12 +27,12 @@
 <p>ubuntu:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">sudo apt-get install fcitx fcitx-sunpinyin fcitx-configtool 
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sudo apt-get install fcitx fcitx-sunpinyin fcitx-configtool 
 sudo apt-get install im-config fcitx-frontend-gtk2 fcitx-frontend-gtk3
 im-config
 </code></pre></td></tr></table>
@@ -80,12 +80,12 @@ im-config
     <description><![CDATA[<h2 id="添加用户并授予root权限">添加用户并授予root权限</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">adduser ubuntu
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">adduser ubuntu
 <span class="c1">#记住自己输入了啥密码</span>
 usermod -g sudo ubuntu
 </code></pre></td></tr></table>
