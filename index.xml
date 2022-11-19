@@ -3,7 +3,7 @@
         <title>网路拾遗</title>
         <link>https://solarpowerinncr.github.io/</link>
         <description>仓鼠症患者</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 19 Nov 2022 19:33:55 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 19 Nov 2022 20:43:03 &#43;0800</lastBuildDate>
             <atom:link href="https://solarpowerinncr.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>Markdown 基本语法</title>
@@ -12,6 +12,16 @@
     <author>作者</author>
     <guid>https://solarpowerinncr.github.io/basic-markdown-preview/</guid>
     <description><![CDATA[<p>这篇文章提供了可以在 Hugo 的文章中使用的基本 Markdown 语法示例.</p>]]></description>
+</item><item>
+    <title>沉柯</title>
+    <link>https://solarpowerinncr.github.io/%E6%B2%89%E6%9F%AF/</link>
+    <pubDate>Sat, 19 Nov 2022 20:43:03 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://solarpowerinncr.github.io/%E6%B2%89%E6%9F%AF/</guid>
+    <description><![CDATA[<p>作者:hannibalkk</p>
+<blockquote>
+<p>笨猫点评:兴唐系列的小说中,秦和罗是一对分不开的表兄弟.但是某猫一向逆向思维,把秦回归他的本位,割断他和罗的联系.只有这样,唐传奇才更象历史,而不是演义.翟让、窦建德一向是演义丑化的人物，却被我还其本来的英雄本色。所以同人与非同人的区别则在此处。</p>
+</blockquote>]]></description>
 </item><item>
     <title>隋唐且看陈荫荣</title>
     <link>https://solarpowerinncr.github.io/%E9%9A%8B%E5%94%90%E4%B8%94%E7%9C%8B%E9%99%88%E8%8D%AB%E8%8D%A3/</link>
@@ -71,26 +81,5 @@
     <author>作者</author>
     <guid>https://solarpowerinncr.github.io/ssr%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BB%A3%E7%90%86/</guid>
     <description><![CDATA[]]></description>
-</item><item>
-    <title>Rime输入法配置</title>
-    <link>https://solarpowerinncr.github.io/rime%E8%BE%93%E5%85%A5%E6%B3%95%E9%85%8D%E7%BD%AE/</link>
-    <pubDate>Tue, 17 Dec 2019 22:38:38 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://solarpowerinncr.github.io/rime%E8%BE%93%E5%85%A5%E6%B3%95%E9%85%8D%E7%BD%AE/</guid>
-    <description><![CDATA[<h2 id="安装">安装</h2>
-<p>ubuntu:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sudo apt-get install fcitx fcitx-sunpinyin fcitx-configtool 
-sudo apt-get install im-config fcitx-frontend-gtk2 fcitx-frontend-gtk3
-im-config
-</code></pre></td></tr></table>
-</div>
-</div>]]></description>
 </item></channel>
 </rss>
